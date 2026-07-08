@@ -1,0 +1,16 @@
+name: Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  open-source-check:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run open-source package check
+        shell: pwsh
+        run: powershell -ExecutionPolicy Bypass -File .\tests\check-open-source.ps1

@@ -8,11 +8,9 @@ New-Item -ItemType Directory -Force -Path (Join-Path $TempRoot "paper") | Out-Nu
 
 Copy-Item -LiteralPath (Join-Path $Root "examples\protocol_state.example.md") -Destination (Join-Path $TempRoot "paper\protocol_state.md")
 
-& powershell -ExecutionPolicy Bypass -File (Join-Path $Root "scripts\check-protocol-state.ps1") -ProjectRoot $TempRoot -Action writing | Out-Null
-if ($LASTEXITCODE -ne 0) { throw "Expected protocol-state writing check to pass." }
+& (Join-Path $Root "scripts\check-protocol-state.ps1") -ProjectRoot $TempRoot -Action writing | Out-Null
 
-& powershell -ExecutionPolicy Bypass -File (Join-Path $Root "scripts\check-protocol-state.ps1") -ProjectRoot $TempRoot -Action result-claim | Out-Null
-if ($LASTEXITCODE -ne 0) { throw "Expected protocol-state result-claim check to pass." }
+& (Join-Path $Root "scripts\check-protocol-state.ps1") -ProjectRoot $TempRoot -Action result-claim | Out-Null
 
 $BlockedRoot = Join-Path $env:TEMP "research-paper-writing-agent-gate-tests-blocked"
 Remove-Item -LiteralPath $BlockedRoot -Recurse -Force -ErrorAction SilentlyContinue
@@ -23,13 +21,18 @@ $BlockedStatePath = Join-Path $BlockedRoot "paper\protocol_state.md"
 (Get-Content -Raw -LiteralPath $BlockedStatePath) -replace "(?m)^- writing$", "- gate-repair" |
   Set-Content -LiteralPath $BlockedStatePath
 
-$previousErrorActionPreference = $ErrorActionPreference
-$ErrorActionPreference = "Continue"
-$blockedOutput = & powershell -ExecutionPolicy Bypass -File (Join-Path $Root "scripts\check-protocol-state.ps1") -ProjectRoot $BlockedRoot -Action writing 2>&1
-$blockedExit = $LASTEXITCODE
-$ErrorActionPreference = $previousErrorActionPreference
+$blocked = $false
+try {
+  & (Join-Path $Root "scripts\check-protocol-state.ps1") -ProjectRoot $BlockedRoot -Action writing | Out-Null
+} catch {
+  if ($_.Exception.Message -match "not explicitly allowed") {
+    $blocked = $true
+  } else {
+    throw
+  }
+}
 
-if ($blockedExit -eq 0 -or (($blockedOutput | Out-String) -notmatch "not explicitly allowed")) {
+if (-not $blocked) {
   throw "Expected protocol-state checker to block unauthorized writing action."
 }
 
@@ -41,7 +44,6 @@ Set-Content -LiteralPath (Join-Path $WritingRoot "claim_evidence_map.md") -Value
 Copy-Item -LiteralPath (Join-Path $Root "examples\section_contracts.example.md") -Destination (Join-Path $WritingRoot "section_contracts.md")
 Set-Content -LiteralPath (Join-Path $WritingRoot "result_audit.md") -Value "# Result Audit`n`nMetric, result, rank, delta, claim support, and evidence boundary are recorded here.`n"
 
-& powershell -ExecutionPolicy Bypass -File (Join-Path $Root "scripts\check-writing-gate.ps1") -ProjectRoot $WritingRoot -RequireResults | Out-Null
-if ($LASTEXITCODE -ne 0) { throw "Expected writing gate check to pass." }
+& (Join-Path $Root "scripts\check-writing-gate.ps1") -ProjectRoot $WritingRoot -RequireResults | Out-Null
 
 Write-Output "Gate checks completed."

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.6
+
+- Added machine-readable `experiment_license.yaml`, `result_ledger.jsonl`, and `handoff_manifest.yaml` examples.
+- Added hard checkers for experiment licenses, source-backed result ledgers, manuscript prose, role boundaries, and aggregate workflow supervision.
+- Strengthened protocol and writing gates so result claims require a result ledger, and final integration requires manuscript-prose and role-boundary checks.
+- Updated docs and tests for direct manuscript scanning, result recomputation, and Coordinator-only manuscript integration.
+
 ## 0.1.5
 
 - Added first-call Remote Audit Window Intake for controllable GPT review windows.

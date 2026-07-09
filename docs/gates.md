@@ -20,12 +20,16 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -Pro
 - Project Identity Gate
 - Phase Gate
 - Pre-registered Experiment License
+- Experiment License Schema Check
 - Failed-Result Optimization Gate
 - Ablation Kill Rule
 - Result Auditor Verdict
+- Result Ledger Recalculation Check
 - Defensive Writing Zero-Tolerance Gate
 - Writing Conformance Gate
 - Fail-Closed Writing Entry Gate
+- Manuscript Prose Scanner
+- Role Boundary Write Barrier
 - Workflow Supervision Audit
 - Optional External GPT Reviewer checkpoints
 
@@ -36,6 +40,30 @@ If the frozen paper type is `method_paper`, the autonomous workflow must not sil
 ## Failed Results
 
 Failed or mixed results are first optimization signals. Before writing failure prose, the workflow must diagnose root cause, propose repair candidates, and run the cheapest licensed repair test when repair is plausible.
+
+## Experiment License Schema
+
+Claim-affecting experiments must use `experiment_license.yaml`, not only a
+free-form Markdown note. Run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-experiment-license.ps1 -ProjectRoot .
+```
+
+The checker requires primary metric, metric direction, claim IDs, source paths,
+budget, success criterion, kill criterion, failure action, and simple controls.
+
+## Result Ledger
+
+`result_audit.md` is a human verdict. `result_ledger.jsonl` is the source-backed
+ledger used for machine checks. Run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-result-audit.ps1 -ProjectRoot .
+```
+
+The checker traces result IDs to source CSV rows, recomputes reported values,
+checks ranks and best markers, and blocks unsupported or contradicted claims.
 
 ## Defensive Writing
 
@@ -54,3 +82,18 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -Proje
 ```
 
 If the checker fails, the next action is to repair artifacts, not to write prose.
+
+## Manuscript Prose And Role Boundary
+
+Before final integration, scan the produced `.tex` files and enforce the
+Coordinator write barrier:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-manuscript-prose.ps1 -ProjectRoot .
+powershell -ExecutionPolicy Bypass -File .\scripts\check-role-boundaries.ps1 -ProjectRoot .
+```
+
+The prose scanner catches internal route names, leaked configuration text,
+defensive phrases, overclaiming phrases, and forbidden paper-type drift. The
+role-boundary checker blocks protected manuscript edits unless a Coordinator
+integration trace exists.

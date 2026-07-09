@@ -142,6 +142,12 @@ if ($RequireResults) {
   if ($ResultText -notmatch "(?i)metric|result|rank|delta|claim|support") {
     throw "result_audit.md must contain metric/result evidence and claim support boundaries."
   }
+
+  $ResultLedgerPath = Require-Artifact -Label "result ledger" -Names @("result_ledger.jsonl", "result-ledger.jsonl")
+  $ResultLedgerText = Get-Content -Raw -LiteralPath $ResultLedgerPath
+  if ($ResultLedgerText -notmatch "(?i)result_id" -or $ResultLedgerText -notmatch "(?i)source_path" -or $ResultLedgerText -notmatch "(?i)reported_value") {
+    throw "result_ledger.jsonl must contain result_id, source_path, and reported_value entries."
+  }
 }
 
 Write-Output "Writing gate check passed."
@@ -151,4 +157,5 @@ Write-Output "Evidence map: $EvidencePath"
 Write-Output "Section contracts: $ContractsPath"
 if ($RequireResults) {
   Write-Output "Result audit: $ResultAuditPath"
+  Write-Output "Result ledger: $ResultLedgerPath"
 }

@@ -189,6 +189,7 @@ switch ($ActionToken) {
   "result-claim" {
     Require-GatePass -GateStatusBody $GateStatus -Label "claim-evidence map"
     Require-GatePass -GateStatusBody $GateStatus -Label "result audit"
+    Require-GatePass -GateStatusBody $GateStatus -Label "result ledger"
     Require-GatePass -GateStatusBody $GateStatus -Label "writing gate"
   }
   "experiment" {
@@ -203,8 +204,11 @@ switch ($ActionToken) {
     Require-GatePass -GateStatusBody $GateStatus -Label "claim-evidence map"
     Require-GatePass -GateStatusBody $GateStatus -Label "section contracts"
     Require-GatePass -GateStatusBody $GateStatus -Label "result audit"
+    Require-GatePass -GateStatusBody $GateStatus -Label "result ledger"
     Require-GatePass -GateStatusBody $GateStatus -Label "writing gate"
+    Require-GatePass -GateStatusBody $GateStatus -Label "manuscript prose"
     Require-GatePass -GateStatusBody $GateStatus -Label "defensive writing"
+    Require-GatePass -GateStatusBody $GateStatus -Label "role boundaries"
   }
 }
 

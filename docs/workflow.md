@@ -20,9 +20,8 @@ This skill treats research-paper writing as a gated research workflow rather tha
 
 ## Key Principle
 
-Sub-agents expand search, create opposition, verify facts, and propose edits. The Research Coordinator owns the paper's main claim, terminology, evidence chain, and final manuscript integration.
+Sub-agents expand search, create opposition, verify facts, and propose edits. The Research Coordinator owns the paper's main claim, terminology, evidence chain, and final manuscript integration. In multi-agent runs, sub-agents write handoffs or patch proposals; protected manuscript edits require a Coordinator integration trace and must pass `scripts/check-role-boundaries.ps1`.
 
 ## Completion Rule
 
-A compiled PDF is not enough. The workflow is complete only when the relevant gates pass, no supervisor blocker remains, and the manuscript claims are supported by the evidence chain.
-
+A compiled PDF is not enough. The workflow is complete only when the relevant gates pass, no supervisor blocker remains, the result ledger traces reported numbers to source files, the manuscript prose scanner passes, and the manuscript claims are supported by the evidence chain.

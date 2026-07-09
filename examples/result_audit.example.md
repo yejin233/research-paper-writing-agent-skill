@@ -1,5 +1,6 @@
 # Result Audit
 
+- Result ledger: result_ledger.jsonl
 - Supported claims:
 - Partially supported claims:
 - Unsupported claims:
@@ -15,4 +16,3 @@
 - Cheapest repair test:
 - Route status: support / partial / optimize / reframe_required / kill
 - Required manuscript changes:
-

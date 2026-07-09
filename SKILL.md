@@ -34,7 +34,8 @@ Refresh `paper/protocol_state.md`:
 
 No manuscript prose may be written unless the writing gate has passed in the
 current protocol state. No result claim may be written unless `result_audit.md`
-exists and supports the claim. No phase may advance unless the latest Workflow
+and `result_ledger.jsonl` exist and the result-audit checker can trace reported
+values to trusted source files. No phase may advance unless the latest Workflow
 Supervision Audit is `pass`. If unsure, choose `block`, not `pass`.
 
 Before a gated action, run the protocol-state checker when available:
@@ -127,6 +128,10 @@ modes unless the project is large enough to require separate agents.
 - Keep the mandatory handoff files small and central: `paper/protocol_state.md`,
   `paper_claims.md`, `claim_evidence_map.md`, `literature_matrix.md`, and
   `result_audit.md`.
+- For multi-agent work, maintain `handoff_manifest.yaml` and a Coordinator
+  integration trace before protected manuscript files are modified. Sub-agents
+  write handoffs or patch proposals under `paper/handoffs/` or
+  `paper/patches/`; the Coordinator performs final `.tex` integration.
 - Generate review reports, figure audits, and revision plans only when needed.
 - A Runner reports commands, configuration, result paths, and failure states; it
   must not write "this demonstrates" conclusions.
@@ -292,11 +297,17 @@ The Workflow Supervisor must check:
 - `route_status` is consistent across `paper_claims.md`,
   `claim_evidence_map.md`, `result_audit.md`, status notes, and manuscript
   prose;
+- `experiment_license.yaml` passes the experiment-license checker before any
+  claim-affecting run;
+- `result_ledger.jsonl` passes the result-audit checker before result claims;
 - failed results entered optimization before manuscript conclusions;
 - method-paper routes were not converted into boundary studies;
-- defensive-writing and planned-vs-produced audits were run before integration;
+- defensive-writing, manuscript-prose, and planned-vs-produced audits were run
+  before integration;
 - sub-agents stayed within permissions and did not directly modify the main
   manuscript unless explicitly authorized;
+- the role-boundary checker did not find protected manuscript edits without a
+  Coordinator integration trace;
 - internal workflow traces, stale route artifacts, and old workspaces were not
   used as current evidence.
 
@@ -442,28 +453,19 @@ Before running any experiment that may affect paper claims, run:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action experiment
+powershell -ExecutionPolicy Bypass -File .\scripts\check-experiment-license.ps1 -ProjectRoot .
 ```
 
-Every experiment that may influence paper claims must declare:
+Every experiment that may influence paper claims must be licensed in
+`experiment_license.yaml`, not only described in prose. Use
+`examples/experiment_license.example.yaml` as the schema. It must declare:
 
-```markdown
-## Experiment License
-
-- Experiment:
-- Claim tested:
-- Primary metric(s):
-- Secondary metric(s):
-- Dataset/task scope:
-- Compared baseline or variant:
-- Expected direction:
-- Minimum practical effect size:
-- Success criterion:
-- Partial-support criterion:
-- Kill/reframe criterion:
-- Cost/time budget:
-- Test exposure: exploratory / confirmatory / frozen-policy rerun
-- Paper decision affected:
-```
+- `experiment_id`, `route_id`, and `claim_ids`;
+- `primary_metric` and `metric_direction`;
+- datasets, baselines, and simple controls;
+- trusted `source_paths` and expected outputs;
+- budget, success criterion, partial-support policy, kill criterion, failure
+  action, and paper decision affected.
 
 If the kill/reframe criterion is empty, the experiment is not licensed. If
 failure would not change any claim, do not run the experiment as claim support.
@@ -531,9 +533,18 @@ The Result Auditor must work from fresh context when possible: paper claims,
 experiment licenses, tables, raw result files, and figure/table drafts, not the
 Coordinator's preferred narrative. Its handoff must include:
 
+Result facts must also be recorded in `result_ledger.jsonl`. `result_audit.md`
+is the human-readable verdict; `result_ledger.jsonl` is the machine-checkable
+source ledger. Before writing result claims, run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-result-audit.ps1 -ProjectRoot .
+```
+
 ```markdown
 ## Result Audit
 
+- Result ledger: result_ledger.jsonl
 - Supported claims:
 - Partially supported claims:
 - Unsupported claims:
@@ -638,10 +649,18 @@ draft prose. Do not rationalize that a later audit will fix missing contracts.
 Violating the gate by writing prose first is a workflow failure.
 
 At writing-stage setup, ensure the paper project has project-local copies of
-`scripts/check-protocol-state.ps1` and `scripts/check-writing-gate.ps1` copied
-from this skill's `scripts/` directory. If either checker is missing, create or
-copy it before drafting prose. Then run both checks before writing, rewriting,
-polishing, or integrating manuscript prose:
+these scripts copied from this skill's `scripts/` directory:
+
+- `check-protocol-state.ps1`
+- `check-writing-gate.ps1`
+- `check-result-audit.ps1`
+- `check-manuscript-prose.ps1`
+- `check-role-boundaries.ps1`
+- `check-workflow-supervision.ps1`
+
+If any required checker is missing, create or copy it before drafting prose.
+Then run the relevant checks before writing, rewriting, polishing, or
+integrating manuscript prose:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action writing
@@ -654,6 +673,15 @@ sentences, Introduction contribution claims, or Conclusion claims:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action result-claim
 powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -ProjectRoot . -RequireResults
+powershell -ExecutionPolicy Bypass -File .\scripts\check-result-audit.ps1 -ProjectRoot .
+```
+
+After drafting or before final integration, scan the actual manuscript text and
+role boundary:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-manuscript-prose.ps1 -ProjectRoot .
+powershell -ExecutionPolicy Bypass -File .\scripts\check-role-boundaries.ps1 -ProjectRoot .
 ```
 
 Create `section_contracts.md` before drafting or rewriting:
@@ -743,18 +771,18 @@ state file is `paper/protocol_state.md` or another path accepted by
 | --- | --- | --- | --- |
 | 0 - Setup | Identify repository, trusted workspace, paper intent, and evidence roots. | `examples/protocol_state.example.md` | `paper/protocol_state.md`; run `scripts/check-protocol-state.ps1 -Action general`. |
 | 1 - Literature and contribution boundary | Search, acquire, read, classify, and use literature to constrain the route. | `references/literature-workflow.md` | `literature_matrix.md`, paper notes, route-killer handoff, citation status. |
-| 2 - Experiment design | Map claims to licensed experiments, simple controls, kill criteria, and method cleanliness. | `references/experiment-workflow.md` | `paper_claims.md`, `claim_evidence_map.md`, Experiment License; run protocol gate with `-Action experiment`. |
+| 2 - Experiment design | Map claims to licensed experiments, simple controls, kill criteria, and method cleanliness. | `references/experiment-workflow.md` | `paper_claims.md`, `claim_evidence_map.md`, `experiment_license.yaml`; run protocol and experiment-license gates. |
 | 3 - Execution and route decision | Run only licensed experiments; audit failures, ablations, and route status. | `references/experiment-workflow.md` | result paths, experiment journal, failure diagnosis, route kill decision. |
-| 4 - Result analysis and expansion | Aggregate results, audit claim support, plan only claim-serving expansions. | `references/experiment-workflow.md` | `result_audit.md`, expansion plan, updated `claim_evidence_map.md`. |
-| 5 - Evidence-grounded drafting | Draft only sections whose contracts and reference-read records are complete. | `references/section-writing/*.md` as routed below | `section_contracts.md`, `writing_gate_report.md`; run writing and protocol gates. |
-| 6 - Review and revision | Simulate reviewers, verify claims, audit figures/tables, and prioritize fixes. | `references/review-workflow.md` | reviewer handoffs, claim verification, figure/table audit, revision trace. |
+| 4 - Result analysis and expansion | Aggregate results, audit claim support, plan only claim-serving expansions. | `references/experiment-workflow.md` | `result_audit.md`, `result_ledger.jsonl`, expansion plan, updated `claim_evidence_map.md`; run result-audit checker. |
+| 5 - Evidence-grounded drafting | Draft only sections whose contracts and reference-read records are complete. | `references/section-writing/*.md` as routed below | `section_contracts.md`, `writing_gate_report.md`; run writing, result, manuscript-prose, role-boundary, and protocol gates as applicable. |
+| 6 - Review and revision | Simulate reviewers, verify claims, audit figures/tables, and prioritize fixes. | `references/review-workflow.md` | reviewer handoffs, claim verification, figure/table audit, revision trace, workflow supervision audit. |
 
 ### Required Reference Routing
 
 | Action | Must read before action | Must record in | Gate before action |
 | --- | --- | --- | --- |
 | Literature search, related-work boundary, idea generation | `references/literature-workflow.md` | `literature_matrix.md` and `paper/protocol_state.md` | protocol state general check |
-| Experiment planning, route kill, failed-result repair, result analysis | `references/experiment-workflow.md` | Experiment License, failure diagnosis, `result_audit.md`, or `claim_evidence_map.md` | protocol state experiment/result check |
+| Experiment planning, route kill, failed-result repair, result analysis | `references/experiment-workflow.md` | `experiment_license.yaml`, failure diagnosis, `result_audit.md`, `result_ledger.jsonl`, or `claim_evidence_map.md` | protocol state, experiment-license, or result-audit check |
 | General drafting, title, abstract, Figure 1, limitations, conclusion, appendix | `references/section-writing/general.md` | `section_contracts.md` | `scripts/check-writing-gate.ps1` |
 | Introduction drafting or rewriting | `references/section-writing/introduction.md` | `section_contracts.md` Introduction contract | `scripts/check-writing-gate.ps1 -Sections Introduction` |
 | Methods or Methodology drafting or rewriting | `references/section-writing/methodology.md` | `section_contracts.md` Methods contract | `scripts/check-writing-gate.ps1 -Sections Methods` |
@@ -805,7 +833,7 @@ Before searching, reading, citing, or using papers for route design, read `refer
 
 ### Phase 2: Experiment Design
 
-Before designing or launching experiments, read `references/experiment-workflow.md`. Every experiment must have an Experiment License with claim tested, primary metric, simple control, success criterion, kill/reframe criterion, expected cost, and paper decision affected. If failure has no consequence, redesign the experiment.
+Before designing or launching experiments, read `references/experiment-workflow.md`. Every experiment must have `experiment_license.yaml` with claim tested, primary metric, simple control, trusted source paths, success criterion, kill/reframe criterion, expected cost, and paper decision affected. Run `scripts/check-experiment-license.ps1` before launch. If failure has no consequence, redesign the experiment.
 
 ### Phase 3: Experiment Execution and Monitoring
 
@@ -813,7 +841,7 @@ Run only licensed experiments. Runners report commands, configs, result paths, a
 
 ### Phase 4: Result Analysis
 
-Before any result claim, update `claim_evidence_map.md` and `result_audit.md`. Negative or mixed ablations trigger failure diagnosis, optimization, reframe, redesign, or route kill; they must not be converted into defensive prose.
+Before any result claim, update `claim_evidence_map.md`, `result_audit.md`, and `result_ledger.jsonl`, then run `scripts/check-result-audit.ps1`. Negative or mixed ablations trigger failure diagnosis, optimization, reframe, redesign, or route kill; they must not be converted into defensive prose.
 
 ### Phase 5: Paper Drafting
 
@@ -847,6 +875,10 @@ Before claiming the skill workflow or a manuscript action is complete, run the r
 ```powershell
 powershell -ExecutionPolicy Bypass -File scripts/check-protocol-state.ps1 -ProjectRoot . -Action writing
 powershell -ExecutionPolicy Bypass -File scripts/check-writing-gate.ps1 -ProjectRoot . -Sections Introduction,Methods,Experiments -RequireResults
+powershell -ExecutionPolicy Bypass -File scripts/check-result-audit.ps1 -ProjectRoot .
+powershell -ExecutionPolicy Bypass -File scripts/check-manuscript-prose.ps1 -ProjectRoot .
+powershell -ExecutionPolicy Bypass -File scripts/check-role-boundaries.ps1 -ProjectRoot .
+powershell -ExecutionPolicy Bypass -File scripts/check-workflow-supervision.ps1 -ProjectRoot . -RequireResults
 powershell -ExecutionPolicy Bypass -File scripts/check-reference-routes.ps1 -ProjectRoot .
 ```
 

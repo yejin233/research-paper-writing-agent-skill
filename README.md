@@ -9,6 +9,11 @@ This skill is designed for projects that need more than prose polishing. It trea
 - Multi-agent roles with strict permission boundaries.
 - Manuscript intent and frozen paper-type gates.
 - Literature, route-killer, experiment-license, result-audit, and workflow-supervision gates.
+- Machine-readable `experiment_license.yaml` and `result_ledger.jsonl` interfaces
+  for source-backed experiment and result checks.
+- Direct manuscript-prose scanning for internal route traces, defensive writing,
+  leaked configuration text, and paper-type drift.
+- Role-boundary write barrier for protected manuscript files.
 - Failed-result optimization before failure prose.
 - Defensive-writing zero-tolerance checks.
 - Section contracts and planned-vs-produced writing audits.
@@ -56,6 +61,9 @@ Use the examples in `examples/` as starting points:
 - `paper_intent.example.md`
 - `protocol_state.example.md`
 - `external_gpt_reviewer.example.md`
+- `experiment_license.example.yaml`
+- `result_ledger.example.jsonl`
+- `handoff_manifest.example.yaml`
 - `result_audit.example.md`
 - `section_contracts.example.md`
 - `workflow_supervision_audit.example.md`
@@ -86,6 +94,7 @@ Run the local release check before publishing or opening a pull request:
 powershell -ExecutionPolicy Bypass -File .\tests\check-open-source.ps1
 powershell -ExecutionPolicy Bypass -File .\tests\check-gates.ps1
 powershell -ExecutionPolicy Bypass -File .\scripts\check-reference-routes.ps1 -ProjectRoot .
+powershell -ExecutionPolicy Bypass -File .\scripts\check-workflow-supervision.ps1 -ProjectRoot .
 ```
 
 For writing-stage projects, run the fail-closed writing gate checker inside the
@@ -94,6 +103,8 @@ paper project before drafting or integrating manuscript prose:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action writing
 powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -ProjectRoot .
+powershell -ExecutionPolicy Bypass -File .\scripts\check-manuscript-prose.ps1 -ProjectRoot .
+powershell -ExecutionPolicy Bypass -File .\scripts\check-role-boundaries.ps1 -ProjectRoot .
 ```
 
 ## License

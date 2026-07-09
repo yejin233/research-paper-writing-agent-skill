@@ -46,9 +46,12 @@
 - claim-evidence map: pass
 - section contracts: pass
 - result audit: pass
+- result ledger: pass
 - writing gate: pass
+- manuscript prose: pass
 - experiment license: pass
 - defensive writing: pass
+- role boundaries: pass
 - workflow supervision: pass
 
 ## Last supervision

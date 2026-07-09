@@ -13,6 +13,7 @@ The skill uses gates as blocking constraints. If a gate artifact is missing, the
 - Result Auditor Verdict
 - Defensive Writing Zero-Tolerance Gate
 - Writing Conformance Gate
+- Fail-Closed Writing Entry Gate
 - Workflow Supervision Audit
 - Optional External GPT Reviewer checkpoints
 
@@ -28,3 +29,15 @@ Failed or mixed results are first optimization signals. Before writing failure p
 
 Defensive prose blocks final integration. Replace protective language with direct ranks, deltas, affected metrics, and bounded claims. If evidence is weak, delete the claim or return to optimization.
 
+## Writing Entry
+
+Writing is fail-closed. Before drafting, rewriting, polishing, or integrating manuscript prose, the workflow must have frozen paper intent, claim-evidence mapping, section contracts, and trusted evidence paths. Experiments/Results and result-bearing Abstract/Introduction/Conclusion sentences additionally require `result_audit.md`.
+
+At writing-stage setup, copy the skill-provided checker into the paper project's
+`scripts/` directory. Then run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -ProjectRoot .
+```
+
+If the checker fails, the next action is to repair artifacts, not to write prose.

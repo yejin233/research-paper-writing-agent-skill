@@ -47,10 +47,12 @@ Use the examples in `examples/` as starting points:
 - `paper_intent.example.md`
 - `external_gpt_reviewer.example.md`
 - `result_audit.example.md`
+- `section_contracts.example.md`
 - `workflow_supervision_audit.example.md`
 - `failure_diagnosis.example.md`
 - `section_contract.example.md`
 - `defensive_writing_audit.example.md`
+- `writing_gate_report.example.md`
 
 ## External GPT Review
 
@@ -72,6 +74,13 @@ Run the local release check before publishing or opening a pull request:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\tests\check-open-source.ps1
+```
+
+For writing-stage projects, run the fail-closed writing gate checker inside the
+paper project before drafting or integrating manuscript prose:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -ProjectRoot .
 ```
 
 ## License

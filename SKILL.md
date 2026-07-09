@@ -573,7 +573,46 @@ audited paragraph by paragraph before integration. This gate prevents the writer
 from inventing a new narrative, leaking internal route language, or drifting
 from the user's writing skill.
 
-Create section contracts before drafting or rewriting:
+**Fail-Closed Writing Entry Gate**:
+Before generating, rewriting, polishing, or integrating any manuscript prose,
+the workflow must pass a writing entry gate. If the required artifacts are
+missing, stale, or inconsistent, stop manuscript writing. The only allowed work
+is to create or repair the missing gate artifacts.
+
+Manuscript prose includes `.tex`, `.md`, `.docx`, Overleaf text, abstract text,
+section drafts, captions, contribution bullets, and conclusion paragraphs.
+
+Required before any manuscript prose is written or modified:
+
+- frozen paper intent or `paper_claims.md`;
+- `claim_evidence_map.md` with each allowed claim tied to concrete evidence or
+  explicitly marked as hypothesis / unsupported;
+- `section_contracts.md` containing a contract for every target section;
+- trusted source paths for experiments, figures, tables, and literature;
+- `result_audit.md` before writing Experiments, Results, Abstract result
+  sentences, Introduction contribution claims, or Conclusion claims;
+- `writing_gate_report.md` before declaring writing complete.
+
+If any item is missing, the correct next action is to write the artifact, not to
+draft prose. Do not rationalize that a later audit will fix missing contracts.
+Violating the gate by writing prose first is a workflow failure.
+
+At writing-stage setup, ensure the paper project has a project-local copy of
+`scripts/check-writing-gate.ps1` copied from this skill's `scripts/` directory.
+If the checker is missing, create or copy it before drafting prose. Then run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -ProjectRoot .
+```
+
+Use `-RequireResults` when writing Experiments, Results, Abstract result
+sentences, Introduction contribution claims, or Conclusion claims:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -ProjectRoot . -RequireResults
+```
+
+Create `section_contracts.md` before drafting or rewriting:
 
 ```markdown
 ## Section Contract
@@ -608,9 +647,36 @@ After drafting, run a planned-vs-produced audit:
 If any paragraph fails the contract, rewrite that paragraph before final
 integration. Do not rely on a later polish pass to fix structural drift.
 
+**Writing gate loop**:
+
+1. Identify the target section(s).
+2. Freeze or repair `paper_claims.md` and `claim_evidence_map.md`.
+3. Create or update `section_contracts.md`.
+4. Run `scripts/check-writing-gate.ps1`.
+5. Draft only paragraphs licensed by the corresponding section contract.
+6. Write `writing_gate_report.md` with the planned-vs-produced audit.
+7. Rewrite failing paragraphs before integration.
+8. Report the gate status in the final answer.
+
+**Stop conditions**:
+
+- target section has no contract;
+- contract lacks purpose, required content moves, forbidden claims, or evidence
+  links;
+- claim appears in prose but not in `claim_evidence_map.md`;
+- result sentence appears without `result_audit.md`;
+- section uses defensive language to protect weak evidence;
+- section introduces a new paper type, method name, terminology, or contribution
+  not approved in the frozen intent;
+- writer says "I will audit later" after drafting prose.
+
 ### Proactivity and Collaboration
 
-**Default: Be proactive. Draft first, ask with the draft.**
+**Default after gates pass: Be proactive. Draft first, ask with the draft.**
+
+Autonomy begins only after the Fail-Closed Writing Entry Gate passes. Before the
+gate passes, being proactive means creating or repairing the required artifacts,
+not drafting manuscript prose.
 
 | Confidence Level | Action |
 |-----------------|--------|

@@ -15,17 +15,66 @@ Copy-Item -LiteralPath (Join-Path $Root "examples\protocol_state.example.md") -D
 $BlockedRoot = Join-Path $env:TEMP "research-paper-writing-agent-gate-tests-blocked"
 Remove-Item -LiteralPath $BlockedRoot -Recurse -Force -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Force -Path (Join-Path $BlockedRoot "paper") | Out-Null
-Copy-Item -LiteralPath (Join-Path $Root "examples\protocol_state.example.md") -Destination (Join-Path $BlockedRoot "paper\protocol_state.md")
 
 $BlockedStatePath = Join-Path $BlockedRoot "paper\protocol_state.md"
-(Get-Content -Raw -LiteralPath $BlockedStatePath) -replace "(?m)^- writing$", "- gate-repair" |
-  Set-Content -LiteralPath $BlockedStatePath
+@'
+# Protocol State
+
+## Current phase
+
+- phase: Phase 5 - Evidence-grounded drafting
+
+## Frozen identity
+
+- paper type: method_paper
+- thesis: The method addresses the approved modeling gap with the frozen mechanism.
+- core method claim: Claim C1 from `claim_evidence_map.md`.
+- forbidden conversions: boundary_study, benchmark, survey, position, negative_result unless the user explicitly approves.
+
+## Allowed next actions
+
+- gate-repair
+- workflow-supervision
+
+## Blocked actions
+
+- writing
+- paper-type-conversion
+- unsupported-claim-writing
+
+## Required artifacts before next action
+
+- paper_claims.md
+- claim_evidence_map.md
+- section_contracts.md
+
+## Gate status
+
+- manuscript intent: pass
+- claim-evidence map: pass
+- section contracts: pass
+- result audit: pass
+- writing gate: pass
+- experiment license: pass
+- defensive writing: pass
+- workflow supervision: pass
+
+## Last supervision
+
+- decision: pass
+- unresolved blockers: none
+
+## Drift risk
+
+- risk: high
+- reason: Unauthorized writing action should be blocked.
+'@ | Set-Content -LiteralPath $BlockedStatePath
 
 $blocked = $false
 try {
   & (Join-Path $Root "scripts\check-protocol-state.ps1") -ProjectRoot $BlockedRoot -Action writing | Out-Null
 } catch {
-  if ($_.Exception.Message -match "not explicitly allowed") {
+  if ($_.Exception.Message -match "not explicitly allowed|explicitly blocked") {
     $blocked = $true
   } else {
     throw

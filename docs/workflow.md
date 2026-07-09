@@ -5,18 +5,19 @@ This skill treats research-paper writing as a gated research workflow rather tha
 ## Core Flow
 
 1. Project identity and manuscript intent.
-2. Literature review and close-work mapping.
-3. Skeptic / Route Killer review.
-4. Experiment license with success and kill criteria.
-5. Execution and factual result collection.
-6. Result audit and claim-evidence mapping.
-7. Failed-result optimization if evidence is weak or contradictory.
-8. Section contracts before drafting.
-9. Planned-vs-produced writing audit after drafting.
-10. Defensive-writing audit.
-11. Workflow supervision.
-12. Reviewer / Meta-Reviewer panel.
-13. Final manuscript integration.
+2. Installed skill freshness check.
+3. Literature review and close-work mapping.
+4. Skeptic / Route Killer review.
+5. Experiment license with success and kill criteria.
+6. Execution and factual result collection.
+7. Result audit and claim-evidence mapping.
+8. Failed-result optimization if evidence is weak or contradictory.
+9. Section contracts before drafting.
+10. Planned-vs-produced writing audit after drafting.
+11. Defensive-writing audit.
+12. Workflow supervision.
+13. Reviewer / Meta-Reviewer panel.
+14. Final manuscript integration.
 
 ## Key Principle
 

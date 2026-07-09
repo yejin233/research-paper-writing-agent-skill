@@ -23,6 +23,8 @@ This skill is designed for projects that need more than prose polishing. It trea
   available, the workflow records `internal-only` and uses internal audits.
 - Optional external GPT reviewer prompts for additional quality assessment when
   a remote audit window is enabled.
+- Installed-skill freshness checks against the latest GitHub version manifest,
+  with optional detailed branch-head comparison.
 - Venue-oriented support for NeurIPS, ICML, ICLR, ACL, AAAI, COLM, and similar venues.
 
 ## Repository Layout
@@ -30,6 +32,7 @@ This skill is designed for projects that need more than prose polishing. It trea
 ```text
 .
 |-- SKILL.md
+|-- skill-version.json
 |-- references/
 |   |-- literature-workflow.md
 |   |-- experiment-workflow.md
@@ -64,6 +67,7 @@ Use the examples in `examples/` as starting points:
 - `experiment_license.example.yaml`
 - `result_ledger.example.jsonl`
 - `handoff_manifest.example.yaml`
+- `skill_update_status.example.md`
 - `result_audit.example.md`
 - `section_contracts.example.md`
 - `workflow_supervision_audit.example.md`
@@ -77,6 +81,21 @@ Use the examples in `examples/` as starting points:
 External GPT review is optional. If enabled, the skill asks the external GPT page to evaluate quality and give complete actionable suggestions at high-risk checkpoints. The external reviewer is advisory only: it must not directly edit the manuscript, inspect credentials, override local evidence, or replace the Workflow Supervisor.
 
 See `docs/external-gpt-review.md`.
+
+## Skill Freshness Check
+
+From the skill root, compare the installed skill against the latest GitHub
+manifest:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-skill-update.ps1
+```
+
+For an explicit branch-head comparison:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-skill-update.ps1 -Detailed
+```
 
 ## Important Safety Notes
 
@@ -93,6 +112,7 @@ Run the local release check before publishing or opening a pull request:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\tests\check-open-source.ps1
 powershell -ExecutionPolicy Bypass -File .\tests\check-gates.ps1
+powershell -ExecutionPolicy Bypass -File .\tests\check-skill-update.ps1
 powershell -ExecutionPolicy Bypass -File .\scripts\check-reference-routes.ps1 -ProjectRoot .
 powershell -ExecutionPolicy Bypass -File .\scripts\check-workflow-supervision.ps1 -ProjectRoot .
 ```

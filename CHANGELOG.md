@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.7
+
+- Added `skill-version.json` and a non-blocking installed-skill freshness check against the latest GitHub manifest.
+- Added `scripts/check-skill-update.ps1` with optional detailed branch-head comparison and Markdown status output.
+- Added `examples/skill_update_status.example.md` and tests for behind, up-to-date, unavailable, and unknown-local-version states.
+- Updated `SKILL.md`, `README.md`, and workflow docs so first-call startup may recommend updating an out-of-date installed skill.
+
 ## 0.1.6
 
 - Added machine-readable `experiment_license.yaml`, `result_ledger.jsonl`, and `handoff_manifest.yaml` examples.

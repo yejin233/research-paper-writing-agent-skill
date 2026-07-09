@@ -4,6 +4,7 @@ $Root = Split-Path -Parent $PSScriptRoot
 
 $Required = @(
   "SKILL.md",
+  "skill-version.json",
   "README.md",
   "LICENSE",
   "examples/paper_intent.example.md",
@@ -12,6 +13,7 @@ $Required = @(
   "examples/experiment_license.example.yaml",
   "examples/result_ledger.example.jsonl",
   "examples/handoff_manifest.example.yaml",
+  "examples/skill_update_status.example.md",
   "examples/result_audit.example.md",
   "examples/section_contracts.example.md",
   "examples/workflow_supervision_audit.example.md",
@@ -19,6 +21,8 @@ $Required = @(
   "docs/gates.md",
   "docs/external-gpt-review.md",
   "tests/check-gates.ps1",
+  "tests/check-skill-update.ps1",
+  "scripts/check-skill-update.ps1",
   "scripts/check-experiment-license.ps1",
   "scripts/check-result-audit.ps1",
   "scripts/check-manuscript-prose.ps1",
@@ -49,6 +53,7 @@ $RequiredAnchors = @(
   "name: research-paper-writing-agent",
   "External GPT Reviewer Role",
   "Remote Audit Window Intake",
+  "Installed Skill Update Check",
   "Workflow Supervisor Role",
   "Runtime Protocol Anchor",
   "Failed-Result Optimization Gate",

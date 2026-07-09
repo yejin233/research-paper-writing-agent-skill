@@ -1,0 +1,9 @@
+{
+  "skill_name": "research-paper-writing-agent",
+  "repo_url": "https://github.com/yejin233/research-paper-writing-agent-skill",
+  "default_branch": "main",
+  "manifest_path": "skill-version.json",
+  "version": "0.1.7",
+  "released_at": "2026-07-09",
+  "release_notes_path": "CHANGELOG.md"
+}

@@ -2,6 +2,20 @@
 
 The skill uses gates as blocking constraints. If a gate artifact is missing, the workflow stops and creates or repairs the artifact before continuing.
 
+## Startup Hygiene
+
+The installed skill may drift behind the latest GitHub version. This is not a
+blocking gate, but it should be checked at the first call of a long-running
+workflow when the skill root is available:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-skill-update.ps1
+```
+
+If the status is `warn`, recommend updating the installed skill before a
+long-running autonomous workflow. If the status is `unavailable`, continue and
+note that the latest published version could not be verified.
+
 ## Runtime Protocol Anchor
 
 Long-running workflows must maintain `paper/protocol_state.md`. Before any gated action, the Coordinator checks current phase, allowed next actions, blocked actions, external audit route, required artifacts, gate status, last supervision, and drift risk. If the intended action is not explicitly allowed, or if the first-call external audit route is unanswered, the next action is protocol repair.

@@ -45,6 +45,7 @@ Then restart Codex or reload skills.
 Use the examples in `examples/` as starting points:
 
 - `paper_intent.example.md`
+- `protocol_state.example.md`
 - `external_gpt_reviewer.example.md`
 - `result_audit.example.md`
 - `section_contracts.example.md`
@@ -74,12 +75,14 @@ Run the local release check before publishing or opening a pull request:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\tests\check-open-source.ps1
+powershell -ExecutionPolicy Bypass -File .\tests\check-gates.ps1
 ```
 
 For writing-stage projects, run the fail-closed writing gate checker inside the
 paper project before drafting or integrating manuscript prose:
 
 ```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action writing
 powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -ProjectRoot .
 ```
 

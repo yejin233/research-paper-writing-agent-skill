@@ -7,6 +7,7 @@ $Required = @(
   "README.md",
   "LICENSE",
   "examples/paper_intent.example.md",
+  "examples/protocol_state.example.md",
   "examples/external_gpt_reviewer.example.md",
   "examples/result_audit.example.md",
   "examples/section_contracts.example.md",
@@ -14,7 +15,9 @@ $Required = @(
   "docs/workflow.md",
   "docs/gates.md",
   "docs/external-gpt-review.md",
-  "scripts/check-writing-gate.ps1"
+  "tests/check-gates.ps1",
+  "scripts/check-writing-gate.ps1",
+  "scripts/check-protocol-state.ps1"
 )
 
 foreach ($rel in $Required) {
@@ -29,6 +32,7 @@ $RequiredAnchors = @(
   "name: research-paper-writing-agent",
   "External GPT Reviewer Role",
   "Workflow Supervisor Role",
+  "Runtime Protocol Anchor",
   "Failed-Result Optimization Gate",
   "Defensive Writing Zero-Tolerance Gate",
   "Writing Conformance Gate",

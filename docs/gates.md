@@ -2,9 +2,20 @@
 
 The skill uses gates as blocking constraints. If a gate artifact is missing, the workflow stops and creates or repairs the artifact before continuing.
 
+## Runtime Protocol Anchor
+
+Long-running workflows must maintain `paper/protocol_state.md`. Before any gated action, the Coordinator checks current phase, allowed next actions, blocked actions, required artifacts, gate status, last supervision, and drift risk. If the intended action is not explicitly allowed, the next action is protocol repair.
+
+Run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action writing
+```
+
 ## Major Gates
 
 - Manuscript Intent Gate
+- Runtime Protocol Anchor
 - Project Identity Gate
 - Phase Gate
 - Pre-registered Experiment License
@@ -33,10 +44,11 @@ Defensive prose blocks final integration. Replace protective language with direc
 
 Writing is fail-closed. Before drafting, rewriting, polishing, or integrating manuscript prose, the workflow must have frozen paper intent, claim-evidence mapping, section contracts, and trusted evidence paths. Experiments/Results and result-bearing Abstract/Introduction/Conclusion sentences additionally require `result_audit.md`.
 
-At writing-stage setup, copy the skill-provided checker into the paper project's
+At writing-stage setup, copy the skill-provided checkers into the paper project's
 `scripts/` directory. Then run:
 
 ```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action writing
 powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -ProjectRoot .
 ```
 

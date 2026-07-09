@@ -1,6 +1,6 @@
 ---
 name: research-paper-writing-agent
-description: "Use when writing, revising, analyzing, or preparing ML/AI research papers with multi-agent orchestration, structured handoffs, skeptical route review, result auditing, figure/table auditing, reviewer panels, and strict main-agent manuscript integration for NeurIPS, ICML, ICLR, ACL, AAAI, COLM, or similar venues."
+description: "Use when writing, revising, analyzing, or preparing ML/AI research papers, especially long-running automated research workflows where manuscript constraints, evidence gates, result audits, reviewer simulation, or protocol-drift prevention matter for NeurIPS, ICML, ICLR, ACL, AAAI, COLM, or similar venues."
 license: MIT
 metadata:
   title: Research Paper Writing Agent Pipeline
@@ -17,6 +17,41 @@ metadata:
 ---
 
 # Research Paper Writing Agent Pipeline
+
+## Runtime Protocol Anchor
+
+This skill is a state-controlled workflow, not a prose guideline.
+
+Before any non-trivial action, the Coordinator must identify:
+
+1. current phase;
+2. current allowed next actions;
+3. required gate artifacts;
+4. blocked actions;
+5. whether the intended action is allowed.
+
+If the intended action is not explicitly allowed by the current protocol state,
+stop and repair the protocol state instead.
+
+Refresh `paper/protocol_state.md`:
+
+- at workflow startup;
+- before writing or modifying manuscript prose;
+- before running experiments that may affect claims;
+- before integrating results into claims;
+- before declaring a phase complete;
+- after every 3 tool-use batches in a long-running task.
+
+No manuscript prose may be written unless the writing gate has passed in the
+current protocol state. No result claim may be written unless `result_audit.md`
+exists and supports the claim. No phase may advance unless the latest Workflow
+Supervision Audit is `pass`. If unsure, choose `block`, not `pass`.
+
+Before a gated action, run the protocol-state checker when available:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action writing
+```
 
 End-to-end pipeline for producing publication-ready ML/AI research papers targeting **NeurIPS, ICML, ICLR, ACL, AAAI, and COLM**. This skill covers the full research lifecycle: experiment design, execution, monitoring, analysis, paper writing, review, revision, and submission.
 
@@ -134,8 +169,9 @@ modes unless the project is large enough to require separate agents.
 - final `.tex` merge.
 
 **Handoff discipline**:
-- Keep the mandatory handoff files small and central: `paper_claims.md`,
-  `claim_evidence_map.md`, `literature_matrix.md`, and `result_audit.md`.
+- Keep the mandatory handoff files small and central: `paper/protocol_state.md`,
+  `paper_claims.md`, `claim_evidence_map.md`, `literature_matrix.md`, and
+  `result_audit.md`.
 - Generate review reports, figure audits, and revision plans only when needed.
 - A Runner reports commands, configuration, result paths, and failure states; it
   must not write "this demonstrates" conclusions.
@@ -266,7 +302,15 @@ state is allowed to advance. It is not a scientific reviewer, result analyst,
 writer, or coordinator. Its job is to catch process failure before the paper is
 drafted, finalized, or declared complete.
 
+The Workflow Supervisor is also the long-running task heartbeat. It must refresh
+or verify `paper/protocol_state.md` at workflow startup, after every 3 tool-use
+batches, before any phase transition, before writing or modifying manuscript
+prose, before running claim-affecting experiments, before integrating results
+into claims, and before declaring the workflow complete.
+
 The Workflow Supervisor must check:
+- `paper/protocol_state.md` exists and declares current phase, allowed next
+  actions, blocked actions, gate status, last supervision, and drift risk;
 - manuscript intent and frozen paper type are present and unchanged;
 - if external GPT review is enabled, required checkpoint reviews were submitted
   and preserved as handoffs;
@@ -289,6 +333,10 @@ The Workflow Supervisor handoff must use this schema:
 
 - Phase audited:
 - Decision: pass / block
+- Protocol state status:
+- Allowed next actions:
+- Blocked actions:
+- Drift risk:
 - Missing gate artifacts:
 - Inconsistent statuses:
 - Forbidden paper-type conversion:
@@ -398,12 +446,24 @@ missing. Do not write Abstract, Introduction, or Conclusion claims that are not
 present in `claim_evidence_map.md`. Do not draft or finalize a manuscript whose
 paper type differs from the frozen manuscript intent.
 
-Before marking any phase complete, run or refresh the Workflow Supervision
-Audit. A `block` decision overrides Coordinator preference, Reviewer advice,
-and local manuscript quality. Do not mark the autonomous workflow complete while
-any supervisor blocker remains open.
+Before marking any phase complete, run the protocol-state checker and refresh
+the Workflow Supervision Audit:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action phase-transition
+```
+
+A `block` decision overrides Coordinator preference, Reviewer advice, and local
+manuscript quality. Do not mark the autonomous workflow complete while any
+supervisor blocker remains open.
 
 **Pre-registered Experiment License**:
+Before running any experiment that may affect paper claims, run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action experiment
+```
+
 Every experiment that may influence paper claims must declare:
 
 ```markdown
@@ -597,11 +657,14 @@ If any item is missing, the correct next action is to write the artifact, not to
 draft prose. Do not rationalize that a later audit will fix missing contracts.
 Violating the gate by writing prose first is a workflow failure.
 
-At writing-stage setup, ensure the paper project has a project-local copy of
-`scripts/check-writing-gate.ps1` copied from this skill's `scripts/` directory.
-If the checker is missing, create or copy it before drafting prose. Then run:
+At writing-stage setup, ensure the paper project has project-local copies of
+`scripts/check-protocol-state.ps1` and `scripts/check-writing-gate.ps1` copied
+from this skill's `scripts/` directory. If either checker is missing, create or
+copy it before drafting prose. Then run both checks before writing, rewriting,
+polishing, or integrating manuscript prose:
 
 ```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action writing
 powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -ProjectRoot .
 ```
 
@@ -609,6 +672,7 @@ Use `-RequireResults` when writing Experiments, Results, Abstract result
 sentences, Introduction contribution claims, or Conclusion claims:
 
 ```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action result-claim
 powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -ProjectRoot . -RequireResults
 ```
 
@@ -652,11 +716,12 @@ integration. Do not rely on a later polish pass to fix structural drift.
 1. Identify the target section(s).
 2. Freeze or repair `paper_claims.md` and `claim_evidence_map.md`.
 3. Create or update `section_contracts.md`.
-4. Run `scripts/check-writing-gate.ps1`.
-5. Draft only paragraphs licensed by the corresponding section contract.
-6. Write `writing_gate_report.md` with the planned-vs-produced audit.
-7. Rewrite failing paragraphs before integration.
-8. Report the gate status in the final answer.
+4. Run `scripts/check-protocol-state.ps1` for the intended action.
+5. Run `scripts/check-writing-gate.ps1`.
+6. Draft only paragraphs licensed by the corresponding section contract.
+7. Write `writing_gate_report.md` with the planned-vs-produced audit.
+8. Rewrite failing paragraphs before integration.
+9. Report the gate status in the final answer.
 
 **Stop conditions**:
 
@@ -723,7 +788,7 @@ Establish a consistent workspace structure:
 
 ```
 workspace/
-  paper/               # LaTeX source, figures, compiled PDFs
+  paper/               # LaTeX source, figures, compiled PDFs, protocol_state.md
   literature/          # Downloaded open PDFs, metadata index, reading notes
   experiments/         # Experiment runner scripts
   code/                # Core method implementation
@@ -731,6 +796,11 @@ workspace/
   tasks/               # Task/benchmark definitions
   human_eval/          # Human evaluation materials (if needed)
 ```
+
+At workflow startup, create `paper/protocol_state.md` from
+`examples/protocol_state.example.md` and update it before any gated action. This
+file records what the agent is currently allowed to do; it is not a manuscript
+summary.
 
 ### Step 0.3: Set Up Version Control
 
@@ -3944,7 +4014,7 @@ See [references/reviewer-guidelines.md](references/reviewer-guidelines.md) for d
 | Experiment runner writes paper conclusions | Split facts from interpretation. Runner reports commands, configuration, result paths, and failure states; Analyst reports trends; Result Auditor checks numbers and claim scope; Coordinator writes conclusions. |
 | Reviewer panel creates noisy or conflicting advice | Use a Meta-Reviewer to aggregate priorities. Fix critical/high issues grounded in evidence; do not mechanically accept every reviewer suggestion. |
 | Multi-agent drafts introduce inconsistent terms | Freeze the paper-facing terminology in `paper_claims.md` or `claim_evidence_map.md`. Writers may propose edits, but the Coordinator owns cross-section naming. |
-| Handoffs become scattered or too heavy | Keep the mandatory handoff set to `paper_claims.md`, `claim_evidence_map.md`, `literature_matrix.md`, and `result_audit.md`; generate extra review or figure-audit files only when needed. |
+| Handoffs become scattered or too heavy | Keep the mandatory handoff set to `paper/protocol_state.md`, `paper_claims.md`, `claim_evidence_map.md`, `literature_matrix.md`, and `result_audit.md`; generate extra review or figure-audit files only when needed. |
 | Missing statistical significance | Add error bars, number of runs, statistical tests, confidence intervals. |
 | Scope creep in experiments | Every experiment must map to a specific claim. Cut experiments that don't. |
 | Paper rejected, need to resubmit | See Conference Resubmission in Phase 7. Address reviewer concerns without referencing reviews. |

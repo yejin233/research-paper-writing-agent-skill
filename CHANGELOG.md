@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.2
+
+- Added Runtime Protocol Anchor near the top of `SKILL.md`.
+- Added `protocol_state.example.md` as the long-running workflow state file.
+- Added `scripts/check-protocol-state.ps1` for action-before-gate checks.
+- Upgraded Workflow Supervisor guidance into a recurring protocol heartbeat.
+
 ## 0.1.1
 
 - Added fail-closed writing entry gate for manuscript drafting and revision.

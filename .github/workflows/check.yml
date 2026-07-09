@@ -14,3 +14,7 @@ jobs:
       - name: Run open-source package check
         shell: pwsh
         run: powershell -ExecutionPolicy Bypass -File .\tests\check-open-source.ps1
+
+      - name: Run gate behavior checks
+        shell: pwsh
+        run: powershell -ExecutionPolicy Bypass -File .\tests\check-gates.ps1

@@ -1,8 +1,6 @@
 # Experiment Design Patterns
 
-Patterns and best practices distilled from running research experiments at scale with the Hermes agent. These cover experiment infrastructure, evaluation protocols, monitoring, and failure recovery.
-
-Windows/Codex note: when using this reference in Codex on Windows, apply [windows-codex-adapter.md](windows-codex-adapter.md) before running shell commands.
+Patterns and best practices for running research experiments at scale. These cover experiment infrastructure, evaluation protocols, monitoring, and failure recovery.
 
 ---
 

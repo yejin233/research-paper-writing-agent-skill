@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.4
+
+- Split long literature, experiment, section-writing, and review guidance out of the core `SKILL.md`.
+- Added routed section-writing references for Introduction, Methodology, Experiments, and Related Work.
+- Added `scripts/check-reference-routes.ps1` to verify routed references and prevent legacy phase manuals from returning to the core skill.
+- Strengthened `scripts/check-writing-gate.ps1` so each section contract must record the required reference path.
+- Removed stale AutoReason, human-evaluation, paper-type, and old experiment-pattern references from the package.
+
 ## 0.1.3
 
 - Slimmed the core `SKILL.md` by removing obsolete Hermes/Windows adapter content.

@@ -17,7 +17,16 @@ $Required = @(
   "docs/external-gpt-review.md",
   "tests/check-gates.ps1",
   "scripts/check-writing-gate.ps1",
-  "scripts/check-protocol-state.ps1"
+  "scripts/check-protocol-state.ps1",
+  "scripts/check-reference-routes.ps1",
+  "references/literature-workflow.md",
+  "references/experiment-workflow.md",
+  "references/section-writing/general.md",
+  "references/section-writing/introduction.md",
+  "references/section-writing/methodology.md",
+  "references/section-writing/experiments.md",
+  "references/section-writing/related-work.md",
+  "references/review-workflow.md"
 )
 
 foreach ($rel in $Required) {
@@ -70,5 +79,7 @@ if ($Matches) {
   $Matches | ForEach-Object { Write-Warning "$($_.Path):$($_.LineNumber): $($_.Line.Trim())" }
   throw "Open-source package check found potential sensitive/local strings."
 }
+
+& (Join-Path $Root "scripts\check-reference-routes.ps1") -ProjectRoot $Root | Out-Null
 
 Write-Output "Open-source package check completed."

@@ -3,6 +3,7 @@
 ## Abstract
 
 - Section: Abstract
+- Reference path(s) read: `references/section-writing/general.md`
 - Purpose in the paper: State the problem, method, strongest evidence, and boundary in a compact form.
 - Required content moves: problem; method mechanism; primary result; evidence boundary.
 - Required terminology: use frozen paper-facing method and mechanism names.
@@ -15,6 +16,7 @@
 ## Introduction
 
 - Section: Introduction
+- Reference path(s) read: `references/section-writing/introduction.md`
 - Purpose in the paper: Build the problem-to-mechanism narrative and motivate the method.
 - Required content moves: existing assumption; failure phenomenon; mechanism gap; method response; bounded contributions.
 - Required terminology: same method and mechanism names as `paper_claims.md`.
@@ -27,6 +29,7 @@
 ## Related Work
 
 - Section: Related Work
+- Reference path(s) read: `references/section-writing/related-work.md`
 - Purpose in the paper: Position the work among task, technique, and closest related methods.
 - Required content moves: method families; representative works; relation to gap; closest-work distinction.
 - Required terminology: use method-family names consistently with the literature matrix.
@@ -39,6 +42,7 @@
 ## Methods
 
 - Section: Methods
+- Reference path(s) read: `references/section-writing/methodology.md`
 - Purpose in the paper: Explain the design logic and closed mechanism of the proposed method.
 - Required content moves: problem formulation; method overview; core modules; training/inference or scoring.
 - Required terminology: frozen method/module names only.
@@ -51,6 +55,7 @@
 ## Experiments
 
 - Section: Experiments
+- Reference path(s) read: `references/section-writing/experiments.md`
 - Purpose in the paper: Test the claims and define evidence boundaries.
 - Required content moves: setup; main comparison; ablations; diagnostics; sensitivity or limitations.
 - Required terminology: metrics, datasets, and variants match `result_audit.md`.

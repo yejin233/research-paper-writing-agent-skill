@@ -12,6 +12,8 @@ This skill is designed for projects that need more than prose polishing. It trea
 - Failed-result optimization before failure prose.
 - Defensive-writing zero-tolerance checks.
 - Section contracts and planned-vs-produced writing audits.
+- Routed reference files so the core skill stays short while section-specific
+  constraints remain mandatory.
 - Optional external GPT reviewer prompts for additional quality assessment.
 - Venue-oriented support for NeurIPS, ICML, ICLR, ACL, AAAI, COLM, and similar venues.
 
@@ -21,6 +23,10 @@ This skill is designed for projects that need more than prose polishing. It trea
 .
 |-- SKILL.md
 |-- references/
+|   |-- literature-workflow.md
+|   |-- experiment-workflow.md
+|   |-- review-workflow.md
+|   `-- section-writing/
 |-- templates/
 |-- examples/
 |-- docs/
@@ -76,6 +82,7 @@ Run the local release check before publishing or opening a pull request:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\tests\check-open-source.ps1
 powershell -ExecutionPolicy Bypass -File .\tests\check-gates.ps1
+powershell -ExecutionPolicy Bypass -File .\scripts\check-reference-routes.ps1 -ProjectRoot .
 ```
 
 For writing-stage projects, run the fail-closed writing gate checker inside the

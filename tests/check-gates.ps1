@@ -95,4 +95,28 @@ Set-Content -LiteralPath (Join-Path $WritingRoot "result_audit.md") -Value "# Re
 
 & (Join-Path $Root "scripts\check-writing-gate.ps1") -ProjectRoot $WritingRoot -RequireResults | Out-Null
 
+$MissingReferenceRoot = Join-Path $env:TEMP "research-paper-writing-agent-writing-gate-missing-reference"
+Remove-Item -LiteralPath $MissingReferenceRoot -Recurse -Force -ErrorAction SilentlyContinue
+New-Item -ItemType Directory -Force -Path $MissingReferenceRoot | Out-Null
+Set-Content -LiteralPath (Join-Path $MissingReferenceRoot "paper_claims.md") -Value "# Paper Claims`n`n- Claim C1: The method addresses a specific modeling gap with a frozen paper-facing mechanism.`n"
+Set-Content -LiteralPath (Join-Path $MissingReferenceRoot "claim_evidence_map.md") -Value "# Claim Evidence Map`n`n| Claim | Evidence | Source |`n| --- | --- | --- |`n| C1 | Literature gap and method design | literature_matrix.md |`n"
+$BadContracts = Get-Content -Raw -LiteralPath (Join-Path $Root "examples\section_contracts.example.md")
+$BadContracts = $BadContracts.Replace('`references/section-writing/introduction.md`', '`references/section-writing/general.md`')
+Set-Content -LiteralPath (Join-Path $MissingReferenceRoot "section_contracts.md") -Value $BadContracts
+
+$referenceBlocked = $false
+try {
+  & (Join-Path $Root "scripts\check-writing-gate.ps1") -ProjectRoot $MissingReferenceRoot -Sections Introduction | Out-Null
+} catch {
+  if ($_.Exception.Message -match "required reference path") {
+    $referenceBlocked = $true
+  } else {
+    throw
+  }
+}
+
+if (-not $referenceBlocked) {
+  throw "Expected writing gate to block Introduction without its routed reference."
+}
+
 Write-Output "Gate checks completed."

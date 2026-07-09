@@ -60,6 +60,7 @@ if ($EvidenceText -notmatch "(?i)claim" -or $EvidenceText -notmatch "(?i)evidenc
 
 $ContractText = Get-Content -Raw -LiteralPath $ContractsPath
 $RequiredContractFields = @(
+  "Reference path(s) read",
   "Purpose in the paper",
   "Required content moves",
   "Forbidden",
@@ -73,9 +74,65 @@ foreach ($field in $RequiredContractFields) {
   }
 }
 
+function Get-SectionAliases {
+  param([string]$Section)
+
+  switch ($Section.ToLowerInvariant()) {
+    "methods" { return @("Methods", "Methodology") }
+    "methodology" { return @("Methods", "Methodology") }
+    "experiments" { return @("Experiments", "Experiments & Results", "Results") }
+    "results" { return @("Experiments", "Experiments & Results", "Results") }
+    default { return @($Section) }
+  }
+}
+
+function Get-ContractSection {
+  param(
+    [string]$Text,
+    [string]$Section
+  )
+
+  $aliases = Get-SectionAliases -Section $Section
+  $escapedAliases = $aliases | ForEach-Object { [regex]::Escape($_) }
+  $headingPattern = $escapedAliases -join "|"
+  $pattern = "(?is)^##\s+(?:$headingPattern)\s*(.*?)(?=^##\s+|\z)"
+  $match = [regex]::Match($Text, $pattern, [System.Text.RegularExpressions.RegexOptions]::Multiline)
+  if (-not $match.Success) {
+    throw "section contracts missing target section: $Section"
+  }
+
+  return $match.Groups[1].Value
+}
+
+function Get-ExpectedReference {
+  param([string]$Section)
+
+  switch ($Section.ToLowerInvariant()) {
+    "abstract" { return "references/section-writing/general.md" }
+    "title" { return "references/section-writing/general.md" }
+    "figure 1" { return "references/section-writing/general.md" }
+    "limitations" { return "references/section-writing/general.md" }
+    "conclusion" { return "references/section-writing/general.md" }
+    "discussion" { return "references/section-writing/general.md" }
+    "appendix" { return "references/section-writing/general.md" }
+    "introduction" { return "references/section-writing/introduction.md" }
+    "related work" { return "references/section-writing/related-work.md" }
+    "methods" { return "references/section-writing/methodology.md" }
+    "methodology" { return "references/section-writing/methodology.md" }
+    "experiments" { return "references/section-writing/experiments.md" }
+    "results" { return "references/section-writing/experiments.md" }
+    default { return $null }
+  }
+}
+
 foreach ($section in $Sections) {
-  if ($ContractText -notmatch [regex]::Escape($section)) {
-    throw "section contracts missing target section: $section"
+  $SectionBody = Get-ContractSection -Text $ContractText -Section $section
+  $ExpectedReference = Get-ExpectedReference -Section $section
+  if ($ExpectedReference) {
+    $normalizedBody = $SectionBody -replace "\\", "/"
+    if ($normalizedBody -notmatch [regex]::Escape($ExpectedReference)) {
+      throw "section '$section' contract must record required reference path: $ExpectedReference"
+    }
   }
 }
 

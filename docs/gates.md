@@ -4,7 +4,7 @@ The skill uses gates as blocking constraints. If a gate artifact is missing, the
 
 ## Runtime Protocol Anchor
 
-Long-running workflows must maintain `paper/protocol_state.md`. Before any gated action, the Coordinator checks current phase, allowed next actions, blocked actions, required artifacts, gate status, last supervision, and drift risk. If the intended action is not explicitly allowed, the next action is protocol repair.
+Long-running workflows must maintain `paper/protocol_state.md`. Before any gated action, the Coordinator checks current phase, allowed next actions, blocked actions, external audit route, required artifacts, gate status, last supervision, and drift risk. If the intended action is not explicitly allowed, or if the first-call external audit route is unanswered, the next action is protocol repair.
 
 Run:
 
@@ -16,6 +16,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -Pro
 
 - Manuscript Intent Gate
 - Runtime Protocol Anchor
+- Remote Audit Window Intake
 - Project Identity Gate
 - Phase Gate
 - Pre-registered Experiment License

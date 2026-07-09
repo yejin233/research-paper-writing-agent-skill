@@ -11,6 +11,13 @@
 - core method claim: Claim C1 from `claim_evidence_map.md`.
 - forbidden conversions: boundary_study, benchmark, survey, position, negative_result unless the user explicitly approves.
 
+## External audit route
+
+- first-call question: answered-no
+- mode: internal-only
+- remote window opening method: none
+- internal audit fallback: Workflow Supervisor, Reviewer, Result Auditor, Figure/Table Auditor
+
 ## Allowed next actions
 
 - writing

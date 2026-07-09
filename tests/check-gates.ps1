@@ -31,6 +31,13 @@ $BlockedStatePath = Join-Path $BlockedRoot "paper\protocol_state.md"
 - core method claim: Claim C1 from `claim_evidence_map.md`.
 - forbidden conversions: boundary_study, benchmark, survey, position, negative_result unless the user explicitly approves.
 
+## External audit route
+
+- first-call question: answered-no
+- mode: internal-only
+- remote window opening method: none
+- internal audit fallback: Workflow Supervisor, Reviewer, Result Auditor, Figure/Table Auditor
+
 ## Allowed next actions
 
 - gate-repair
@@ -83,6 +90,55 @@ try {
 
 if (-not $blocked) {
   throw "Expected protocol-state checker to block unauthorized writing action."
+}
+
+$UnansweredRoot = Join-Path $env:TEMP "research-paper-writing-agent-gate-tests-unanswered-external-audit"
+Remove-Item -LiteralPath $UnansweredRoot -Recurse -Force -ErrorAction SilentlyContinue
+New-Item -ItemType Directory -Force -Path (Join-Path $UnansweredRoot "paper") | Out-Null
+Copy-Item -LiteralPath (Join-Path $Root "examples\protocol_state.example.md") -Destination (Join-Path $UnansweredRoot "paper\protocol_state.md")
+$UnansweredStatePath = Join-Path $UnansweredRoot "paper\protocol_state.md"
+$UnansweredState = Get-Content -Raw -LiteralPath $UnansweredStatePath
+$UnansweredState = $UnansweredState.Replace("- first-call question: answered-no", "- first-call question: unanswered")
+Set-Content -LiteralPath $UnansweredStatePath -Value $UnansweredState
+
+$externalAuditBlocked = $false
+try {
+  & (Join-Path $Root "scripts\check-protocol-state.ps1") -ProjectRoot $UnansweredRoot -Action writing | Out-Null
+} catch {
+  if ($_.Exception.Message -match "first-call question must be answered") {
+    $externalAuditBlocked = $true
+  } else {
+    throw
+  }
+}
+
+if (-not $externalAuditBlocked) {
+  throw "Expected protocol-state checker to block workflow before remote audit intake is answered."
+}
+
+$BadRemoteRoot = Join-Path $env:TEMP "research-paper-writing-agent-gate-tests-bad-remote-audit"
+Remove-Item -LiteralPath $BadRemoteRoot -Recurse -Force -ErrorAction SilentlyContinue
+New-Item -ItemType Directory -Force -Path (Join-Path $BadRemoteRoot "paper") | Out-Null
+Copy-Item -LiteralPath (Join-Path $Root "examples\protocol_state.example.md") -Destination (Join-Path $BadRemoteRoot "paper\protocol_state.md")
+$BadRemoteStatePath = Join-Path $BadRemoteRoot "paper\protocol_state.md"
+$BadRemoteState = Get-Content -Raw -LiteralPath $BadRemoteStatePath
+$BadRemoteState = $BadRemoteState.Replace("- first-call question: answered-no", "- first-call question: answered-yes")
+$BadRemoteState = $BadRemoteState.Replace("- mode: internal-only", "- mode: remote-gpt")
+Set-Content -LiteralPath $BadRemoteStatePath -Value $BadRemoteState
+
+$badRemoteBlocked = $false
+try {
+  & (Join-Path $Root "scripts\check-protocol-state.ps1") -ProjectRoot $BadRemoteRoot -Action writing | Out-Null
+} catch {
+  if ($_.Exception.Message -match "opening method is not usable") {
+    $badRemoteBlocked = $true
+  } else {
+    throw
+  }
+}
+
+if (-not $badRemoteBlocked) {
+  throw "Expected protocol-state checker to block remote-gpt mode without a usable opening method."
 }
 
 $WritingRoot = Join-Path $env:TEMP "research-paper-writing-agent-writing-gate-tests"

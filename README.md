@@ -14,7 +14,10 @@ This skill is designed for projects that need more than prose polishing. It trea
 - Section contracts and planned-vs-produced writing audits.
 - Routed reference files so the core skill stays short while section-specific
   constraints remain mandatory.
-- Optional external GPT reviewer prompts for additional quality assessment.
+- First-call remote GPT audit window intake; if no controllable window is
+  available, the workflow records `internal-only` and uses internal audits.
+- Optional external GPT reviewer prompts for additional quality assessment when
+  a remote audit window is enabled.
 - Venue-oriented support for NeurIPS, ICML, ICLR, ACL, AAAI, COLM, and similar venues.
 
 ## Repository Layout

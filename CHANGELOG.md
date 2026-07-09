@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.5
+
+- Added first-call Remote Audit Window Intake for controllable GPT review windows.
+- Added `External audit route` to protocol state with `remote-gpt` and `internal-only` modes.
+- Updated protocol-state checks to block gated workflow actions until the audit route is answered.
+- Updated examples and docs for internal-only fallback when no remote GPT window is available.
+
 ## 0.1.4
 
 - Split long literature, experiment, section-writing, and review guidance out of the core `SKILL.md`.

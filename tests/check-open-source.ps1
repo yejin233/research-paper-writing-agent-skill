@@ -40,6 +40,7 @@ $Skill = Get-Content -Raw (Join-Path $Root "SKILL.md")
 $RequiredAnchors = @(
   "name: research-paper-writing-agent",
   "External GPT Reviewer Role",
+  "Remote Audit Window Intake",
   "Workflow Supervisor Role",
   "Runtime Protocol Anchor",
   "Failed-Result Optimization Gate",

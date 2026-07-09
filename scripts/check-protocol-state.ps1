@@ -119,6 +119,7 @@ $ProtocolText = Get-Content -Raw -LiteralPath $ProtocolPath
 
 $CurrentPhase = Get-Section -Text $ProtocolText -Heading "Current phase"
 $FrozenIdentity = Get-Section -Text $ProtocolText -Heading "Frozen identity"
+$ExternalAuditRoute = Get-Section -Text $ProtocolText -Heading "External audit route"
 $AllowedActions = Get-Section -Text $ProtocolText -Heading "Allowed next actions"
 $BlockedActions = Get-Section -Text $ProtocolText -Heading "Blocked actions"
 $RequiredArtifacts = Get-Section -Text $ProtocolText -Heading "Required artifacts before next action"
@@ -130,12 +131,34 @@ Require-NonPlaceholderLine -SectionBody $CurrentPhase -Label "phase" -SectionNam
 Require-NonPlaceholderLine -SectionBody $FrozenIdentity -Label "paper type" -SectionName "Frozen identity" | Out-Null
 Require-NonPlaceholderLine -SectionBody $FrozenIdentity -Label "thesis" -SectionName "Frozen identity" | Out-Null
 Require-NonPlaceholderLine -SectionBody $FrozenIdentity -Label "core method claim" -SectionName "Frozen identity" | Out-Null
+$FirstCallQuestion = Require-NonPlaceholderLine -SectionBody $ExternalAuditRoute -Label "first-call question" -SectionName "External audit route"
+$ExternalAuditMode = Require-NonPlaceholderLine -SectionBody $ExternalAuditRoute -Label "mode" -SectionName "External audit route"
 Require-ListItem -SectionBody $AllowedActions -SectionName "Allowed next actions"
 Require-ListItem -SectionBody $BlockedActions -SectionName "Blocked actions"
 Require-ListItem -SectionBody $RequiredArtifacts -SectionName "Required artifacts before next action"
 Require-NonPlaceholderLine -SectionBody $LastSupervision -Label "decision" -SectionName "Last supervision" | Out-Null
 Require-NonPlaceholderLine -SectionBody $DriftRisk -Label "risk" -SectionName "Drift risk" | Out-Null
 Require-NonPlaceholderLine -SectionBody $DriftRisk -Label "reason" -SectionName "Drift risk" | Out-Null
+
+$ExternalAuditMode = $ExternalAuditMode.ToLowerInvariant()
+if ($FirstCallQuestion.ToLowerInvariant() -notin @("answered-yes", "answered-no", "declined", "unavailable")) {
+  throw "External audit route first-call question must be answered before gated work. Use answered-yes or answered-no."
+}
+
+if ($ExternalAuditMode -notin @("remote-gpt", "internal-only")) {
+  throw "External audit route mode must be remote-gpt or internal-only. Current mode: $ExternalAuditMode"
+}
+
+if ($ExternalAuditMode -eq "remote-gpt") {
+  $OpeningMethod = Require-NonPlaceholderLine -SectionBody $ExternalAuditRoute -Label "remote window opening method" -SectionName "External audit route"
+  if ($OpeningMethod.ToLowerInvariant() -in @("none", "n/a", "na", "unavailable", "internal-only")) {
+    throw "External audit route mode is remote-gpt, but remote window opening method is not usable."
+  }
+}
+
+if ($ExternalAuditMode -eq "internal-only") {
+  Require-NonPlaceholderLine -SectionBody $ExternalAuditRoute -Label "internal audit fallback" -SectionName "External audit route" | Out-Null
+}
 
 $ActionToken = $Action.ToLowerInvariant()
 if ($ActionToken -ne "general") {

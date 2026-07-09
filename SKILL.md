@@ -16,7 +16,8 @@ Before any non-trivial action, the Coordinator must identify:
 2. current allowed next actions;
 3. required gate artifacts;
 4. blocked actions;
-5. whether the intended action is allowed.
+5. external audit route (`remote-gpt` or `internal-only`);
+6. whether the intended action is allowed.
 
 If the intended action is not explicitly allowed by the current protocol state,
 stop and repair the protocol state instead.
@@ -24,6 +25,7 @@ stop and repair the protocol state instead.
 Refresh `paper/protocol_state.md`:
 
 - at workflow startup;
+- when the first-call remote audit window intake is answered;
 - before writing or modifying manuscript prose;
 - before running experiments that may affect claims;
 - before integrating results into claims;
@@ -152,10 +154,21 @@ modes unless the project is large enough to require separate agents.
   argument.
 
 **External GPT Reviewer Role**:
-At workflow startup, ask whether the user has a controllable external GPT review
-page. If yes, record how to open or reuse it. If no, continue the workflow
-unchanged. This is a conditional outside-review channel, not a dependency for
-normal operation.
+On the first call of this skill in a paper workflow, run the **Remote Audit
+Window Intake** before literature search, experiments, drafting, or review.
+Ask the user exactly once:
+
+```text
+Do you have a controllable remote GPT review window that Codex may use as an
+external audit window for this paper workflow?
+```
+
+If the user says yes, record how to open or reuse that window and set the audit
+route to `remote-gpt`. If the user says no, does not answer, or cannot provide a
+usable opening method, set the audit route to `internal-only` and continue with
+the internal Workflow Supervisor, Reviewer, Result Auditor, and Figure/Table
+Auditor path. This is a conditional outside-review channel, not a dependency
+for normal operation.
 
 Record only operational details in `external_gpt_reviewer.md` or the active
 status note:
@@ -163,6 +176,8 @@ status note:
 ```markdown
 ## External GPT Reviewer
 
+- Intake status: unanswered / answered-yes / answered-no
+- Audit route: remote-gpt / internal-only
 - Enabled: yes / no
 - Browser surface: in-app browser / Chrome CDP / user-managed browser / other
 - Opening method:
@@ -173,6 +188,10 @@ status note:
 - Required checkpoints:
 - Last successful external review:
 ```
+
+Also record the route in `paper/protocol_state.md` under `External audit route`.
+The first-call intake is complete only when that section says either
+`mode: remote-gpt` or `mode: internal-only`.
 
 If enabled, the External GPT Reviewer is used only at high-risk review
 checkpoints. It must not be asked to rewrite the main manuscript directly. It
@@ -264,6 +283,8 @@ into claims, and before declaring the workflow complete.
 The Workflow Supervisor must check:
 - `paper/protocol_state.md` exists and declares current phase, allowed next
   actions, blocked actions, gate status, last supervision, and drift risk;
+- the first-call external audit route is answered and set to either
+  `remote-gpt` or `internal-only`;
 - manuscript intent and frozen paper type are present and unchanged;
 - if external GPT review is enabled, required checkpoint reviews were submitted
   and preserved as handoffs;
@@ -296,6 +317,7 @@ The Workflow Supervisor handoff must use this schema:
 - Failed-result optimization status:
 - Defensive-writing audit status:
 - Writing-conformance audit status:
+- External audit route status:
 - External GPT review status:
 - Sub-agent permission violations:
 - Evidence-chain contamination:
@@ -313,15 +335,20 @@ artifact is missing, stop the current phase and create or repair the artifact
 before continuing. Do not compensate for a missing gate with more prose.
 
 **External GPT Availability Check**:
-At the start of a paper workflow, ask the user once whether a controllable
-external GPT review page is available. If the user says no or does not provide a
-usable opening method, set `External GPT Reviewer.Enabled: no` and continue the
-normal workflow. If the user says yes, create or update
-`external_gpt_reviewer.md` and enable the configured checkpoints.
+At the first call of this skill for a paper workflow, ask the Remote Audit
+Window Intake question before any phase work. If the user says no, does not
+answer, or does not provide a usable opening method, set
+`External audit route.mode: internal-only`, set
+`External GPT Reviewer.Enabled: no`, and use internal audit only. If the user
+says yes, create or update `external_gpt_reviewer.md`, set
+`External audit route.mode: remote-gpt`, record the opening method, and enable
+the configured checkpoints.
 
-Do not block normal research only because no external GPT page exists. Do block
-configured checkpoint completion if external GPT review is enabled but the
-required external review handoff is missing.
+Do not block normal research only because no external GPT page exists after the
+route is explicitly recorded as `internal-only`. Do block all gated phase work
+if the first-call audit route is still unanswered. Do block configured
+checkpoint completion if `remote-gpt` is enabled but the required external
+review handoff is missing.
 
 **Manuscript Intent Gate**:
 Before literature search, experiments, or drafting, freeze the intended paper

@@ -8,8 +8,8 @@
 - Failed-result optimization status:
 - Defensive-writing audit status:
 - Writing-conformance audit status:
+- External audit route status:
 - External GPT review status:
 - Sub-agent permission violations:
 - Evidence-chain contamination:
 - Required repairs before next phase:
-

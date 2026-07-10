@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.9
+
+- Rebuilt the experiment workflow and Experiments writing references as clean Markdown after the previous reference text became corrupted by per-character quoting.
+- Added `scripts/check-experiment-analysis.ps1` and `examples/experiment_analysis_audit.example.md`.
+- Added an Experiment Analysis Depth Gate requiring claim-level interpretation, strongest-baseline comparison, mechanism interpretation, alternative-explanation analysis, boundary conditions, weak cases, and required prose before Experiments writing.
+- Updated workflow supervision, writing gates, docs, and open-source checks so experiment analysis is part of result-to-prose readiness.
+- Clarified that the local Strict External ML Logic Reviewer is required in the reviewer panel and cannot be replaced by optional remote GPT review.
+
 ## 0.1.8
 
 - Rebuilt `references/review-workflow.md` as a clean role-bounded reviewer panel workflow.

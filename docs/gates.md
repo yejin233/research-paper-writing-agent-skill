@@ -35,6 +35,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -Pro
 - Phase Gate
 - Pre-registered Experiment License
 - Experiment License Schema Check
+- Experiment Analysis Depth Gate
 - Failed-Result Optimization Gate
 - Ablation Kill Rule
 - Result Auditor Verdict
@@ -66,6 +67,21 @@ powershell -ExecutionPolicy Bypass -File .\scripts\check-experiment-license.ps1 
 
 The checker requires primary metric, metric direction, claim IDs, source paths,
 budget, success criterion, kill criterion, failure action, and simple controls.
+
+## Experiment Analysis
+
+Reported numbers are not enough for Experiments writing. Before drafting result
+interpretation, create `experiment_analysis_audit.md` and run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-experiment-analysis.ps1 -ProjectRoot .
+```
+
+The checker requires one Experiment Analysis Unit per interpreted result, with
+claim tested, reviewer question, primary observation, strongest-baseline
+comparison, mechanism interpretation, alternative explanation, evidence against
+that explanation, boundary condition, weak case, claim implication, and required
+prose.
 
 ## Result Ledger
 

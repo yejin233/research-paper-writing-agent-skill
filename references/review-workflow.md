@@ -53,6 +53,13 @@ Do not create several generic reviewers. Use role-bounded reviewers. Each role
 has a jurisdiction, a clean input packet, block authority, and explicit
 non-coverage statement.
 
+The Strict External ML Logic Reviewer is a required local fresh-context role in
+the reviewer panel. It is not the same as the optional External GPT Reviewer.
+When a controllable remote GPT audit window is enabled, its report is an
+additional outside critique only. It cannot satisfy, skip, replace, or override
+the local Strict External ML Logic Reviewer, Meta-Reviewer, Result Auditor, or
+Workflow Supervisor.
+
 | Role | Jurisdiction | Required input | May block final integration when |
 | --- | --- | --- | --- |
 | Paper-Type and Intent Reviewer | Paper identity, thesis, contribution shape, forbidden conversions | Manuscript, frozen paper intent, paper type, forbidden conversions | A method paper reads as a boundary study, benchmark, survey, negative-result paper, or prototype report without user approval |

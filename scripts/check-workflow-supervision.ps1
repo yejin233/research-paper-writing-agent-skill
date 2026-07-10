@@ -64,6 +64,8 @@ Invoke-Gate -Name "experiment license" -ScriptName "check-experiment-license.ps1
 
 Invoke-Gate -Name "result audit" -ScriptName "check-result-audit.ps1" -GateParameters @{ ProjectRoot = $Root } -Optional -ShouldRun (Test-AnyPath -RelativePaths @("result_ledger.jsonl", "paper\result_ledger.jsonl"))
 
+Invoke-Gate -Name "experiment analysis" -ScriptName "check-experiment-analysis.ps1" -GateParameters @{ ProjectRoot = $Root } -Optional -ShouldRun (Test-AnyPath -RelativePaths @("experiment_analysis_audit.md", "experiment_analysis_units.md", "paper\experiment_analysis_audit.md", "paper\experiment_analysis_units.md"))
+
 $writingArgs = @{ ProjectRoot = $Root; Sections = $Sections }
 if ($RequireResults) {
   $writingArgs["RequireResults"] = $true

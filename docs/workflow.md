@@ -11,13 +11,14 @@ This skill treats research-paper writing as a gated research workflow rather tha
 5. Experiment license with success and kill criteria.
 6. Execution and factual result collection.
 7. Result audit and claim-evidence mapping.
-8. Failed-result optimization if evidence is weak or contradictory.
-9. Section contracts before drafting.
-10. Planned-vs-produced writing audit after drafting.
-11. Defensive-writing audit.
-12. Workflow supervision.
-13. Reviewer / Meta-Reviewer panel.
-14. Final manuscript integration.
+8. Experiment analysis depth audit before result prose.
+9. Failed-result optimization if evidence is weak or contradictory.
+10. Section contracts before drafting.
+11. Planned-vs-produced writing audit after drafting.
+12. Defensive-writing audit.
+13. Workflow supervision.
+14. Reviewer / Meta-Reviewer panel.
+15. Final manuscript integration.
 
 ## Key Principle
 

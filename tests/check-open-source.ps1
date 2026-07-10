@@ -11,6 +11,7 @@ $Required = @(
   "examples/protocol_state.example.md",
   "examples/external_gpt_reviewer.example.md",
   "examples/experiment_license.example.yaml",
+  "examples/experiment_analysis_audit.example.md",
   "examples/result_ledger.example.jsonl",
   "examples/handoff_manifest.example.yaml",
   "examples/skill_update_status.example.md",
@@ -24,6 +25,7 @@ $Required = @(
   "tests/check-skill-update.ps1",
   "scripts/check-skill-update.ps1",
   "scripts/check-experiment-license.ps1",
+  "scripts/check-experiment-analysis.ps1",
   "scripts/check-result-audit.ps1",
   "scripts/check-manuscript-prose.ps1",
   "scripts/check-role-boundaries.ps1",
@@ -58,6 +60,7 @@ $RequiredAnchors = @(
   "Runtime Protocol Anchor",
   "Failed-Result Optimization Gate",
   "Result Auditor Verdict",
+  "Experiment Analysis Auditor Verdict",
   "Defensive Writing Zero-Tolerance Gate",
   "Writing Conformance Gate",
   "Fail-Closed Writing Entry Gate"

@@ -11,6 +11,9 @@ This skill is designed for projects that need more than prose polishing. It trea
 - Literature, route-killer, experiment-license, result-audit, and workflow-supervision gates.
 - Machine-readable `experiment_license.yaml` and `result_ledger.jsonl` interfaces
   for source-backed experiment and result checks.
+- Experiment analysis depth checks that require claim-level interpretation,
+  strongest-baseline comparison, mechanism explanation, alternative-explanation
+  analysis, and bounded result prose before Experiments writing.
 - Direct manuscript-prose scanning for internal route traces, defensive writing,
   leaked configuration text, and paper-type drift.
 - Role-boundary write barrier for protected manuscript files.
@@ -65,6 +68,7 @@ Use the examples in `examples/` as starting points:
 - `protocol_state.example.md`
 - `external_gpt_reviewer.example.md`
 - `experiment_license.example.yaml`
+- `experiment_analysis_audit.example.md`
 - `result_ledger.example.jsonl`
 - `handoff_manifest.example.yaml`
 - `skill_update_status.example.md`
@@ -123,6 +127,7 @@ paper project before drafting or integrating manuscript prose:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action writing
 powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -ProjectRoot .
+powershell -ExecutionPolicy Bypass -File .\scripts\check-experiment-analysis.ps1 -ProjectRoot .
 powershell -ExecutionPolicy Bypass -File .\scripts\check-manuscript-prose.ps1 -ProjectRoot .
 powershell -ExecutionPolicy Bypass -File .\scripts\check-role-boundaries.ps1 -ProjectRoot .
 ```

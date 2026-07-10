@@ -116,7 +116,7 @@ Use sub-agents at high-risk boundaries:
 | --- | --- | --- |
 | Discovery | Required Literature Agent | `literature_matrix.md` entries: papers found, method family, relevance, relation to the gap, baseline use, close-work status, citation status |
 | Design stress test | Required Skeptic / Route Killer | existing-work overlap, patchwork risk, overclaim risk, simple-baseline threat, cheapest kill test |
-| Experiment execution and audit | Required Experiment Agent and Result Auditor | facts from runs, configuration, result paths, tables, deltas, ranking checks, claim-scope checks |
+| Experiment execution and audit | Required Experiment Agent, Result Auditor, and Experiment Analysis Auditor | facts from runs, configuration, result paths, tables, deltas, ranking checks, claim-scope checks, mechanism-level analysis units |
 | Section drafting and integration | Optional Writing Agent | local section draft or patch proposal only; no direct manuscript write unless explicitly authorized |
 | External review | Optional at startup; required at configured checkpoints once enabled | external GPT review handoffs for intent, novelty, experiment design, failed-result repair, section conformance, and final readiness |
 | Workflow supervision | Required Workflow Supervisor | process-compliance audit covering gates, state transitions, role boundaries, forbidden conversions, defensive prose, and unresolved blockers |
@@ -132,6 +132,7 @@ Default roles are intentionally compact:
 | Skeptic / Route Killer | Tests whether an idea is already done, too weak, too broad, or easily beaten | Required before committing to a route |
 | Experiment Agent | Plans or runs experiments and summarizes factual outputs | Required in experiment stage |
 | Result Auditor | Verifies numbers, ranks, averages, table labels, and claim boundaries from fresh context | Required after results |
+| Experiment Analysis Auditor | Checks whether each result has claim-level interpretation, strongest-baseline comparison, mechanism explanation, alternative-explanation analysis, boundary condition, and required prose | Required before Experiments writing |
 | Writing Agent | Produces local drafts or patch proposals for specific sections | Optional |
 | External GPT Reviewer | Uses a user-provided controllable GPT page as an outside review source; produces advisory review handoffs only | Optional; required at configured checkpoints once enabled |
 | Workflow Supervisor | Independently audits whether the autonomous research process followed the skill, gates, state transitions, and permission boundaries | Required at phase transitions and final integration |
@@ -163,13 +164,18 @@ modes unless the project is large enough to require separate agents.
   must not write "this demonstrates" conclusions.
 - An Analyst may report trends and deltas; a Result Auditor must independently
   check numbers and whether claims exceed the data.
+- An Experiment Analysis Auditor checks interpretation depth. It must block
+  Experiments writing when results are merely reported without mechanism-level
+  explanation, strongest-baseline comparison, alternative explanation, and
+  boundary condition.
 - Reviewers use role-bounded, fresh-context packets. Each reviewer can recommend
   changes only inside its jurisdiction and must state what it did not check. The
   Meta-Reviewer prioritizes reports and preserves hard blockers; the Research
   Coordinator decides final revisions.
 - An External GPT Reviewer gives additional outside critique only. It does not
   directly edit the manuscript, run experiments, inspect browser credentials, or
-  override local evidence gates.
+  override local evidence gates. It also does not replace the local
+  Role-Bounded Reviewer Panel or the Strict External ML Logic Reviewer.
 - The Workflow Supervisor can block phase transitions and final integration
   when gates are missing, statuses are inconsistent, or forbidden conversions
   occur. It does not write manuscript prose, run experiments, or repair results.
@@ -330,6 +336,8 @@ The Workflow Supervisor must check:
 - `experiment_license.yaml` passes the experiment-license checker before any
   claim-affecting run;
 - `result_ledger.jsonl` passes the result-audit checker before result claims;
+- `experiment_analysis_audit.md` passes the experiment-analysis checker before
+  Experiments writing or result interpretation prose;
 - failed results entered optimization before manuscript conclusions;
 - method-paper routes were not converted into boundary studies;
 - defensive-writing, manuscript-prose, and planned-vs-produced audits were run
@@ -459,13 +467,14 @@ or negative evidence.
 | Experiment execution | Experiment License with success and kill criteria, external GPT experiment-design review if enabled | write the license and configured external experiment review before running |
 | Results analysis | raw results plus `claim_evidence_map.md` draft | map every metric to a claim before interpreting |
 | Optimization after failed results | failure diagnosis plus optimization plan, external GPT failure/repair review if enabled | diagnose root cause, get configured external repair critique, and propose repair tests before drafting failure prose |
-| Paper drafting | manuscript intent, section contracts, `claim_evidence_map.md`, `result_audit.md`, experiment log, external GPT section review if enabled | audit results, verify frozen paper type, freeze section-level writing constraints, and capture configured external section critique before writing conclusions |
+| Paper drafting | manuscript intent, section contracts, `claim_evidence_map.md`, `result_audit.md`, `experiment_analysis_audit.md`, experiment log, external GPT section review if enabled | audit results, verify frozen paper type, freeze section-level writing constraints, check experiment-analysis depth, and capture configured external section critique before writing conclusions |
 | Final manuscript integration | planned-vs-produced audit, defensive-writing audit, reviewer/meta-review, workflow supervision audit, external GPT final review if enabled, and figure/table audit when applicable | fix paper-type drift, writing drift, defensive prose, process violations, external-review blockers, critical evidence issues, or presentation issues first |
 
-Do not enter Experiments writing if the evidence map or result audit is
-missing. Do not write Abstract, Introduction, or Conclusion claims that are not
-present in `claim_evidence_map.md`. Do not draft or finalize a manuscript whose
-paper type differs from the frozen manuscript intent.
+Do not enter Experiments writing if the evidence map, result audit, or
+experiment-analysis audit is missing. Do not write Abstract, Introduction, or
+Conclusion claims that are not present in `claim_evidence_map.md`. Do not draft
+or finalize a manuscript whose paper type differs from the frozen manuscript
+intent.
 
 Before marking any phase complete, run the protocol-state checker and refresh
 the Workflow Supervision Audit:
@@ -571,6 +580,27 @@ source ledger. Before writing result claims, run:
 powershell -ExecutionPolicy Bypass -File .\scripts\check-result-audit.ps1 -ProjectRoot .
 ```
 
+**Experiment Analysis Auditor Verdict**:
+The Experiment Analysis Auditor works from the result audit, claim map, tables,
+figures, experiment log, and clean manuscript packet. It verifies that each
+reported result has an interpretation chain:
+
+```text
+claim tested -> reviewer question -> primary observation -> strongest baseline
+comparison -> mechanism interpretation -> alternative explanation -> boundary
+condition -> claim implication -> required prose
+```
+
+Before writing Experiments prose, create `experiment_analysis_audit.md` and run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-experiment-analysis.ps1 -ProjectRoot .
+```
+
+If the analysis unit is shallow, missing mechanism interpretation, missing
+alternative explanation, or missing boundary condition, do not draft the
+paragraph. Repair the analysis first.
+
 ```markdown
 ## Result Audit
 
@@ -672,6 +702,8 @@ Required before any manuscript prose is written or modified:
 - trusted source paths for experiments, figures, tables, and literature;
 - `result_audit.md` before writing Experiments, Results, Abstract result
   sentences, Introduction contribution claims, or Conclusion claims;
+- `experiment_analysis_audit.md` before writing Experiments, Results, ablation,
+  further-analysis, table-result, or figure-result prose;
 - `writing_gate_report.md` before declaring writing complete.
 
 If any item is missing, the correct next action is to write the artifact, not to
@@ -684,6 +716,7 @@ these scripts copied from this skill's `scripts/` directory:
 - `check-protocol-state.ps1`
 - `check-writing-gate.ps1`
 - `check-result-audit.ps1`
+- `check-experiment-analysis.ps1`
 - `check-manuscript-prose.ps1`
 - `check-role-boundaries.ps1`
 - `check-workflow-supervision.ps1`
@@ -704,6 +737,7 @@ sentences, Introduction contribution claims, or Conclusion claims:
 powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action result-claim
 powershell -ExecutionPolicy Bypass -File .\scripts\check-writing-gate.ps1 -ProjectRoot . -RequireResults
 powershell -ExecutionPolicy Bypass -File .\scripts\check-result-audit.ps1 -ProjectRoot .
+powershell -ExecutionPolicy Bypass -File .\scripts\check-experiment-analysis.ps1 -ProjectRoot .
 ```
 
 After drafting or before final integration, scan the actual manuscript text and
@@ -803,7 +837,7 @@ state file is `paper/protocol_state.md` or another path accepted by
 | 1 - Literature and contribution boundary | Search, acquire, read, classify, and use literature to constrain the route. | `references/literature-workflow.md` | `literature_matrix.md`, paper notes, route-killer handoff, citation status. |
 | 2 - Experiment design | Map claims to licensed experiments, simple controls, kill criteria, and method cleanliness. | `references/experiment-workflow.md` | `paper_claims.md`, `claim_evidence_map.md`, `experiment_license.yaml`; run protocol and experiment-license gates. |
 | 3 - Execution and route decision | Run only licensed experiments; audit failures, ablations, and route status. | `references/experiment-workflow.md` | result paths, experiment journal, failure diagnosis, route kill decision. |
-| 4 - Result analysis and expansion | Aggregate results, audit claim support, plan only claim-serving expansions. | `references/experiment-workflow.md` | `result_audit.md`, `result_ledger.jsonl`, expansion plan, updated `claim_evidence_map.md`; run result-audit checker. |
+| 4 - Result analysis and expansion | Aggregate results, audit claim support, add mechanism-level analysis, plan only claim-serving expansions. | `references/experiment-workflow.md` | `result_audit.md`, `result_ledger.jsonl`, `experiment_analysis_audit.md`, expansion plan, updated `claim_evidence_map.md`; run result-audit and experiment-analysis checkers. |
 | 5 - Evidence-grounded drafting | Draft only sections whose contracts and reference-read records are complete. | `references/section-writing/*.md` as routed below | `section_contracts.md`, `writing_gate_report.md`; run writing, result, manuscript-prose, role-boundary, and protocol gates as applicable. |
 | 6 - Review and revision | Simulate reviewers, verify claims, audit figures/tables, and prioritize fixes. | `references/review-workflow.md` | reviewer handoffs, claim verification, figure/table audit, revision trace, workflow supervision audit. |
 
@@ -812,11 +846,11 @@ state file is `paper/protocol_state.md` or another path accepted by
 | Action | Must read before action | Must record in | Gate before action |
 | --- | --- | --- | --- |
 | Literature search, related-work boundary, idea generation | `references/literature-workflow.md` | `literature_matrix.md` and `paper/protocol_state.md` | protocol state general check |
-| Experiment planning, route kill, failed-result repair, result analysis | `references/experiment-workflow.md` | `experiment_license.yaml`, failure diagnosis, `result_audit.md`, `result_ledger.jsonl`, or `claim_evidence_map.md` | protocol state, experiment-license, or result-audit check |
+| Experiment planning, route kill, failed-result repair, result analysis | `references/experiment-workflow.md` | `experiment_license.yaml`, failure diagnosis, `result_audit.md`, `result_ledger.jsonl`, `experiment_analysis_audit.md`, or `claim_evidence_map.md` | protocol state, experiment-license, result-audit, or experiment-analysis check |
 | General drafting, title, abstract, Figure 1, limitations, conclusion, appendix | `references/section-writing/general.md` | `section_contracts.md` | `scripts/check-writing-gate.ps1` |
 | Introduction drafting or rewriting | `references/section-writing/introduction.md` | `section_contracts.md` Introduction contract | `scripts/check-writing-gate.ps1 -Sections Introduction` |
 | Methods or Methodology drafting or rewriting | `references/section-writing/methodology.md` | `section_contracts.md` Methods contract | `scripts/check-writing-gate.ps1 -Sections Methods` |
-| Experiments, Results, ablation, analysis, table or figure-result prose | `references/section-writing/experiments.md` | `section_contracts.md` Experiments contract and `result_audit.md` | `scripts/check-writing-gate.ps1 -Sections Experiments -RequireResults` |
+| Experiments, Results, ablation, analysis, table or figure-result prose | `references/section-writing/experiments.md` | `section_contracts.md` Experiments contract, `result_audit.md`, and `experiment_analysis_audit.md` | `scripts/check-writing-gate.ps1 -Sections Experiments -RequireResults`; then `scripts/check-experiment-analysis.ps1` |
 | Related Work drafting or rewriting | `references/section-writing/related-work.md` | `section_contracts.md` Related Work contract and `literature_matrix.md` | `scripts/check-writing-gate.ps1 -Sections 'Related Work'` |
 | Full draft review, claim verification, reviewer simulation, visual review | `references/review-workflow.md` | review handoff, claim verification notes, revision trace | protocol state final-integration check when finalizing |
 
@@ -867,11 +901,11 @@ Before designing or launching experiments, read `references/experiment-workflow.
 
 ### Phase 3: Experiment Execution and Monitoring
 
-Run only licensed experiments. Runners report commands, configs, result paths, and failure states. Analysts summarize trends. Result Auditors check numbers, rankings, deltas, and claim scope. The Coordinator alone writes manuscript conclusions.
+Run only licensed experiments. Runners report commands, configs, result paths, and failure states. Analysts summarize trends. Result Auditors check numbers, rankings, deltas, and claim scope. Experiment Analysis Auditors check interpretation depth before prose. The Coordinator alone writes manuscript conclusions.
 
 ### Phase 4: Result Analysis
 
-Before any result claim, update `claim_evidence_map.md`, `result_audit.md`, and `result_ledger.jsonl`, then run `scripts/check-result-audit.ps1`. Negative or mixed ablations trigger failure diagnosis, optimization, reframe, redesign, or route kill; they must not be converted into defensive prose.
+Before any result claim, update `claim_evidence_map.md`, `result_audit.md`, `result_ledger.jsonl`, and `experiment_analysis_audit.md`, then run `scripts/check-result-audit.ps1` and `scripts/check-experiment-analysis.ps1`. Negative or mixed ablations trigger failure diagnosis, optimization, reframe, redesign, or route kill; they must not be converted into defensive prose.
 
 ### Phase 5: Paper Drafting
 
@@ -906,6 +940,7 @@ Before claiming the skill workflow or a manuscript action is complete, run the r
 powershell -ExecutionPolicy Bypass -File scripts/check-protocol-state.ps1 -ProjectRoot . -Action writing
 powershell -ExecutionPolicy Bypass -File scripts/check-writing-gate.ps1 -ProjectRoot . -Sections Introduction,Methods,Experiments -RequireResults
 powershell -ExecutionPolicy Bypass -File scripts/check-result-audit.ps1 -ProjectRoot .
+powershell -ExecutionPolicy Bypass -File scripts/check-experiment-analysis.ps1 -ProjectRoot .
 powershell -ExecutionPolicy Bypass -File scripts/check-manuscript-prose.ps1 -ProjectRoot .
 powershell -ExecutionPolicy Bypass -File scripts/check-role-boundaries.ps1 -ProjectRoot .
 powershell -ExecutionPolicy Bypass -File scripts/check-workflow-supervision.ps1 -ProjectRoot . -RequireResults
@@ -919,11 +954,11 @@ Use narrower `-Sections` values when only one section is being drafted. Use `-Ac
 | Document | Contents |
 | --- | --- |
 | [references/literature-workflow.md](references/literature-workflow.md) | Literature search, citation verification, paper acquisition, literature matrix, idea discovery, root-cause innovation gate. |
-| [references/experiment-workflow.md](references/experiment-workflow.md) | Experiment design, licenses, route kill review, failure transitions, result analysis, expansion planning, experiment log. |
+| [references/experiment-workflow.md](references/experiment-workflow.md) | Experiment design, licenses, route kill review, failure transitions, result analysis, experiment-analysis depth gate, expansion planning, experiment log. |
 | [references/section-writing/general.md](references/section-writing/general.md) | Drafting modes, context management, title, abstract, Figure 1, limitations, conclusion, appendix, page budget, style. |
 | [references/section-writing/introduction.md](references/section-writing/introduction.md) | Failure-to-mechanism Introduction structure and quality gate. |
 | [references/section-writing/methodology.md](references/section-writing/methodology.md) | Methodology structure, module logic, formula rules, method-experiment alignment, naming and implementation-detail boundaries. |
-| [references/section-writing/experiments.md](references/section-writing/experiments.md) | Experiment section structure, setup, main results, ablations, further analysis, table/prose rules, defensive-language ban. |
+| [references/section-writing/experiments.md](references/section-writing/experiments.md) | Experiment section structure, setup, main results, ablations, mechanism-level analysis units, table/prose rules, defensive-language ban. |
 | [references/section-writing/related-work.md](references/section-writing/related-work.md) | Related Work structure, citation selection, gap discipline, paragraph pattern, subsection closure. |
 | [references/review-workflow.md](references/review-workflow.md) | Reviewer simulation, visual review, claim verification, revision cycle, reviewer criteria, common issues. |
 | [references/writing-guide.md](references/writing-guide.md) | General scientific writing principles and sentence-level style examples. |

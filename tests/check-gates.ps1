@@ -209,6 +209,60 @@ Set-Content -LiteralPath (Join-Path $ExperimentRoot "results\main.csv") -Value "
 
 & (Join-Path $Root "scripts\check-experiment-license.ps1") -ProjectRoot $ExperimentRoot | Out-Null
 
+$AnalysisRoot = Join-Path $env:TEMP "research-paper-writing-agent-experiment-analysis-tests"
+Remove-Item -LiteralPath $AnalysisRoot -Recurse -Force -ErrorAction SilentlyContinue
+New-Item -ItemType Directory -Force -Path $AnalysisRoot | Out-Null
+@'
+# Experiment Analysis Audit
+
+## Experiment Analysis Unit: exp-main
+
+- Experiment: Main comparison
+- Claim tested: C1
+- Reviewer question answered: Does the proposed mechanism improve the primary metric against the strongest baseline?
+- Primary observation: Ours ranks first on the primary metric with a 0.09 absolute delta over the strongest baseline.
+- Strongest baseline comparison: StrongBase reaches 0.82 F1 while Ours reaches 0.91 F1.
+- Mechanism interpretation: The improvement appears when the mechanism is enabled and disappears in the removal ablation.
+- Alternative explanation: The gain may come from extra compute or threshold tuning rather than the proposed mechanism.
+- Evidence against alternative explanation: The compute-matched control and fixed-threshold control do not reproduce the gain.
+- Boundary condition: The result is verified on the demo dataset and should not be generalized beyond the tested protocol.
+- Failure or weak case: No failure case in this smoke fixture.
+- Claim implication: Supports C1 under the declared protocol.
+- Required prose: State the rank, delta, strongest baseline, mechanism interpretation, and boundary condition directly.
+'@ | Set-Content -LiteralPath (Join-Path $AnalysisRoot "experiment_analysis_audit.md")
+
+& (Join-Path $Root "scripts\check-experiment-analysis.ps1") -ProjectRoot $AnalysisRoot | Out-Null
+
+$BadAnalysisRoot = Join-Path $env:TEMP "research-paper-writing-agent-experiment-analysis-bad"
+Remove-Item -LiteralPath $BadAnalysisRoot -Recurse -Force -ErrorAction SilentlyContinue
+New-Item -ItemType Directory -Force -Path $BadAnalysisRoot | Out-Null
+@'
+# Experiment Analysis Audit
+
+## Experiment Analysis Unit: exp-main
+
+- Experiment: Main comparison
+- Claim tested: C1
+- Primary observation: Ours improves.
+- Strongest baseline comparison: StrongBase is lower.
+- Claim implication: Supports C1.
+'@ | Set-Content -LiteralPath (Join-Path $BadAnalysisRoot "experiment_analysis_audit.md")
+
+$analysisBlocked = $false
+try {
+  & (Join-Path $Root "scripts\check-experiment-analysis.ps1") -ProjectRoot $BadAnalysisRoot | Out-Null
+} catch {
+  if ($_.Exception.Message -match "Reviewer question answered|Mechanism interpretation|Alternative explanation|Required prose") {
+    $analysisBlocked = $true
+  } else {
+    throw
+  }
+}
+
+if (-not $analysisBlocked) {
+  throw "Expected experiment-analysis checker to block shallow result analysis."
+}
+
 $BadExperimentRoot = Join-Path $env:TEMP "research-paper-writing-agent-experiment-license-bad"
 Remove-Item -LiteralPath $BadExperimentRoot -Recurse -Force -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Force -Path $BadExperimentRoot | Out-Null

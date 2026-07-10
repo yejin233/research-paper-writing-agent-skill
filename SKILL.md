@@ -120,7 +120,7 @@ Use sub-agents at high-risk boundaries:
 | Section drafting and integration | Optional Writing Agent | local section draft or patch proposal only; no direct manuscript write unless explicitly authorized |
 | External review | Optional at startup; required at configured checkpoints once enabled | external GPT review handoffs for intent, novelty, experiment design, failed-result repair, section conformance, and final readiness |
 | Workflow supervision | Required Workflow Supervisor | process-compliance audit covering gates, state transitions, role boundaries, forbidden conversions, defensive prose, and unresolved blockers |
-| Pre-submission review | Required Reviewer / Meta-Reviewer | technical, novelty, experiment, presentation reviews plus a prioritized meta-review |
+| Pre-submission review | Required role-bounded Reviewer Panel and Meta-Reviewer | intent, novelty, methodology, experiment, result, writing, presentation, and strict external ML logic reviews plus a prioritized meta-review |
 | Figure/table quality | Required when figures or tables are created or revised | figure/table audit covering claim support, symbol consistency, captions, best/second-best markers, crowding, and internal trace leaks |
 
 Default roles are intentionally compact:
@@ -135,7 +135,8 @@ Default roles are intentionally compact:
 | Writing Agent | Produces local drafts or patch proposals for specific sections | Optional |
 | External GPT Reviewer | Uses a user-provided controllable GPT page as an outside review source; produces advisory review handoffs only | Optional; required at configured checkpoints once enabled |
 | Workflow Supervisor | Independently audits whether the autonomous research process followed the skill, gates, state transitions, and permission boundaries | Required at phase transitions and final integration |
-| Reviewer / Meta-Reviewer | Simulates venue review and aggregates priorities | Required before submission |
+| Role-Bounded Reviewer Panel | Runs separate fresh-context reviews for paper intent, novelty, methodology, experiment design, result claims, writing conformance, PDF presentation, strict ML logic, defensive prose, and venue readiness | Required before submission |
+| Meta-Reviewer | Aggregates role-bounded reviewer reports, preserves hard blockers, and prioritizes repairs | Required before submission |
 
 Treat Citation Verifier, Claim Verifier, and Figure/Table Auditor as auditor
 modes unless the project is large enough to require separate agents.
@@ -162,8 +163,10 @@ modes unless the project is large enough to require separate agents.
   must not write "this demonstrates" conclusions.
 - An Analyst may report trends and deltas; a Result Auditor must independently
   check numbers and whether claims exceed the data.
-- A Reviewer can recommend changes; the Meta-Reviewer prioritizes them; the
-  Research Coordinator decides final revisions.
+- Reviewers use role-bounded, fresh-context packets. Each reviewer can recommend
+  changes only inside its jurisdiction and must state what it did not check. The
+  Meta-Reviewer prioritizes reports and preserves hard blockers; the Research
+  Coordinator decides final revisions.
 - An External GPT Reviewer gives additional outside critique only. It does not
   directly edit the manuscript, run experiments, inspect browser credentials, or
   override local evidence gates.
@@ -177,6 +180,8 @@ modes unless the project is large enough to require separate agents.
 - many writer agents directly edit the main `.tex`;
 - a runner writes paper claims instead of facts;
 - reviewer suggestions are accepted mechanically;
+- generic reviewers all give broad positive summaries without assigned
+  jurisdictions, clean packets, or explicit block authority;
 - section drafts introduce new terms, claims, or internal route names;
 - figure captions, table labels, or result prose leak file names, scripts,
   plugin traces, or generated-artifact wording;

@@ -1,231 +1,549 @@
 # Review Workflow
 
-Detailed reference for self-review, reviewer simulation, visual review, claim verification, revision, rebuttal notes, reviewer criteria, and common issues. Use this after a complete evidence-grounded draft exists or when a supervisor gate requests review.
+Detailed reference for self-review, reviewer simulation, visual review, claim
+verification, revision, rebuttal notes, reviewer criteria, and common issues.
+Use this after a complete evidence-grounded draft exists or when a supervisor
+gate requests review.
 
-'#'#' 'P'h'a's'e' '6':' 'S'e'l'f'-'R'e'v'i'e'w' '&' 'R'e'v'i's'i'o'n'
-'
-'*'*'G'o'a'l'*'*':' 'S'i'm'u'l'a't'e' 't'h'e' 'r'e'v'i'e'w' 'p'r'o'c'e's's' 'b'e'f'o'r'e' 's'u'b'm'i's's'i'o'n'.' 'C'a't'c'h' 'w'e'a'k'n'e's's'e's' 'e'a'r'l'y'.'
-'
-'#'#'#' 'S't'e'p' '6'.'1':' 'S'i'm'u'l'a't'e' 'R'e'v'i'e'w's' '('E'n's'e'm'b'l'e' 'P'a't't'e'r'n')'
-'
-'G'e'n'e'r'a't'e' 'r'e'v'i'e'w's' 'f'r'o'm' 'm'u'l't'i'p'l'e' 'p'e'r's'p'e'c't'i'v'e's'.' 'T'h'e' 'k'e'y' 'i'n's'i'g'h't' 'f'r'o'm' 'a'u't'o'm'a't'e'd' 'r'e's'e'a'r'c'h' 'p'i'p'e'l'i'n'e's' '('n'o't'a'b'l'y' 'S'a'k'a'n'a'A'I'''s' 'A'I'-'S'c'i'e'n't'i's't')':' '*'*'e'n's'e'm'b'l'e' 'r'e'v'i'e'w'i'n'g' 'w'i't'h' 'a' 'm'e't'a'-'r'e'v'i'e'w'e'r' 'p'r'o'd'u'c'e's' 'f'a'r' 'm'o'r'e' 'c'a'l'i'b'r'a't'e'd' 'f'e'e'd'b'a'c'k' 't'h'a'n' 'a' 's'i'n'g'l'e' 'r'e'v'i'e'w' 'p'a's's'.'*'*'
-'
-'*'*'S't'e'p' '1':' 'G'e'n'e'r'a't'e' 'N' 'i'n'd'e'p'e'n'd'e'n't' 'r'e'v'i'e'w's'*'*' '('N'='3'-'5')'
-'
-'U's'e' 'd'i'f'f'e'r'e'n't' 'm'o'd'e'l's' 'o'r' 't'e'm'p'e'r'a't'u'r'e' 's'e't't'i'n'g's'.' 'E'a'c'h' 'r'e'v'i'e'w'e'r' 's'e'e's' 'o'n'l'y' 't'h'e' 'p'a'p'e'r',' 'n'o't' 'o't'h'e'r' 'r'e'v'i'e'w's'.' '*'*'D'e'f'a'u'l't' 't'o' 'n'e'g'a't'i'v'e' 'b'i'a's'*'*' ''?'L'L'M's' 'h'a'v'e' 'w'e'l'l'-'d'o'c'u'm'e'n't'e'd' 'p'o's'i't'i'v'i't'y' 'b'i'a's' 'i'n' 'e'v'a'l'u'a't'i'o'n'.'
-'
-'`'`'`'
-'Y'o'u' 'a'r'e' 'a'n' 'e'x'p'e'r't' 'r'e'v'i'e'w'e'r' 'f'o'r' '['V'E'N'U'E']'.' 'Y'o'u' 'a'r'e' 'c'r'i't'i'c'a'l' 'a'n'd' 't'h'o'r'o'u'g'h'.'
-'I'f' 'a' 'p'a'p'e'r' 'h'a's' 'w'e'a'k'n'e's's'e's' 'o'r' 'y'o'u' 'a'r'e' 'u'n's'u'r'e' 'a'b'o'u't' 'a' 'c'l'a'i'm',' 'f'l'a'g' 'i't' 'c'l'e'a'r'l'y'
-'a'n'd' 'r'e'f'l'e'c't' 't'h'a't' 'i'n' 'y'o'u'r' 's'c'o'r'e's'.' 'D'o' 'n'o't' 'g'i'v'e' 't'h'e' 'b'e'n'e'f'i't' 'o'f' 't'h'e' 'd'o'u'b't'.'
-'
-'R'e'v'i'e'w' 't'h'i's' 'p'a'p'e'r' 'a'c'c'o'r'd'i'n'g' 't'o' 't'h'e' 'o'f'f'i'c'i'a'l' 'r'e'v'i'e'w'e'r' 'g'u'i'd'e'l'i'n'e's'.' 'E'v'a'l'u'a't'e':'
-'
-'1'.' 'S'o'u'n'd'n'e's's' '('a'r'e' 'c'l'a'i'm's' 'w'e'l'l'-'s'u'p'p'o'r't'e'd'?' 'a'r'e' 'b'a's'e'l'i'n'e's' 'f'a'i'r' 'a'n'd' 's't'r'o'n'g'?')'
-'2'.' 'C'l'a'r'i't'y' '('i's' 't'h'e' 'p'a'p'e'r' 'w'e'l'l'-'w'r'i't't'e'n'?' 'c'o'u'l'd' 'a'n' 'e'x'p'e'r't' 'r'e'p'r'o'd'u'c'e' 'i't'?')'
-'3'.' 'S'i'g'n'i'f'i'c'a'n'c'e' '('d'o'e's' 't'h'i's' 'm'a't't'e'r' 't'o' 't'h'e' 'c'o'm'm'u'n'i't'y'?')'
-'4'.' 'O'r'i'g'i'n'a'l'i't'y' '('n'e'w' 'i'n's'i'g'h't's',' 'n'o't' 'j'u's't' 'i'n'c'r'e'm'e'n't'a'l' 'c'o'm'b'i'n'a't'i'o'n'?')'
-'
-'P'r'o'v'i'd'e' 'y'o'u'r' 'r'e'v'i'e'w' 'a's' 's't'r'u'c't'u'r'e'd' 'J'S'O'N':'
-'{'
-' ' '"'s'u'm'm'a'r'y'"':' '"'2'-'3' 's'e'n't'e'n'c'e' 's'u'm'm'a'r'y'"','
-' ' '"'s't'r'e'n'g't'h's'"':' '['"'s't'r'e'n'g't'h' '1'"',' '"'s't'r'e'n'g't'h' '2'"',' '.'.'.']','
-' ' '"'w'e'a'k'n'e's's'e's'"':' '['"'w'e'a'k'n'e's's' '1' '('m'o's't' 'c'r'i't'i'c'a'l')'"',' '"'w'e'a'k'n'e's's' '2'"',' '.'.'.']','
-' ' '"'q'u'e's't'i'o'n's'"':' '['"'q'u'e's't'i'o'n' 'f'o'r' 'a'u't'h'o'r's' '1'"',' '.'.'.']','
-' ' '"'m'i's's'i'n'g'_'r'e'f'e'r'e'n'c'e's'"':' '['"'p'a'p'e'r' 't'h'a't' 's'h'o'u'l'd' 'b'e' 'c'i't'e'd'"',' '.'.'.']','
-' ' '"'s'o'u'n'd'n'e's's'"':' '1'-'4','
-' ' '"'p'r'e's'e'n't'a't'i'o'n'"':' '1'-'4','
-' ' '"'c'o'n't'r'i'b'u't'i'o'n'"':' '1'-'4','
-' ' '"'o'v'e'r'a'l'l'"':' '1'-'1'0','
-' ' '"'c'o'n'f'i'd'e'n'c'e'"':' '1'-'5'
-'}'
-'`'`'`'
-'
-'*'*'S't'e'p' '2':' 'M'e't'a'-'r'e'v'i'e'w' '('A'r'e'a' 'C'h'a'i'r' 'a'g'g'r'e'g'a't'i'o'n')'*'*'
-'
-'F'e'e'd' 'a'l'l' 'N' 'r'e'v'i'e'w's' 't'o' 'a' 'm'e't'a'-'r'e'v'i'e'w'e'r':'
-'
-'`'`'`'
-'Y'o'u' 'a'r'e' 'a'n' 'A'r'e'a' 'C'h'a'i'r' 'a't' '['V'E'N'U'E']'.' 'Y'o'u' 'h'a'v'e' 'r'e'c'e'i'v'e'd' '['N']' 'i'n'd'e'p'e'n'd'e'n't' 'r'e'v'i'e'w's'
-'o'f' 'a' 'p'a'p'e'r'.' 'Y'o'u'r' 'j'o'b' 'i's' 't'o':'
-'
-'1'.' 'I'd'e'n't'i'f'y' 'c'o'n's'e'n's'u's' 's't'r'e'n'g't'h's' 'a'n'd' 'w'e'a'k'n'e's's'e's' 'a'c'r'o's's' 'r'e'v'i'e'w'e'r's'
-'2'.' 'R'e's'o'l'v'e' 'd'i's'a'g'r'e'e'm'e'n't's' 'b'y' 'e'x'a'm'i'n'i'n'g' 't'h'e' 'p'a'p'e'r' 'd'i'r'e'c't'l'y'
-'3'.' 'P'r'o'd'u'c'e' 'a' 'm'e't'a'-'r'e'v'i'e'w' 't'h'a't' 'r'e'p'r'e's'e'n't's' 't'h'e' 'a'g'g'r'e'g'a't'e' 'j'u'd'g'm'e'n't'
-'4'.' 'U's'e' 'A'V'E'R'A'G'E'D' 'n'u'm'e'r'i'c'a'l' 's'c'o'r'e's' 'a'c'r'o's's' 'a'l'l' 'r'e'v'i'e'w's'
-'
-'B'e' 'c'o'n's'e'r'v'a't'i'v'e':' 'i'f' 'r'e'v'i'e'w'e'r's' 'd'i's'a'g'r'e'e' 'o'n' 'w'h'e't'h'e'r' 'a' 'w'e'a'k'n'e's's' 'i's' 's'e'r'i'o'u's','
-'t'r'e'a't' 'i't' 'a's' 's'e'r'i'o'u's' 'u'n't'i'l' 't'h'e' 'a'u't'h'o'r's' 'a'd'd'r'e's's' 'i't'.'
-'
-'R'e'v'i'e'w's':'
-'['r'e'v'i'e'w'_'1']'
-'['r'e'v'i'e'w'_'2']'
-'.'.'.'
-'`'`'`'
-'
-'*'*'S't'e'p' '3':' 'R'e'f'l'e'c't'i'o'n' 'l'o'o'p'*'*' '('o'p't'i'o'n'a'l',' '2'-'3' 'r'o'u'n'd's')'
-'
-'E'a'c'h' 'r'e'v'i'e'w'e'r' 'c'a'n' 'r'e'f'i'n'e' 't'h'e'i'r' 'r'e'v'i'e'w' 'a'f't'e'r' 's'e'e'i'n'g' 't'h'e' 'm'e't'a'-'r'e'v'i'e'w'.' 'U's'e' 'a'n' 'e'a'r'l'y' 't'e'r'm'i'n'a't'i'o'n' 's'e'n't'i'n'e'l':' 'i'f' 't'h'e' 'r'e'v'i'e'w'e'r' 'r'e's'p'o'n'd's' '"'I' 'a'm' 'd'o'n'e'"' '('n'o' 'c'h'a'n'g'e's')',' 's't'o'p' 'i't'e'r'a't'i'n'g'.'
-'
-'*'*'M'o'd'e'l' 's'e'l'e'c't'i'o'n' 'f'o'r' 'r'e'v'i'e'w'i'n'g'*'*':' 'R'e'v'i'e'w'i'n'g' 'i's' 'b'e's't' 'd'o'n'e' 'w'i't'h' 't'h'e' 's't'r'o'n'g'e's't' 'a'v'a'i'l'a'b'l'e' 'm'o'd'e'l',' 'e'v'e'n' 'i'f' 'y'o'u' 'w'r'o't'e' 't'h'e' 'p'a'p'e'r' 'w'i't'h' 'a' 'c'h'e'a'p'e'r' 'o'n'e'.' 'T'h'e' 'r'e'v'i'e'w'e'r' 'm'o'd'e'l' 's'h'o'u'l'd' 'b'e' 'c'h'o's'e'n' 'i'n'd'e'p'e'n'd'e'n't'l'y' 'f'r'o'm' 't'h'e' 'w'r'i't'i'n'g' 'm'o'd'e'l'.'
-'
-'*'*'F'e'w'-'s'h'o't' 'c'a'l'i'b'r'a't'i'o'n'*'*':' 'I'f' 'a'v'a'i'l'a'b'l'e',' 'i'n'c'l'u'd'e' '1'-'2' 'r'e'a'l' 'p'u'b'l'i's'h'e'd' 'r'e'v'i'e'w's' 'f'r'o'm' 't'h'e' 't'a'r'g'e't' 'v'e'n'u'e' 'a's' 'e'x'a'm'p'l'e's'.' 'T'h'i's' 'd'r'a'm'a't'i'c'a'l'l'y' 'i'm'p'r'o'v'e's' 's'c'o'r'e' 'c'a'l'i'b'r'a't'i'o'n'.' 'S'e'e' '['r'e'f'e'r'e'n'c'e's'/'r'e'v'i'e'w'e'r'-'g'u'i'd'e'l'i'n'e's'.'m'd']'('r'e'f'e'r'e'n'c'e's'/'r'e'v'i'e'w'e'r'-'g'u'i'd'e'l'i'n'e's'.'m'd')' 'f'o'r' 'e'x'a'm'p'l'e' 'r'e'v'i'e'w's'.'
-'
-'#'#'#' 'S't'e'p' '6'.'1'b':' 'V'i's'u'a'l' 'R'e'v'i'e'w' 'P'a's's' '('V'L'M')'
-'
-'T'e'x't'-'o'n'l'y' 'r'e'v'i'e'w' 'm'i's's'e's' 'a'n' 'e'n't'i'r'e' 'c'l'a's's' 'o'f' 'p'r'o'b'l'e'm's':' 'f'i'g'u'r'e' 'q'u'a'l'i't'y',' 'l'a'y'o'u't' 'i's's'u'e's',' 'v'i's'u'a'l' 'c'o'n's'i's't'e'n'c'y'.' 'I'f' 'y'o'u' 'h'a'v'e' 'a'c'c'e's's' 't'o' 'a' 'v'i's'i'o'n'-'c'a'p'a'b'l'e' 'm'o'd'e'l',' 'r'u'n' 'a' 's'e'p'a'r'a't'e' '*'*'v'i's'u'a'l' 'r'e'v'i'e'w'*'*' 'o'n' 't'h'e' 'c'o'm'p'i'l'e'd' 'P'D'F':'
-'
-'`'`'`'
-'Y'o'u' 'a'r'e' 'r'e'v'i'e'w'i'n'g' 't'h'e' 'v'i's'u'a'l' 'p'r'e's'e'n't'a't'i'o'n' 'o'f' 't'h'i's' 'r'e's'e'a'r'c'h' 'p'a'p'e'r' 'P'D'F'.'
-'C'h'e'c'k' 'f'o'r':'
-'1'.' 'F'i'g'u'r'e' 'q'u'a'l'i't'y':' 'A'r'e' 'p'l'o't's' 'r'e'a'd'a'b'l'e'?' 'L'a'b'e'l's' 'l'e'g'i'b'l'e'?' 'C'o'l'o'r's' 'd'i's't'i'n'g'u'i's'h'a'b'l'e'?'
-'2'.' 'F'i'g'u'r'e'-'c'a'p't'i'o'n' 'a'l'i'g'n'm'e'n't':' 'D'o'e's' 'e'a'c'h' 'c'a'p't'i'o'n' 'a'c'c'u'r'a't'e'l'y' 'd'e's'c'r'i'b'e' 'i't's' 'f'i'g'u'r'e'?'
-'3'.' 'L'a'y'o'u't' 'i's's'u'e's':' 'O'r'p'h'a'n'e'd' 's'e'c't'i'o'n' 'h'e'a'd'e'r's',' 'a'w'k'w'a'r'd' 'p'a'g'e' 'b'r'e'a'k's',' 'f'i'g'u'r'e's' 'f'a'r' 'f'r'o'm' 't'h'e'i'r' 'r'e'f'e'r'e'n'c'e's'
-'4'.' 'T'a'b'l'e' 'f'o'r'm'a't't'i'n'g':' 'A'l'i'g'n'e'd' 'c'o'l'u'm'n's',' 'c'o'n's'i's't'e'n't' 'd'e'c'i'm'a'l' 'p'r'e'c'i's'i'o'n',' 'b'o'l'd' 'f'o'r' 'b'e's't' 'r'e's'u'l't's'
-'5'.' 'V'i's'u'a'l' 'c'o'n's'i's't'e'n'c'y':' 'S'a'm'e' 'c'o'l'o'r' 's'c'h'e'm'e' 'a'c'r'o's's' 'a'l'l' 'f'i'g'u'r'e's',' 'c'o'n's'i's't'e'n't' 'f'o'n't' 's'i'z'e's'
-'6'.' 'G'r'a'y's'c'a'l'e' 'r'e'a'd'a'b'i'l'i't'y':' 'W'o'u'l'd' 't'h'e' 'f'i'g'u'r'e's' 'b'e' 'u'n'd'e'r's't'a'n'd'a'b'l'e' 'i'f' 'p'r'i'n't'e'd' 'i'n' 'B'&'W'?'
-'
-'F'o'r' 'e'a'c'h' 'i's's'u'e',' 's'p'e'c'i'f'y' 't'h'e' 'p'a'g'e' 'n'u'm'b'e'r' 'a'n'd' 'e'x'a'c't' 'l'o'c'a't'i'o'n'.'
-'`'`'`'
-'
-'T'h'i's' 'c'a't'c'h'e's' 'p'r'o'b'l'e'm's' 't'h'a't' 't'e'x't'-'b'a's'e'd' 'r'e'v'i'e'w' 'c'a'n'n'o't':' 'a' 'p'l'o't' 'w'i't'h' 'i'l'l'e'g'i'b'l'e' 'a'x'i's' 'l'a'b'e'l's',' 'a' 'f'i'g'u'r'e' 'p'l'a'c'e'd' '3' 'p'a'g'e's' 'f'r'o'm' 'i't's' 'f'i'r's't' 'r'e'f'e'r'e'n'c'e',' 'i'n'c'o'n's'i's't'e'n't' 'c'o'l'o'r' 'p'a'l'e't't'e's' 'b'e't'w'e'e'n' 'F'i'g'u'r'e' '2' 'a'n'd' 'F'i'g'u'r'e' '5',' 'o'r' 'a' 't'a'b'l'e' 't'h'a't'''s' 'c'l'e'a'r'l'y' 'w'i'd'e'r' 't'h'a'n' 't'h'e' 'c'o'l'u'm'n' 'w'i'd't'h'.'
-'
-'#'#'#' 'S't'e'p' '6'.'1'c':' 'C'l'a'i'm' 'V'e'r'i'f'i'c'a't'i'o'n' 'P'a's's'
-'
-'A'f't'e'r' 's'i'm'u'l'a't'e'd' 'r'e'v'i'e'w's',' 'r'u'n' 'a' 's'e'p'a'r'a't'e' 'v'e'r'i'f'i'c'a't'i'o'n' 'p'a's's'.' 'T'h'i's' 'c'a't'c'h'e's' 'f'a'c't'u'a'l' 'e'r'r'o'r's' 't'h'a't' 'r'e'v'i'e'w'e'r's' 'm'i'g'h't' 'm'i's's':'
-'
-'`'`'`'
-'C'l'a'i'm' 'V'e'r'i'f'i'c'a't'i'o'n' 'P'r'o't'o'c'o'l':'
-'1'.' 'E'x't'r'a'c't' 'e'v'e'r'y' 'f'a'c't'u'a'l' 'c'l'a'i'm' 'f'r'o'm' 't'h'e' 'p'a'p'e'r' '('n'u'm'b'e'r's',' 'c'o'm'p'a'r'i's'o'n's',' 't'r'e'n'd's')'
-'2'.' 'F'o'r' 'e'a'c'h' 'c'l'a'i'm',' 't'r'a'c'e' 'i't' 't'o' 't'h'e' 's'p'e'c'i'f'i'c' 'e'x'p'e'r'i'm'e'n't'/'r'e's'u'l't' 't'h'a't' 's'u'p'p'o'r't's' 'i't'
-'3'.' 'V'e'r'i'f'y' 't'h'e' 'n'u'm'b'e'r' 'i'n' 't'h'e' 'p'a'p'e'r' 'm'a't'c'h'e's' 't'h'e' 'a'c't'u'a'l' 'r'e's'u'l't' 'f'i'l'e'
-'4'.' 'F'l'a'g' 'a'n'y' 'c'l'a'i'm' 'w'i't'h'o'u't' 'a' 't'r'a'c'e'a'b'l'e' 's'o'u'r'c'e' 'a's' '['V'E'R'I'F'Y']'
-'`'`'`'
-'
-'F'o'r' 'a'g'e'n't'-'b'a's'e'd' 'w'o'r'k'f'l'o'w's':' 'd'e'l'e'g'a't'e' 'v'e'r'i'f'i'c'a't'i'o'n' 't'o' 'a' '*'*'f'r'e's'h' 's'u'b'-'a'g'e'n't'*'*' 't'h'a't' 'r'e'c'e'i'v'e's' 'o'n'l'y' 't'h'e' 'p'a'p'e'r' 't'e'x't' 'a'n'd' 't'h'e' 'r'a'w' 'r'e's'u'l't' 'f'i'l'e's'.' 'T'h'e' 'f'r'e's'h' 'c'o'n't'e'x't' 'p'r'e'v'e'n't's' 'c'o'n'f'i'r'm'a't'i'o'n' 'b'i'a's' ''?'t'h'e' 'v'e'r'i'f'i'e'r' 'd'o'e's'n'''t' '"'r'e'm'e'm'b'e'r'"' 'w'h'a't' 't'h'e' 'r'e's'u'l't's' 'w'e'r'e' 's'u'p'p'o's'e'd' 't'o' 'b'e'.'
-'
-'#'#'#' 'S't'e'p' '6'.'2':' 'P'r'i'o'r'i't'i'z'e' 'F'e'e'd'b'a'c'k'
-'
-'A'f't'e'r' 'c'o'l'l'e'c't'i'n'g' 'r'e'v'i'e'w's',' 'c'a't'e'g'o'r'i'z'e':'
-'
-'|' 'P'r'i'o'r'i't'y' '|' 'A'c't'i'o'n' '|'
-'|'-'-'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'-'-'|'
-'|' '*'*'C'r'i't'i'c'a'l'*'*' '('t'e'c'h'n'i'c'a'l' 'f'l'a'w',' 'm'i's's'i'n'g' 'b'a's'e'l'i'n'e')' '|' 'M'u's't' 'f'i'x'.' 'M'a'y' 'r'e'q'u'i'r'e' 'n'e'w' 'e'x'p'e'r'i'm'e'n't's' '鈫'?'b'a'c'k' 't'o' 'P'h'a's'e' '2' '|'
-'|' '*'*'H'i'g'h'*'*' '('c'l'a'r'i't'y' 'i's's'u'e',' 'm'i's's'i'n'g' 'a'b'l'a't'i'o'n')' '|' 'S'h'o'u'l'd' 'f'i'x' 'i'n' 't'h'i's' 'r'e'v'i's'i'o'n' '|'
-'|' '*'*'M'e'd'i'u'm'*'*' '('m'i'n'o'r' 'w'r'i't'i'n'g' 'i's's'u'e's',' 'e'x't'r'a' 'e'x'p'e'r'i'm'e'n't's')' '|' 'F'i'x' 'i'f' 't'i'm'e' 'a'l'l'o'w's' '|'
-'|' '*'*'L'o'w'*'*' '('s't'y'l'e' 'p'r'e'f'e'r'e'n'c'e's',' 't'a'n'g'e'n't'i'a'l' 's'u'g'g'e's't'i'o'n's')' '|' 'N'o't'e' 'f'o'r' 'f'u't'u'r'e' 'w'o'r'k' '|'
-'
-'#'#'#' 'S't'e'p' '6'.'3':' 'R'e'v'i's'i'o'n' 'C'y'c'l'e'
-'
-'F'o'r' 'e'a'c'h' 'c'r'i't'i'c'a'l'/'h'i'g'h' 'i's's'u'e':'
-'1'.' 'I'd'e'n't'i'f'y' 't'h'e' 's'p'e'c'i'f'i'c' 's'e'c't'i'o'n'('s')' 'a'f'f'e'c't'e'd'
-'2'.' 'D'r'a'f't' 't'h'e' 'f'i'x'
-'3'.' 'V'e'r'i'f'y' 't'h'e' 'f'i'x' 'd'o'e's'n'''t' 'b'r'e'a'k' 'o't'h'e'r' 'c'l'a'i'm's'
-'4'.' 'U'p'd'a't'e' 't'h'e' 'p'a'p'e'r'
-'5'.' 'R'e'-'c'h'e'c'k' 'a'g'a'i'n's't' 't'h'e' 'r'e'v'i'e'w'e'r'''s' 'c'o'n'c'e'r'n'
-'
-'#'#'#' 'S't'e'p' '6'.'4':' 'R'e'b'u't't'a'l' 'W'r'i't'i'n'g'
-'
-'W'h'e'n' 'r'e's'p'o'n'd'i'n'g' 't'o' 'a'c't'u'a'l' 'r'e'v'i'e'w's' '('p'o's't'-'s'u'b'm'i's's'i'o'n')',' 'r'e'b'u't't'a'l's' 'a'r'e' 'a' 'd'i's't'i'n'c't' 's'k'i'l'l' 'f'r'o'm' 'r'e'v'i's'i'o'n':'
-'
-'*'*'F'o'r'm'a't'*'*':' 'P'o'i'n't'-'b'y'-'p'o'i'n't'.' 'F'o'r' 'e'a'c'h' 'r'e'v'i'e'w'e'r' 'c'o'n'c'e'r'n':'
-'`'`'`'
-'>' 'R'1'-'W'1':' '"'T'h'e' 'p'a'p'e'r' 'l'a'c'k's' 'c'o'm'p'a'r'i's'o'n' 'w'i't'h' 'M'e't'h'o'd' 'X'.'"'
-'
-'W'e' 't'h'a'n'k' 't'h'e' 'r'e'v'i'e'w'e'r' 'f'o'r' 't'h'i's' 's'u'g'g'e's't'i'o'n'.' 'W'e' 'h'a'v'e' 'a'd'd'e'd' 'a' 'c'o'm'p'a'r'i's'o'n' 'w'i't'h' '
-'M'e't'h'o'd' 'X' 'i'n' 'T'a'b'l'e' '3' '('r'e'v'i's'e'd')'.' 'O'u'r' 'm'e't'h'o'd' 'o'u't'p'e'r'f'o'r'm's' 'X' 'b'y' '3'.'2'p'p' 'o'n' '['m'e't'r'i'c']' '
-'('p'<'0'.'0'5')'.' 'W'e' 'n'o't'e' 't'h'a't' 'X' 'r'e'q'u'i'r'e's' '2'x' 'o'u'r' 'c'o'm'p'u't'e' 'b'u'd'g'e't'.'
-'`'`'`'
-'
-'*'*'R'u'l'e's'*'*':'
-'-' 'A'd'd'r'e's's' 'e'v'e'r'y' 'c'o'n'c'e'r'n' ''?'r'e'v'i'e'w'e'r's' 'n'o't'i'c'e' 'i'f' 'y'o'u' 's'k'i'p' 'o'n'e'
-'-' 'L'e'a'd' 'w'i't'h' 't'h'e' 's't'r'o'n'g'e's't' 'r'e's'p'o'n's'e's'
-'-' 'B'e' 'c'o'n'c'i's'e' 'a'n'd' 'd'i'r'e'c't' ''?'r'e'v'i'e'w'e'r's' 'r'e'a'd' 'd'o'z'e'n's' 'o'f' 'r'e'b'u't't'a'l's'
-'-' 'I'n'c'l'u'd'e' 'n'e'w' 'r'e's'u'l't's' 'i'f' 'y'o'u' 'r'a'n' 'e'x'p'e'r'i'm'e'n't's' 'd'u'r'i'n'g' 't'h'e' 'r'e'b'u't't'a'l' 'p'e'r'i'o'd'
-'-' 'N'e'v'e'r' 'b'e' 'd'e'f'e'n's'i'v'e' 'o'r' 'd'i's'm'i's's'i'v'e',' 'e'v'e'n' 'o'f' 'w'e'a'k' 'c'r'i't'i'c'i's'm's'
-'-' 'T'h'a'n'k' 'r'e'v'i'e'w'e'r's' 'f'o'r' 's'p'e'c'i'f'i'c',' 'a'c't'i'o'n'a'b'l'e' 'f'e'e'd'b'a'c'k' '('n'o't' 'g'e'n'e'r'i'c' 'p'r'a'i's'e')'
-'
-'*'*'W'h'a't' 'N'O'T' 't'o' 'd'o'*'*':' '"'W'e' 'r'e's'p'e'c't'f'u'l'l'y' 'd'i's'a'g'r'e'e'"' 'w'i't'h'o'u't' 'e'v'i'd'e'n'c'e'.' '"'T'h'i's' 'i's' 'o'u't' 'o'f' 's'c'o'p'e'"' 'w'i't'h'o'u't' 'e'x'p'l'a'n'a't'i'o'n'.' 'I'g'n'o'r'i'n'g' 'a' 'w'e'a'k'n'e's's' 'b'y' 'o'n'l'y' 'r'e's'p'o'n'd'i'n'g' 't'o' 's't'r'e'n'g't'h's'.'
-'
-'#'#'#' 'S't'e'p' '6'.'5':' 'P'a'p'e'r' 'E'v'o'l'u't'i'o'n' 'T'r'a'c'k'i'n'g'
-'
-'S'a'v'e' 's'n'a'p's'h'o't's' 'a't' 'k'e'y' 'm'i'l'e's't'o'n'e's':'
-'`'`'`'
-'p'a'p'e'r'/'
-' ' 'p'a'p'e'r'.'t'e'x' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' '#' 'C'u'r'r'e'n't' 'w'o'r'k'i'n'g' 'v'e'r's'i'o'n'
-' ' 'p'a'p'e'r'_'v'1'_'f'i'r's't'_'d'r'a'f't'.'t'e'x' ' ' ' ' '#' 'F'i'r's't' 'c'o'm'p'l'e't'e' 'd'r'a'f't'
-' ' 'p'a'p'e'r'_'v'2'_'p'o's't'_'r'e'v'i'e'w'.'t'e'x' ' ' ' ' '#' 'A'f't'e'r' 's'i'm'u'l'a't'e'd' 'r'e'v'i'e'w'
-' ' 'p'a'p'e'r'_'v'3'_'p'r'e'_'s'u'b'm'i's's'i'o'n'.'t'e'x' ' '#' 'F'i'n'a'l' 'b'e'f'o'r'e' 's'u'b'm'i's's'i'o'n'
-' ' 'p'a'p'e'r'_'v'4'_'c'a'm'e'r'a'_'r'e'a'd'y'.'t'e'x' ' ' ' '#' 'P'o's't'-'a'c'c'e'p't'a'n'c'e' 'f'i'n'a'l'
-'`'`'`'
-'
-'-'-'-'
-'
-'#'#' 'R'e'v'i'e'w'e'r' 'E'v'a'l'u'a't'i'o'n' 'C'r'i't'e'r'i'a'
-'
-'U'n'd'e'r's't'a'n'd'i'n'g' 'w'h'a't' 'r'e'v'i'e'w'e'r's' 'l'o'o'k' 'f'o'r' 'h'e'l'p's' 'f'o'c'u's' 'e'f'f'o'r't':'
-'
-'|' 'C'r'i't'e'r'i'o'n' '|' 'W'h'a't' 'T'h'e'y' 'C'h'e'c'k' '|'
-'|'-'-'-'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'|'
-'|' '*'*'Q'u'a'l'i't'y'*'*' '|' 'T'e'c'h'n'i'c'a'l' 's'o'u'n'd'n'e's's',' 'w'e'l'l'-'s'u'p'p'o'r't'e'd' 'c'l'a'i'm's',' 'f'a'i'r' 'b'a's'e'l'i'n'e's' '|'
-'|' '*'*'C'l'a'r'i't'y'*'*' '|' 'C'l'e'a'r' 'w'r'i't'i'n'g',' 'r'e'p'r'o'd'u'c'i'b'l'e' 'b'y' 'e'x'p'e'r't's',' 'c'o'n's'i's't'e'n't' 'n'o't'a't'i'o'n' '|'
-'|' '*'*'S'i'g'n'i'f'i'c'a'n'c'e'*'*' '|' 'C'o'm'm'u'n'i't'y' 'i'm'p'a'c't',' 'a'd'v'a'n'c'e's' 'u'n'd'e'r's't'a'n'd'i'n'g' '|'
-'|' '*'*'O'r'i'g'i'n'a'l'i't'y'*'*' '|' 'N'e'w' 'i'n's'i'g'h't's' '('d'o'e's'n'''t' 'r'e'q'u'i'r'e' 'n'e'w' 'm'e't'h'o'd')' '|'
-'
-'*'*'S'c'o'r'i'n'g' '('N'e'u'r'I'P'S' '6'-'p'o'i'n't' 's'c'a'l'e')':'*'*'
-'-' '6':' 'S't'r'o'n'g' 'A'c'c'e'p't' ''?'g'r'o'u'n'd'b'r'e'a'k'i'n'g',' 'f'l'a'w'l'e's's'
-'-' '5':' 'A'c'c'e'p't' ''?'t'e'c'h'n'i'c'a'l'l'y' 's'o'l'i'd',' 'h'i'g'h' 'i'm'p'a'c't'
-'-' '4':' 'B'o'r'd'e'r'l'i'n'e' 'A'c'c'e'p't' ''?'s'o'l'i'd',' 'l'i'm'i't'e'd' 'e'v'a'l'u'a't'i'o'n'
-'-' '3':' 'B'o'r'd'e'r'l'i'n'e' 'R'e'j'e'c't' ''?'w'e'a'k'n'e's's'e's' 'o'u't'w'e'i'g'h'
-'-' '2':' 'R'e'j'e'c't' ''?'t'e'c'h'n'i'c'a'l' 'f'l'a'w's'
-'-' '1':' 'S't'r'o'n'g' 'R'e'j'e'c't' ''?'k'n'o'w'n' 'r'e's'u'l't's' 'o'r' 'e't'h'i'c's' 'i's's'u'e's'
-'
-'S'e'e' '['r'e'f'e'r'e'n'c'e's'/'r'e'v'i'e'w'e'r'-'g'u'i'd'e'l'i'n'e's'.'m'd']'('r'e'f'e'r'e'n'c'e's'/'r'e'v'i'e'w'e'r'-'g'u'i'd'e'l'i'n'e's'.'m'd')' 'f'o'r' 'd'e't'a'i'l'e'd' 'g'u'i'd'e'l'i'n'e's',' 'c'o'm'm'o'n' 'c'o'n'c'e'r'n's',' 'a'n'd' 'r'e'b'u't't'a'l' 's't'r'a't'e'g'i'e's'.'
-'
-'-'-'-'
-'
-'#'#' 'C'o'm'm'o'n' 'I's's'u'e's' 'a'n'd' 'S'o'l'u't'i'o'n's'
-'
-'|' 'I's's'u'e' '|' 'S'o'l'u't'i'o'n' '|'
-'|'-'-'-'-'-'-'-'|'-'-'-'-'-'-'-'-'-'-'|'
-'|' 'A'b's't'r'a'c't' 't'o'o' 'g'e'n'e'r'i'c' '|' 'D'e'l'e't'e' 'f'i'r's't' 's'e'n't'e'n'c'e' 'i'f' 'i't' 'c'o'u'l'd' 'p'r'e'p'e'n'd' 'a'n'y' 'M'L' 'p'a'p'e'r'.' 'S't'a'r't' 'w'i't'h' 'y'o'u'r' 's'p'e'c'i'f'i'c' 'c'o'n't'r'i'b'u't'i'o'n'.' '|'
-'|' 'A'b's't'r'a'c't' 'o'r' 'i'n't'r'o'd'u'c't'i'o'n' 'l'e'a'k's' 'i'n't'e'r'n'a'l' 'r'o'u't'e'/'c'o'n'f'i'g' 't'e'x't' '|' 'R'e'p'l'a'c'e' 'c'o'd'e' 'i'd'e'n't'i'f'i'e'r's',' '`'s'c'o'r'e'_'m'o'd'e'`' 'v'a'l'u'e's',' '"'p'r'o'm'o't'e'd' 'r'o'u't'e'"',' 'a'n'd' 'w'i'n'd'o'w'/'s't'e'p' 's'e't't'i'n'g's' 'w'i't'h' 'p'a'p'e'r'-'f'a'c'i'n'g' 'm'e'c'h'a'n'i's'm' 'n'a'm'e's';' 'm'o'v'e' 'e'x'a'c't' 'c'o'n'f'i'g'u'r'a't'i'o'n' 't'o' 'M'e't'h'o'd's',' 'E'x'p'e'r'i'm'e'n't's',' 'o'r' 'R'e'p'r'o'd'u'c'i'b'i'l'i't'y'.' '|'
-'|' 'I'n't'r'o'd'u'c't'i'o'n' 'e'x'c'e'e'd's' '1'.'5' 'p'a'g'e's' '|' 'S'p'l'i't' 'b'a'c'k'g'r'o'u'n'd' 'i'n't'o' 'R'e'l'a't'e'd' 'W'o'r'k'.' 'F'r'o'n't'-'l'o'a'd' 'c'o'n't'r'i'b'u't'i'o'n' 'b'u'l'l'e't's'.' '|'
-'|' 'I'n't'r'o'd'u'c't'i'o'n' 'r'e'a'd's' 'l'i'k'e' 'a' 'm'o'd'u'l'e' 'l'i's't' '|' 'R'e'b'u'i'l'd' 'i't' 'w'i't'h' 't'h'e' 'F'a'i'l'u'r'e'-'t'o'-'M'e'c'h'a'n'i's'm' 'I'n't'r'o'd'u'c't'i'o'n' 'P'a't't'e'r'n':' 'e'x'i's't'i'n'g' 'a's's'u'm'p't'i'o'n',' 'r'e'a'l'-'w'o'r'l'd' 'c'o'u'n't'e'r'e'x'a'm'p'l'e',' 'f'a'i'l'u'r'e' 'p'h'e'n'o'm'e'n'o'n',' 'm'e'c'h'a'n'i's'm' 'g'a'p's',' 't'h'e'n' 'm'o'd'u'l'e'-'b'y'-'g'a'p' 'm'e't'h'o'd' 'm'a'p'p'i'n'g'.' '|'
-'|' 'R'e'l'a't'e'd' 'W'o'r'k' 'r'e'a'd's' 'l'i'k'e' 'a' 'c'i't'a't'i'o'n' 'l'i's't' '|' 'R'e'b'u'i'l'd' 'i't' 'a'r'o'u'n'd' 't'a's'k'-'r'e'l'a't'e'd',' 't'e'c'h'n'i'q'u'e'-'r'e'l'a't'e'd',' 'a'n'd' 'c'l'o's'e'l'y' 'r'e'l'a't'e'd' 'm'e't'h'o'd' 'g'r'o'u'p's'.' 'E'n'd' 'e'a'c'h' 'g'r'o'u'p' 'w'i't'h' 'a' 'c'o'n'c'r'e't'e' 'p'o's'i't'i'o'n'i'n'g' 's'e'n't'e'n'c'e' 't'i'e'd' 't'o' 't'h'e' 'p'a'p'e'r'''s' 'g'a'p',' 'm'e't'h'o'd',' 'o'r' 'b'a's'e'l'i'n'e's'.' '|'
-'|' 'E'x'p'e'r'i'm'e'n't's' 'l'a'c'k' 'e'x'p'l'i'c'i't' 'c'l'a'i'm's' '|' 'A'd'd':' '"'T'h'i's' 'e'x'p'e'r'i'm'e'n't' 't'e's't's' 'w'h'e't'h'e'r' '['s'p'e'c'i'f'i'c' 'c'l'a'i'm']'.'.'.'"' 'b'e'f'o'r'e' 'e'a'c'h' 'o'n'e'.' '|'
-'|' 'E'x'p'e'r'i'm'e'n't'a'l' 's'e't'u'p' 'm'i'x'e's' 's'e't'u'p' 'a'n'd' 'a'n'a'l'y's'i's' '|' 'K'e'e'p' 'S'e't'u'p' 't'o' 'd'a't'a's'e't's',' 'b'a's'e'l'i'n'e's',' 'm'e't'r'i'c's'/'p'r'o't'o'c'o'l',' 'a'n'd' 'i'm'p'l'e'm'e'n't'a't'i'o'n' 'd'e't'a'i'l's'.' 'M'o'v'e' 'r'e's'u'l't' 'i'n't'e'r'p'r'e't'a't'i'o'n',' 'f'a'i'r'n'e's's' 'd'e'f'e'n's'e',' 'a'n'd' 'c'l'a'i'm's' 't'o' 'M'a'i'n' 'R'e's'u'l't's' 'o'r' 'l'a't'e'r' 'a'n'a'l'y's'i's'.' '|'
-'|' 'E'x'p'e'r'i'm'e'n't's' 's'e'c't'i'o'n' 'o'n'l'y' 'h'a's' 't'h'e' 'm'a'i'n' 'r'e's'u'l't' '|' 'A'f't'e'r' 't'h'e' 'm'a'i'n' 'e'x'p'e'r'i'm'e'n't' 'r'e'a'c'h'e's' 'e'x'p'e'c't'e'd' 'p'e'r'f'o'r'm'a'n'c'e' 'a'n'd' 's'u'p'p'o'r't's' 't'h'e' 'c'o'r'e' 'c'l'a'i'm',' 'c'r'e'a't'e' 't'h'e' 'P'o's't'-'M'a'i'n' 'E'x'p'e'r'i'm'e'n't' 'E'x'p'a'n's'i'o'n' 'P'l'a'n'.' 'A'd'd' 'a'b'l'a't'i'o'n's',' 's'e'n's'i't'i'v'i't'y',' 'v'i's'u'a'l'i'z'a't'i'o'n',' 's'l'i'c'e' 'a'n'a'l'y's'i's',' 'c'l'a'i'm'-'v'e'r'i'f'i'c'a't'i'o'n' 'd'i'a'g'n'o's't'i'c's',' 'c'o's't' 'a'n'a'l'y's'i's',' 'a'n'd' 'f'a'i'l'u'r'e' 'c'a's'e's' 'a's' 'n'e'e'd'e'd' 'f'o'r' 't'h'e' 'p'a'p'e'r'''s' 'c'l'a'i'm's'.' '|'
-'|' 'E'x'p'e'r'i'm'e'n't's' 'u's'e' 'd'e'f'e'n's'i'v'e' 'r'e's'u'l't' 'l'a'n'g'u'a'g'e' '|' 'R'e'p'l'a'c'e' '"'a'l't'h'o'u'g'h' 't'h'i's' 'd'o'e's' 'n'o't' 'u'n'd'e'r'm'i'n'e'"',' '"'d'e's'p'i't'e' 'n'o't' 'a'c'h'i'e'v'i'n'g'"',' '"'s't'i'l'l' 'a'c'c'e'p't'a'b'l'e'"',' '"'d'o'e's' 'n'o't' 'a'f'f'e'c't' 'e'f'f'e'c't'i'v'e'n'e's's'"',' 'a'n'd' '"'r'e'm'a'i'n's' 'c'o'm'p'e't'i't'i'v'e'"' 'w'i't'h' 'd'i'r'e'c't' 'r'a'n'k's',' 'd'e'l't'a's',' 'a'f'f'e'c't'e'd' 'm'e't'r'i'c's',' 'a'n'd' 'b'o'u'n'd'e'd' 'c'o'n'c'l'u's'i'o'n's'.' '|'
-'|' 'E'x'p'e'r'i'm'e'n't's' 'l'e'a'k' 'i'n't'e'r'n'a'l' 'f'i'l'e's' 'o'r' 'w'o'r'k'f'l'o'w' 't'r'a'c'e's' '|' 'R'e'm'o'v'e' 'c'o'd'e' 'f'i'l'e'n'a'm'e's',' 'C'S'V'/'l'o'g' 'p'a't'h's',' 's'c'r'i'p't' 'n'a'm'e's',' 'g'e'n'e'r'a't'e'd'-'f'i'l'e' 'w'o'r'd'i'n'g',' 's'a'v'e'd'-'r'e's'u'l't' 'w'o'r'd'i'n'g',' 'p'l'u'g'i'n' 't'r'a'c'e's',' 'a'n'd' 't'e'm'p'o'r'a'r'y' 'v'a'r'i'a'b'l'e' 'n'a'm'e's' 'f'r'o'm' 't'h'e' 'p'a'p'e'r' 'b'o'd'y'.' 'K'e'e'p' 'r'e'a'd'e'r'-'f'a'c'i'n'g' 'p'r'o't'o'c'o'l' 'd'e't'a'i'l's' 'i'n' 'I'm'p'l'e'm'e'n't'a't'i'o'n' 'D'e't'a'i'l's' 'a'n'd' 'e'n'g'i'n'e'e'r'i'n'g' 't'r'a'c'e's' 'i'n' 'r'e'l'e'a's'e' 'd'o'c'u'm'e'n't'a't'i'o'n'.' '|'
-'|' 'R'e'v'i'e'w'e'r's' 'f'i'n'd' 'p'a'p'e'r' 'h'a'r'd' 't'o' 'f'o'l'l'o'w' '|' 'A'd'd' 's'i'g'n'p'o's't'i'n'g',' 'u's'e' 'c'o'n's'i's't'e'n't' 't'e'r'm'i'n'o'l'o'g'y',' 'm'a'k'e' 'f'i'g'u'r'e' 'c'a'p't'i'o'n's' 's'e'l'f'-'c'o'n't'a'i'n'e'd'.' '|'
-'|' 'M'e't'h'o'd's' 'r'e'a'd's' 'l'i'k'e' 'c'o'd'e' 'f'l'o'w' '|' 'R'e'b'u'i'l'd' 'i't' 'a'r'o'u'n'd' 'P'r'o'b'l'e'm' 'F'o'r'm'u'l'a't'i'o'n',' 'M'e't'h'o'd' 'O'v'e'r'v'i'e'w',' 'C'o'r'e' 'M'o'd'u'l'e's',' 'a'n'd' 'T'r'a'i'n'i'n'g'/'I'n'f'e'r'e'n'c'e'.' 'F'o'r' 'e'v'e'r'y' 'm'o'd'u'l'e',' 's't'a't'e' 'm'o't'i'v'a't'i'o'n',' 'i'n'p'u't',' 'o'u't'p'u't',' 'f'o'r'm'u'l'a',' 'm'e'c'h'a'n'i's'm' 'e'f'f'e'c't',' 'a'n'd' 'd'o'w'n's't'r'e'a'm' 'c'o'n'n'e'c't'i'o'n'.' 'M'o'v'e' 'r'o'u't'i'n'e' 'c'o'n'f'i'g'u'r'a't'i'o'n' 't'o' 'E'x'p'e'r'i'm'e'n't's' 'o'r' 'R'e'p'r'o'd'u'c'i'b'i'l'i't'y'.' '|'
-'|' 'M'e't'h'o'd' 'f'e'e'l's' 'l'i'k'e' 'p'a't'c'h'w'o'r'k' '|' 'R'e'd'u'c'e' 'i't' 't'o' 'o'n'e' 'c'o'r'e' 'm'e'c'h'a'n'i's'm'.' 'R'e'm'o'v'e' 'a'd' 'h'o'c' 'h'e'u'r'i's't'i'c's',' 'f'a'l'l'b'a'c'k' 'b'r'a'n'c'h'e's',' 'a'n'd' 's'p'e'c'i'a'l' 'c'a's'e's' 'u'n'l'e's's' 'e'a'c'h' 'h'a's' 'a' 'p'r'i'n'c'i'p'l'e'd' 'r'e'a's'o'n' 'a'n'd' 'a'b'l'a't'i'o'n' 's'u'p'p'o'r't'.' '|'
-'|' 'M'e't'h'o'd' 'l'o'o'k's' 'c'o'p'i'e'd' 'f'r'o'm' 'l'i't'e'r'a't'u'r'e' '|' 'E'x't'r'a'c't' 't'h'e' 's'o'u'r'c'e' 'm'e'c'h'a'n'i's'm',' 'i'd'e'n't'i'f'y' 't'h'e' 'm'i's'm'a't'c'h' 'w'i't'h' 't'h'i's' 'p'a'p'e'r'''s' 'p'r'o'b'l'e'm',' 'a'n'd' 'r'e'd'e's'i'g'n' 't'h'e' 'c'o'm'p'o'n'e'n't' 's'o' 't'h'e' 'a'd'a'p't'a't'i'o'n' 'c'r'e'a't'e's' 'a' 'c'l'e'a'r' 'i'n'n'o'v'a't'i'o'n' 'd'e'l't'a'.' 'I'f' 'n'o' 'a'd'a'p't'a't'i'o'n' 'e'x'i's't's',' 'm'o'v'e' 'i't' 't'o' 'b'a's'e'l'i'n'e's' 'o'r' 'r'e'l'a't'e'd' 'w'o'r'k'.' '|'
-'|' 'N'e'w' 'i'd'e'a' 'a'p'p'e'a'r's' 'f'r'o'm' 'i'n't'u'i't'i'o'n' 'o'n'l'y' '|' 'B'u'i'l'd' 't'h'e' 'S'i'm'i'l'a'r'-'P'a'p'e'r' 'M'a't'r'i'x' 'f'i'r's't'.' 'G'e'n'e'r'a't'e' 'c'a'n'd'i'd'a't'e' 'd'i'r'e'c't'i'o'n's' 'o'n'l'y' 'f'r'o'm' 's'a'm'e'-'f'a'm'i'l'y' 'p'a'p'e'r' 'l'i'm'i't'a't'i'o'n's',' 's'h'a'r'e'd' 'a's's'u'm'p't'i'o'n's',' 'e'v'a'l'u'a't'i'o'n' 'g'a'p's',' 's't'r'o'n'g'-'b'a's'e'l'i'n'e' 'b'e'h'a'v'i'o'r',' 'o'r' 'f'a'i'l'e'd'-'r'o'u't'e' 'e'v'i'd'e'n'c'e'.' 'R'e'j'e'c't' 'i'd'e'a's' 'w'i't'h'o'u't' 'a' 'l'i't'e'r'a't'u'r'e' 's'o'u'r'c'e' 'c'h'a'i'n' 'a'n'd' 'c'h'e'a'p'e's't' 'k'i'l'l' 't'e's't'.' '|'
-'|' 'A'g'e'n't' 'm'e'c'h'a'n'i'c'a'l'l'y' 'e'x'e'c'u't'e's' 't'h'e' 'r'e's'e'a'r'c'h' 'm'a't'r'i'x' '|' 'B'u'i'l'd' 't'h'e' 'P'r'o'b'l'e'm'-'S'p'e'c'i'f'i'c' 'S'n'a'p's'h'o't',' 'S'e'a'r'c'h' 'L'e'n's' 'P'l'a'n',' 'a'n'd' 'P'r'o'b'l'e'm'-'S'p'e'c'i'f'i'c' 'I'n's'i'g'h't' 'M'a'p'.' 'T'a'i'l'o'r' 't'h'e' 'm'a't'r'i'x' 'f'i'e'l'd's' 't'o' 't'h'e' 'c'o'n'c'r'e't'e' 't'a's'k',' 'c'o'n's't'r'a'i'n't's',' 'f'a'i'l'u'r'e's',' 'a'n'd' 'a'd'j'a'c'e'n't' 'a'n'a'l'o'g'i'e's' 'b'e'f'o'r'e' 'c'h'o'o's'i'n'g' 'a' 'm'e't'h'o'd'.' '|'
-'|' 'A'g'e'n't' 'k'e'e'p's' 'o'p't'i'm'i'z'i'n'g' 'p'o's't'-'p'r'o'c'e's's'i'n'g' 'a'r'o'u'n'd' 'a' 'w'e'a'k' 'b'a's'e' '|' 'R'u'n' 't'h'e' 'R'o'o't'-'C'a'u's'e' 'I'n'n'o'v'a't'i'o'n' 'G'a't'e'.' 'A't't'r'i'b'u't'e' 't'h'e' 'f'a'i'l'u'r'e' 't'o' 'b'a's'e'/'b'a'c'k'b'o'n'e',' 'o'b'j'e'c't'i'v'e',' 'd'a't'a',' 'i'n'f'e'r'e'n'c'e',' 'p'o's't'-'p'r'o'c'e's's'i'n'g',' 'o'r' 'e'v'a'l'u'a't'i'o'n' 'b'e'f'o'r'e' 'c'h'o'o's'i'n'g' 't'h'e' 'n'e'x't' 'r'o'u't'e'.' 'I'f' 't'h'e' 'b'a's'e' 'l'a'c'k's' 't'h'e' 'n'e'e'd'e'd' 's'i'g'n'a'l',' 'r'e'q'u'i'r'e' 'a' 'b'a's'e'-'l'e'v'e'l' 'o'r' 'o'b'j'e'c't'i'v'e'-'l'e'v'e'l' 'c'a'n'd'i'd'a't'e' 'i'n's't'e'a'd' 'o'f' 'a'n'o't'h'e'r' 'f'i'l't'e'r',' 't'h'r'e's'h'o'l'd',' 'r'e'r'a'n'k'e'r',' 'c'r'i't'i'c',' 'o'r' 's'm'o'o't'h'i'n'g' 'p'a't'c'h'.' '|'
-'|' 'C'a'n'd'i'd'a't'e' 'p'a'p'e'r's' 'a'r'e' 'o'n'l'y' 'm'e't'a'd'a't'a' 'o'r' 'a'b's't'r'a'c't's' '|' 'R'u'n' 't'h'e' 'R'e'f'e'r'e'n'c'e' 'P'a'p'e'r' 'A'c'q'u'i's'i't'i'o'n' 'G'a't'e'.' 'D'o'w'n'l'o'a'd' 'l'a'w'f'u'l' 'p'u'b'l'i'c' 'P'D'F's' 'w'h'e'n' 'a'v'a'i'l'a'b'l'e',' 'w'r'i't'e' '`'p'a'p'e'r'_'i'n'd'e'x'`' 'm'e't'a'd'a't'a' 'a'n'd' 'r'e'a'd'i'n'g' 'n'o't'e's',' 'a'n'd' 'm'a'r'k' 'm'e't'a'd'a't'a'-'o'n'l'y' 'p'a'p'e'r's' 'a's' 'u'n'a'b'l'e' 't'o' 's'u'p'p'o'r't' 'c'l'a'i'm's'.' '|'
-'|' 'I'n's'p'i'r'a't'i'o'n' 'i's' 'c'o'p'i'e'd' 'w'i't'h'o'u't' 'a'd'a'p't'a't'i'o'n' '|' 'B'o'r'r'o'w' 'm'e'c'h'a'n'i's'm's',' 'n'o't' 'm'e't'h'o'd's'.' 'W'r'i't'e' 't'h'e' 't'r'a'n's'f'e'r' 'p'a't'h' 'f'r'o'm' 's'o'u'r'c'e' 'p'a'p'e'r' 't'o' 'e'x't'r'a'c't'e'd' 'm'e'c'h'a'n'i's'm' 't'o' 'm'i's'm'a't'c'h' 't'o' 'a'd'a'p't'a't'i'o'n' 't'o' 'i'n'n'o'v'a't'i'o'n' 'd'e'l't'a' 'b'e'f'o'r'e' 'e'x'p'e'r'i'm'e'n't's'.' '|'
-'|' 'A'g'e'n't' 's't'o'p's' 'b'e'c'a'u's'e' 'i't' 'w'a'n't's' 'a'n'o't'h'e'r' 'a'p'p'r'o'v'a'l' 'p'h'r'a's'e' '|' 'I'f' 'a'n' 'A'u't'o'n'o'm'o'u's' 'E'x'p'e'r'i'm'e'n't' 'L'i'c'e'n's'e' 'a'l'r'e'a'd'y' 'c'o'v'e'r's' 't'h'e' 'r'o'u't'e',' 'b'u'd'g'e't',' 'a'l'l'o'w'e'd' 'a'c't'i'o'n's',' 'a'n'd' 's't'o'p' 'c'o'n'd'i't'i'o'n's',' 'c'o'n't'i'n'u'e' 'i'n's'i'd'e' 't'h'a't' 'l'i'c'e'n's'e'.' 'A's'k' 'a'g'a'i'n' 'o'n'l'y' 'w'h'e'n' 't'h'e' 'n'e'x't' 'a'c't'i'o'n' 'e'x'c'e'e'd's' 't'h'e' 'l'i'c'e'n's'e' 'o'r' 'h'i't's' 'a' 's't'o'p' 'c'o'n'd'i't'i'o'n'.' '|'
-'|' 'W'o'r'k'f'l'o'w' 'i's' 'c'o'm'p'l'i'a'n't' 'b'u't' 't'h'e' 'p'a'p'e'r' 'i's' 'n'o't' 'c'o'n'v'e'r'g'i'n'g' '|' 'U'p'd'a't'e' '`'p'a'p'e'r'/'s't'a't'u's'.'m'd'`',' 'i'd'e'n't'i'f'y' 't'h'e' 'c'u'r'r'e'n't' 'p'r'o'j'e'c't' 'p'h'a's'e',' 'l'i's't' 'a'l'l'o'w'e'd' 'a'n'd' 'b'l'o'c'k'e'd' 'a'c't'i'o'n's',' 'a'n'd' 'f'o'r'c'e' 't'h'e' 'n'e'x't' 'g'a't'e' 'd'e'c'i's'i'o'n' 'b'e'f'o'r'e' 'd'o'i'n'g' 'm'o'r'e' 'l'o'c'a'l' 'w'o'r'k'.' 'D'o' 'n'o't' 's't'a'y' 'i'n' 'r'o'u'g'h' 'd'r'a'f't'i'n'g' 'o'r' 'e'n'd'l'e's's' 'e'x'p'e'r'i'm'e'n't' 'l'o'o'p's' 'w'i't'h'o'u't' 'a' 'p'h'a's'e' 't'r'a'n's'i't'i'o'n'.' '|'
-'|' 'S'k'i'l'l' 'c'o'n's't'r'a'i'n't's' 'a'r'e' 't'r'e'a't'e'd' 'a's' 'a'd'v'i'c'e' 'i'n's't'e'a'd' 'o'f' 'g'a't'e's' '|' 'A'p'p'l'y' 't'h'e' 'P'h'a's'e' 'G'a't'e' 't'a'b'l'e'.' 'I'f' 'p'r'o'j'e'c't' 'i'd'e'n't'i't'y',' 'l'i't'e'r'a't'u'r'e' 'm'a't'r'i'x',' 'r'o'u't'e'-'k'i'l'l'e'r' 'h'a'n'd'o'f'f',' 'e'x'p'e'r'i'm'e'n't' 'l'i'c'e'n's'e',' 'c'l'a'i'm'-'e'v'i'd'e'n'c'e' 'm'a'p',' 'o'r' 'r'e's'u'l't' 'a'u'd'i't' 'i's' 'm'i's's'i'n'g',' 's't'o'p' 'a'n'd' 'c'r'e'a't'e' 't'h'e' 'm'i's's'i'n'g' 'a'r't'i'f'a'c't' 'b'e'f'o'r'e' 'c'o'n't'i'n'u'i'n'g'.' '|'
-'|' 'W'o'r'k'f'l'o'w' 'i's' 'm'a'r'k'e'd' 'c'o'm'p'l'e't'e' 'w'i't'h'o'u't' 'i'n'd'e'p'e'n'd'e'n't' 's'u'p'e'r'v'i's'i'o'n' '|' 'R'u'n' 't'h'e' 'W'o'r'k'f'l'o'w' 'S'u'p'e'r'v'i's'o'r' 'a'u'd'i't'.' 'I'f' 't'h'e' 'd'e'c'i's'i'o'n' 'i's' '`'b'l'o'c'k'`',' 'd'o' 'n'o't' 'p'a'c'k'a'g'e',' 'f'i'n'a'l'i'z'e',' 'o'r' 'c'a'l'l' 't'h'e' 'r'e's'e'a'r'c'h' 'w'o'r'k'f'l'o'w' 'c'o'm'p'l'e't'e' 'u'n't'i'l' 'e'v'e'r'y' 'l'i's't'e'd' 'p'r'o'c'e's's' 'r'e'p'a'i'r' 'i's' 'd'o'n'e'.' '|'
-'|' 'E'x't'e'r'n'a'l' 'G'P'T' 'p'a'g'e' 'e'x'i's't's' 'b'u't' 'i's' 'n'o't' 'u's'e'd' 'c'o'n's'i's't'e'n't'l'y' '|' 'A'p'p'l'y' 't'h'e' 'E'x't'e'r'n'a'l' 'G'P'T' 'R'e'v'i'e'w'e'r' 'R'o'l'e'.' 'R'e'c'o'r'd' '`'e'x't'e'r'n'a'l'_'g'p't'_'r'e'v'i'e'w'e'r'.'m'd'`',' 'u's'e' 't'h'e' 's't'a'n'd'a'r'd' 'p'r'o'm'p't' 'a't' 'c'o'n'f'i'g'u'r'e'd' 'c'h'e'c'k'p'o'i'n't's',' 'p'r'e's'e'r'v'e' 't'h'e' 'G'P'T' 'r'e's'p'o'n's'e' 'a's' 'a' 'h'a'n'd'o'f'f',' 'a'n'd' 'l'e't' 't'h'e' 'W'o'r'k'f'l'o'w' 'S'u'p'e'r'v'i's'o'r' 'd'e'c'i'd'e' 'w'h'e't'h'e'r' 'i't' 'c'r'e'a't'e's' 'a' 'l'o'c'a'l' 'b'l'o'c'k'e'r'.' '|'
-'|' 'E'x't'e'r'n'a'l' 'G'P'T' 'g'i'v'e's' 'v'a'g'u'e' 'a'd'v'i'c'e' '|' 'R'e'-'s'u'b'm'i't' 'w'i't'h' 't'h'e' 's't'a'n'd'a'r'd' 'p'r'o'm'p't' 'a'n'd' 'r'e'q'u'i'r'e' 'q'u'a'l'i't'y' 's'c'o'r'e',' '`'p'a's's' '/' 'c'o'n'c'e'r'n' '/' 'b'l'o'c'k'`',' 'm'u's't'-'f'i'x' 'i't'e'm's',' 'a'n'd' 'c'o'm'p'l'e't'e' 'a'c't'i'o'n'a'b'l'e' 's'u'g'g'e's't'i'o'n's'.' 'D'o' 'n'o't' 'a'c'c'e'p't' 'g'e'n'e'r'i'c' 'p'r'a'i's'e' 'o'r' 'u'n's'o'u'r'c'e'd' 'r'e'w'r'i't'e's' 'a's' 'a'n' 'a'u'd'i't'.' '|'
-'|' 'M'e't'h'o'd' 'p'a'p'e'r' 's'i'l'e'n't'l'y' 'b'e'c'o'm'e's' 'a' 'b'o'u'n'd'a'r'y' 's't'u'd'y' '|' 'A'p'p'l'y' 't'h'e' 'M'a'n'u's'c'r'i'p't' 'I'n't'e'n't' 'G'a't'e'.' 'I'f' 't'h'e' 'f'r'o'z'e'n' 'p'a'p'e'r' 't'y'p'e' 'i's' '`'m'e't'h'o'd'_'p'a'p'e'r'`',' 'b'o'u'n'd'a'r'y'-'s't'u'd'y' 'c'o'n'v'e'r's'i'o'n' 'i's' 'p'r'o'h'i'b'i't'e'd';' 'm'a'r'k' 't'h'e' 'r'o'u't'e' '`'r'e'f'r'a'm'e'_'r'e'q'u'i'r'e'd'`' 'o'r' '`'k'i'l'l'`' 'i'n's't'e'a'd' 'o'f' 'd'r'a'f't'i'n'g' 'o'r' 'c'o'm'p'l'e't'i'n'g' 'a' 'b'o'u'n'd'a'r'y'-'s't'u'd'y' 'm'a'n'u's'c'r'i'p't'.' '|'
-'|' 'W'o'r'k's'p'a'c'e' 'o'r' 'o'l'd' 'r'o'u't'e' 'a'r't'i'f'a'c't's' 'p'o'l'l'u't'e' 't'h'e' 'e'v'i'd'e'n'c'e' 'c'h'a'i'n' '|' 'R'e'-'o'p'e'n' 't'h'e' 'P'r'o'j'e'c't' 'I'd'e'n't'i't'y' 'G'a't'e'.' 'C'o'n'f'i'r'm' 't'h'e' 't'r'u's't'e'd' 'w'o'r'k's'p'a'c'e' 'r'o'o't',' 't'o'p'i'c',' 'i'n'-'s'c'o'p'e' 'm'e't'h'o'd' 't'e'r'm's',' 'd'e'p'r'e'c'a't'e'd' 'r'o'u't'e's'/'f'i'l'e's',' 'a'n'd' 't'r'u's't'e'd' 'r'e's'u'l't' 'd'i'r'e'c't'o'r'i'e's' 'b'e'f'o'r'e' 'u's'i'n'g' 'a'n'y' 'a'r't'i'f'a'c't'.' '|'
-'|' 'F'a'i'l'e'd' 'r'e's'u'l't's' 'a'r'e' 't'u'r'n'e'd' 'i'n't'o' 'p'r'o's'e' 'i'n's't'e'a'd' 'o'f' 'r'e'p'a'i'r' '|' 'A'p'p'l'y' 't'h'e' 'F'a'i'l'e'd'-'R'e's'u'l't' 'O'p't'i'm'i'z'a't'i'o'n' 'G'a't'e'.' 'S'e't' 'r'o'u't'e' 's't'a't'u's' 't'o' '`'o'p't'i'm'i'z'e'`',' 'w'r'i't'e' 'a' 'f'a'i'l'u'r'e' 'd'i'a'g'n'o's'i's',' 'p'r'o'p'o's'e' '2'-'4' 'r'o'o't'-'c'a'u's'e' 'r'e'p'a'i'r' 'c'a'n'd'i'd'a't'e's',' 'a'n'd' 'r'u'n' 't'h'e' 'c'h'e'a'p'e's't' 'l'i'c'e'n's'e'd' 'r'e'p'a'i'r' 't'e's't' 'b'e'f'o'r'e' 'w'r'i't'i'n'g' 'm'a'n'u's'c'r'i'p't' 'c'o'n'c'l'u's'i'o'n's'.' '|'
-'|' 'A'b'l'a't'i'o'n' 'r'e's'u'l't's' 'c'o'n't'r'a'd'i'c't' 't'h'e' 'm'e't'h'o'd' 'b'u't' 't'h'e' 'd'r'a'f't' 's't'i'l'l' 'c'l'a'i'm's' 's'u'c'c'e's's' '|' 'A'p'p'l'y' 't'h'e' 'A'b'l'a't'i'o'n' 'K'i'l'l' 'R'u'l'e'.' 'R'e'm'o'v'e' 'u'n's'u'p'p'o'r't'e'd' 'm'o'd'u'l'e' 'c'l'a'i'm's',' 'u'p'd'a't'e' '`'r'e's'u'l't'_'a'u'd'i't'.'m'd'`' 'a'n'd' '`'c'l'a'i'm'_'e'v'i'd'e'n'c'e'_'m'a'p'.'m'd'`',' 'a'n'd' 't'r'i'g'g'e'r' 'r'e'f'r'a'm'e'/'r'e'd'e's'i'g'n'/'k'i'l'l' 'r'e'v'i'e'w' 'b'e'f'o'r'e' 'a'n'y' 'm'a'n'u's'c'r'i'p't' 'e'x'p'a'n's'i'o'n'.' '|'
-'|' 'R'e's'u'l't' 'p'r'o's'e' 'p'r'o't'e'c't's' 'w'e'a'k' 'e'v'i'd'e'n'c'e' '|' 'A'p'p'l'y' 't'h'e' 'D'e'f'e'n's'i'v'e' 'W'r'i't'i'n'g' 'Z'e'r'o'-'T'o'l'e'r'a'n'c'e' 'G'a't'e'.' 'L'o'c'a't'e' 't'h'e' 's'e'n't'e'n'c'e',' 'n'a'm'e' 't'h'e' 'w'e'a'k' 'c'l'a'i'm' 'i't' 'p'r'o't'e'c't's',' 't'h'e'n' 'd'e'l'e't'e' 't'h'e' 'c'l'a'i'm',' 'w'e'a'k'e'n' 'i't' 'w'i't'h' 'd'i'r'e'c't' 'r'a'n'k's'/'d'e'l't'a's',' 'o'r' 'r'e't'u'r'n' 't'o' 'o'p't'i'm'i'z'a't'i'o'n'.' '|'
-'|' 'S'e'c't'i'o'n' 'p'r'o's'e' 'i'g'n'o'r'e's' 't'h'e' 'u's'e'r'''s' 'w'r'i't'i'n'g' 'c'o'n's't'r'a'i'n't's' '|' 'A'p'p'l'y' 't'h'e' 'W'r'i't'i'n'g' 'C'o'n'f'o'r'm'a'n'c'e' 'G'a't'e'.' 'F'r'e'e'z'e' 'a' 's'e'c't'i'o'n' 'c'o'n't'r'a'c't',' 'a'u'd'i't' 'e'a'c'h' 'p'a'r'a'g'r'a'p'h' 'a'g'a'i'n's't' 'i't',' 'a'n'd' 'r'e'w'r'i't'e' 'f'a'i'l'i'n'g' 'p'a'r'a'g'r'a'p'h's' 'b'e'f'o'r'e' 'i'n't'e'g'r'a't'i'o'n'.' '|'
-'|' 'S'u'b'-'a'g'e'n't's' 'd'i'r'e'c't'l'y' 'e'd'i't' 't'h'e' 'm'a'i'n' 'm'a'n'u's'c'r'i'p't' '|' 'R'e'v'o'k'e' 'd'i'r'e'c't' 'm'a'n'u's'c'r'i'p't' 'w'r'i't'e's'.' 'R'e'q'u'i'r'e' 's't'r'u'c't'u'r'e'd' 'h'a'n'd'o'f'f's',' 't'h'e'n' 'l'e't' 't'h'e' 'R'e's'e'a'r'c'h' 'C'o'o'r'd'i'n'a't'o'r' 'i'n't'e'g'r'a't'e' 't'e'r'm's',' 'c'l'a'i'm's',' 'a'n'd' 'f'i'n'a'l' 'L'a'T'e'X' 'e'd'i't's'.' '|'
-'|' 'E'x'p'e'r'i'm'e'n't' 'r'u'n'n'e'r' 'w'r'i't'e's' 'p'a'p'e'r' 'c'o'n'c'l'u's'i'o'n's' '|' 'S'p'l'i't' 'f'a'c't's' 'f'r'o'm' 'i'n't'e'r'p'r'e't'a't'i'o'n'.' 'R'u'n'n'e'r' 'r'e'p'o'r't's' 'c'o'm'm'a'n'd's',' 'c'o'n'f'i'g'u'r'a't'i'o'n',' 'r'e's'u'l't' 'p'a't'h's',' 'a'n'd' 'f'a'i'l'u'r'e' 's't'a't'e's';' 'A'n'a'l'y's't' 'r'e'p'o'r't's' 't'r'e'n'd's';' 'R'e's'u'l't' 'A'u'd'i't'o'r' 'c'h'e'c'k's' 'n'u'm'b'e'r's' 'a'n'd' 'c'l'a'i'm' 's'c'o'p'e';' 'C'o'o'r'd'i'n'a't'o'r' 'w'r'i't'e's' 'c'o'n'c'l'u's'i'o'n's'.' '|'
-'|' 'R'e'v'i'e'w'e'r' 'p'a'n'e'l' 'c'r'e'a't'e's' 'n'o'i's'y' 'o'r' 'c'o'n'f'l'i'c't'i'n'g' 'a'd'v'i'c'e' '|' 'U's'e' 'a' 'M'e't'a'-'R'e'v'i'e'w'e'r' 't'o' 'a'g'g'r'e'g'a't'e' 'p'r'i'o'r'i't'i'e's'.' 'F'i'x' 'c'r'i't'i'c'a'l'/'h'i'g'h' 'i's's'u'e's' 'g'r'o'u'n'd'e'd' 'i'n' 'e'v'i'd'e'n'c'e';' 'd'o' 'n'o't' 'm'e'c'h'a'n'i'c'a'l'l'y' 'a'c'c'e'p't' 'e'v'e'r'y' 'r'e'v'i'e'w'e'r' 's'u'g'g'e's't'i'o'n'.' '|'
-'|' 'M'u'l't'i'-'a'g'e'n't' 'd'r'a'f't's' 'i'n't'r'o'd'u'c'e' 'i'n'c'o'n's'i's't'e'n't' 't'e'r'm's' '|' 'F'r'e'e'z'e' 't'h'e' 'p'a'p'e'r'-'f'a'c'i'n'g' 't'e'r'm'i'n'o'l'o'g'y' 'i'n' '`'p'a'p'e'r'_'c'l'a'i'm's'.'m'd'`' 'o'r' '`'c'l'a'i'm'_'e'v'i'd'e'n'c'e'_'m'a'p'.'m'd'`'.' 'W'r'i't'e'r's' 'm'a'y' 'p'r'o'p'o's'e' 'e'd'i't's',' 'b'u't' 't'h'e' 'C'o'o'r'd'i'n'a't'o'r' 'o'w'n's' 'c'r'o's's'-'s'e'c't'i'o'n' 'n'a'm'i'n'g'.' '|'
-'|' 'H'a'n'd'o'f'f's' 'b'e'c'o'm'e' 's'c'a't't'e'r'e'd' 'o'r' 't'o'o' 'h'e'a'v'y' '|' 'K'e'e'p' 't'h'e' 'm'a'n'd'a't'o'r'y' 'h'a'n'd'o'f'f' 's'e't' 't'o' '`'p'a'p'e'r'/'p'r'o't'o'c'o'l'_'s't'a't'e'.'m'd'`',' '`'p'a'p'e'r'_'c'l'a'i'm's'.'m'd'`',' '`'c'l'a'i'm'_'e'v'i'd'e'n'c'e'_'m'a'p'.'m'd'`',' '`'l'i't'e'r'a't'u'r'e'_'m'a't'r'i'x'.'m'd'`',' 'a'n'd' '`'r'e's'u'l't'_'a'u'd'i't'.'m'd'`';' 'g'e'n'e'r'a't'e' 'e'x't'r'a' 'r'e'v'i'e'w' 'o'r' 'f'i'g'u'r'e'-'a'u'd'i't' 'f'i'l'e's' 'o'n'l'y' 'w'h'e'n' 'n'e'e'd'e'd'.' '|'
-'|' 'M'i's's'i'n'g' 's't'a't'i's't'i'c'a'l' 's'i'g'n'i'f'i'c'a'n'c'e' '|' 'A'd'd' 'e'r'r'o'r' 'b'a'r's',' 'n'u'm'b'e'r' 'o'f' 'r'u'n's',' 's't'a't'i's't'i'c'a'l' 't'e's't's',' 'c'o'n'f'i'd'e'n'c'e' 'i'n't'e'r'v'a'l's'.' '|'
-'|' 'S'c'o'p'e' 'c'r'e'e'p' 'i'n' 'e'x'p'e'r'i'm'e'n't's' '|' 'E'v'e'r'y' 'e'x'p'e'r'i'm'e'n't' 'm'u's't' 'm'a'p' 't'o' 'a' 's'p'e'c'i'f'i'c' 'c'l'a'i'm'.' 'C'u't' 'e'x'p'e'r'i'm'e'n't's' 't'h'a't' 'd'o'n'''t'.' '|'
-'|' 'R'e'v'i'e'w'e'r's' 'q'u'e's't'i'o'n' 'r'e'p'r'o'd'u'c'i'b'i'l'i't'y' '|' 'D'o'c'u'm'e'n't' 'c'o'd'e',' 'h'y'p'e'r'p'a'r'a'm'e't'e'r's',' 's'e'e'd's',' 'c'o'm'p'u't'e' 'd'e't'a'i'l's',' 'a'n'd' 'r'e's'u'l't' 's'o'u'r'c'e' 'p'a't'h's'.' '|'
-'
-'-'-'-'
+## Phase 6: Self-Review and Revision
+
+Goal: simulate the review process before submission. Catch weak novelty,
+unsupported claims, paper-type drift, method-experiment mismatch, presentation
+problems, and workflow violations before final integration.
+
+Process compliance is not paper quality. A workflow may pass process gates while
+the manuscript still fails as a paper. The reviewer panel must judge the current
+manuscript, not whether it improved over earlier drafts.
+
+## Review Isolation Rule
+
+Default to fresh-context review packets. A reviewer should see only the files
+needed for its role, not project progress notes, repair history, previous review
+passes, patch proposals, or the Coordinator's private rationale.
+
+Allowed in review packets:
+
+- rendered manuscript PDF or extracted paper text;
+- `main.tex` or section text when needed for textual inspection;
+- frozen paper intent, paper type, thesis, and forbidden conversions;
+- public `claim_evidence_map.md` or a sanitized claim-evidence extract;
+- `literature_matrix.md` or a sanitized related-work extract;
+- `result_audit.md`, `result_ledger.jsonl`, tables, figures, and source result
+  paths when the role checks evidence;
+- section contracts and planned-vs-produced writing audits when the role checks
+  writing conformance.
+
+Exclude from reviewer packets unless the role is Workflow Supervisor:
+
+- `paper/protocol_state.md` except for frozen intent fields;
+- `progress.md`, `status.md`, task plans, and old route history;
+- previous reviewer reports;
+- patch proposals and repair logs;
+- agent handoffs unrelated to that role;
+- stale workspaces or deprecated route artifacts.
+
+The reviewer must not reward careful limitation language unless the frozen paper
+type explicitly permits a boundary, benchmark, negative-result, or position
+paper. For a frozen method paper, "bounded prototype behavior" is a warning
+unless supported by a clear method contribution and adequate evidence.
+
+## Reviewer Panel Roles
+
+Do not create several generic reviewers. Use role-bounded reviewers. Each role
+has a jurisdiction, a clean input packet, block authority, and explicit
+non-coverage statement.
+
+| Role | Jurisdiction | Required input | May block final integration when |
+| --- | --- | --- | --- |
+| Paper-Type and Intent Reviewer | Paper identity, thesis, contribution shape, forbidden conversions | Manuscript, frozen paper intent, paper type, forbidden conversions | A method paper reads as a boundary study, benchmark, survey, negative-result paper, or prototype report without user approval |
+| Novelty and Related Work Reviewer | Novelty risk, close related work, method-family positioning, baseline rationale | Manuscript, literature matrix, BibTeX or citation list, close-work notes | Closest work is missing, related work is a citation list, or the gap is not specific to the method |
+| Methodology Reviewer | Method design logic, problem formulation, input-output chain, formulas, module necessity, naming | Manuscript, method section, section contract, claim map | Method is code flow, taxonomy, patchwork, unmotivated modules, or inconsistent with experiments |
+| Experiment Design Reviewer | Claim-serving experiments, primary metric, baselines, controls, ablations, kill criteria, failure repair | Manuscript, experiment license, result audit, tables, experiment plan | Experiments do not test the stated claims, lack simple controls, hide failed ablations, or cannot support the paper type |
+| Result and Claim Auditor | Numeric values, ranks, deltas, best markers, source paths, claim boundaries | Manuscript, tables, figures, result audit, result ledger, source result files | Any reported value, rank, marker, or claim cannot be traced to trusted evidence |
+| Writing Conformance Reviewer | Section roles, section contracts, defensive language, internal traces, narrative structure | Manuscript, section contracts, writing gate report | Sections violate their contracts, introduce internal route text, use defensive prose, or drift from the required structure |
+| Presentation and PDF Reviewer | Rendered PDF quality, title/author state, figures, table density, captions, layout, first-viewport paper maturity | Rendered PDF, figure/table files when available | The PDF looks like an internal report, has no required method figure, unreadable tables, broken layout, or submission-facing metadata gaps |
+| Strict External ML Logic Reviewer | Professional, severe ML paper review focused on logic-chain coherence, claim-evidence closure, defensive language, methodology, and submission maturity | Clean review packet only; no process history | The logic chain is broken, evidence does not support claims, defensive prose hides weak results, or the paper would likely be rejected despite passing internal gates |
+| Workflow Supervisor | Process compliance only: protocol state, gates, role boundaries, evidence contamination | Protocol state, gate outputs, handoff manifest, audit traces | Required gates are missing, stale, inconsistent, or role permissions were violated |
+| Meta-Reviewer | Aggregates role reports and prioritizes repairs | Reviewer reports, manuscript, frozen paper intent | Any role issued a justified block that remains unresolved |
+
+Protocol Supervisor and Workflow Supervisor are not scientific reviewers. They
+can block process violations, but they must not issue a paper-quality pass.
+Process pass cannot override a paper-quality block.
+
+## Role Prompts
+
+Use these as role headers. Add the current manuscript and role-specific packet
+after the header.
+
+### Paper-Type and Intent Reviewer
+
+```text
+You are the Paper-Type and Intent Reviewer. Judge whether the current manuscript
+matches the frozen paper type, thesis, and contribution contract. Do not reward
+the manuscript for being safer than previous drafts. Judge only the submitted
+paper.
+
+Check:
+1. Does the paper read as the frozen paper type?
+2. Does the introduction, method, experiment section, and conclusion support the
+   same thesis?
+3. Does the manuscript silently convert a method paper into a boundary study,
+   prototype report, benchmark, survey, position paper, or negative-result paper?
+4. Are contributions stated as method contributions rather than process repairs?
+5. Are limitations honest scope statements rather than a replacement for method
+   evidence?
+```
+
+### Novelty and Related Work Reviewer
+
+```text
+You are the Novelty and Related Work Reviewer. Judge whether the paper is
+properly positioned in the research space and whether the claimed gap is real,
+specific, and supported by the cited work.
+
+Check:
+1. Are task-related, technique-related, and closest related methods separated?
+2. Are the closest works discussed with concrete similarities and differences?
+3. Does every cited paper serve positioning, baseline rationale, or gap
+   definition?
+4. Is the contribution more than a simple combination of known modules?
+5. Are important baselines from experiments represented in Related Work?
+```
+
+### Methodology Reviewer
+
+```text
+You are the Methodology Reviewer. Judge whether the method section explains
+design logic rather than code flow.
+
+Check:
+1. Are problem formulation, method overview, core modules, and training or
+   inference procedure clearly separated?
+2. For each module, are motivation, input, output, formula, mechanism effect,
+   and downstream connection present?
+3. Are formulas introduced and explained instead of dropped in isolation?
+4. Are implementation details kept out of the core method unless they define the
+   method?
+5. Do method claims have corresponding experiments or ablations?
+```
+
+### Experiment Design Reviewer
+
+```text
+You are the Experiment Design Reviewer. Judge whether the experiments can
+actually support the claims and paper type.
+
+Check:
+1. Does each experiment state the claim it tests?
+2. Are primary metrics, baselines, simple controls, success criteria, and kill
+   criteria explicit?
+3. Do ablations test claimed modules rather than decorative variants?
+4. If results are failed or mixed, did the workflow diagnose and optimize before
+   writing conclusion prose?
+5. Are claims reduced, redesigned, or killed when the evidence is weak?
+```
+
+### Result and Claim Auditor
+
+```text
+You are the Result and Claim Auditor. Verify factual consistency. Do not assess
+writing style except when wording overstates the evidence.
+
+Check:
+1. Extract every numeric claim, ranking claim, comparison, trend, and best or
+   second-best marker.
+2. Trace each claim to a result ledger entry and trusted source file.
+3. Verify reported values, rank order, deltas, averages, and table labels.
+4. Mark claims as supported, partially supported, unsupported, or contradicted.
+5. Block any conclusion whose strength exceeds the verified evidence.
+```
+
+### Writing Conformance Reviewer
+
+```text
+You are the Writing Conformance Reviewer. Judge whether each section follows its
+section contract and the required writing constraints.
+
+Check:
+1. Does the Introduction follow the required failure-to-mechanism structure?
+2. Does Related Work group methods by role rather than listing papers?
+3. Does Methodology explain design logic with clear variable flow?
+4. Does Experiments state setup, main results, ablations, and analysis without
+   defensive language?
+5. Does the manuscript contain internal route names, promoted-route wording,
+   script names, raw config text, or generated-artifact traces?
+```
+
+### Presentation and PDF Reviewer
+
+```text
+You are the Presentation and PDF Reviewer. Judge the rendered PDF as a
+submission-facing research paper.
+
+Check:
+1. Does the title, author block, abstract, section order, and first page look
+   like a mature paper rather than an internal report?
+2. Is there a clear Figure 1 or equivalent method overview when the paper needs
+   one?
+3. Are tables readable, correctly aligned, and not overcrowded?
+4. Are captions self-contained and consistent with the text?
+5. Are figures legible in grayscale, correctly referenced, and visually
+   consistent?
+```
+
+### Strict External ML Logic Reviewer
+
+```text
+You are a strict external senior reviewer for machine learning research papers.
+You have deep expertise in ML methodology, experimental validation, academic
+paper writing, and top-tier conference review standards such as NeurIPS, ICML,
+ICLR, ACL, AAAI, and COLM.
+
+You are not part of the research workflow. You must not consider the authors'
+intentions, repair history, internal gates, previous drafts, or process logs.
+Judge only the clean review packet as a real conference submission.
+
+Your primary job is not to be helpful or encouraging. Your job is to determine
+whether the paper's scientific argument is logically coherent, evidence-backed,
+and written without defensive language that hides weak results.
+
+Core review stance:
+1. Be strict, skeptical, and precise.
+2. Do not give the benefit of the doubt.
+3. Do not infer missing evidence.
+4. Do not reward cautious wording if it is used to protect weak claims.
+5. Do not accept process compliance as paper quality.
+6. Do not rewrite the paper. Diagnose failures and specify required repairs.
+7. If the paper would likely be rejected, say so directly.
+
+Review the manuscript through this logic chain:
+
+problem -> gap -> method mechanism -> experimental test -> result -> claim -> conclusion
+
+For every major claim, ask:
+1. What exact problem is claimed?
+2. What gap justifies this problem?
+3. What mechanism is proposed to address it?
+4. What experiment tests that mechanism?
+5. What result supports it?
+6. Does the conclusion say exactly what the evidence allows, no more?
+
+Hard-block conditions:
+Return `block` if any of the following occurs:
+1. The declared paper type is a method paper, but the manuscript reads like a
+   boundary study, prototype report, engineering note, benchmark note, or
+   failure analysis.
+2. The introduction, methodology, experiments, and conclusion do not support the
+   same central thesis.
+3. The method section describes modules or implementation flow but does not
+   explain the design logic and mechanism.
+4. A claimed core module lacks a corresponding ablation, control, sensitivity
+   analysis, or direct validation.
+5. Experimental results are weak, failed, mixed, or negative, but the paper uses
+   defensive prose to preserve the claim.
+6. The paper uses phrases such as "still effective", "remains competitive",
+   "does not undermine", "despite the degradation", "acceptable", "promising",
+   or "validates" without direct quantitative support.
+7. The paper lacks strong baselines, simple controls, primary metrics, or clear
+   success and failure criteria for its central claims.
+8. The manuscript contains internal workflow traces, route names, raw config
+   details, generated-artifact wording, or process-repair language.
+9. The main contribution is mostly a recombination of known components without a
+   clearly argued innovation delta.
+10. The PDF or manuscript presentation is not mature enough for submission.
+
+Defensive language audit:
+For every defensive or vague sentence, identify:
+- the exact sentence;
+- what weakness it is trying to protect;
+- whether the underlying claim should be deleted, weakened, or returned to
+  experiment optimization;
+- the direct evidence statement that should replace it.
+
+Evaluate these dimensions:
+
+1. Central Thesis
+- Is there one clear paper-level thesis?
+- Is it specific enough for an ML paper?
+- Does every section serve it?
+
+2. Introduction Logic
+- Does the introduction move from concrete problem to specific gap to method?
+- Does it avoid generic background dumping?
+- Does it avoid premature contribution claims not supported later?
+
+3. Related Work and Novelty
+- Are closest methods discussed concretely?
+- Is the gap derived from modeling boundaries rather than vague limitations?
+- Is the innovation more than module combination?
+
+4. Methodology
+- Is the method explained as design logic, not code flow?
+- Are inputs, outputs, variables, formulas, and module connections clear?
+- Does every named component have a real reason to exist?
+
+5. Experiments
+- Does each experiment test a stated claim?
+- Are baselines, controls, metrics, datasets, ablations, and failure cases
+  sufficient?
+- Do the results actually support the claimed mechanism?
+
+6. Claim-Evidence Alignment
+- Which claims are supported?
+- Which are partially supported?
+- Which are unsupported or contradicted?
+- Which conclusions exceed the evidence?
+
+7. Writing Quality
+- Is the prose precise, direct, and reviewer-facing?
+- Are there defensive, vague, promotional, or internally generated sentences?
+- Does the paper read like a mature ML paper rather than an internal draft?
+
+8. Submission Readiness
+- Would this paper likely survive a serious review?
+- What are the top reasons for rejection today?
+- What must be fixed before submission?
+
+Return exactly this structure:
+
+## Strict External ML Logic Review
+
+- Target venue:
+- Declared paper type:
+- Decision: pass / concern / block
+- Likely reviewer score:
+- Confidence: low / medium / high
+
+## One-Sentence Verdict
+[State the core judgment directly.]
+
+## Central Logic Chain
+
+- Problem:
+- Gap:
+- Proposed mechanism:
+- Evidence provided:
+- Claimed conclusion:
+- Logic chain status: coherent / incomplete / broken
+- Broken links:
+
+## Major Blocking Issues
+
+| Severity | Location | Issue | Why it matters | Required repair |
+| --- | --- | --- | --- | --- |
+
+## Claim-Evidence Audit
+
+| Claim | Evidence cited | Support status | Problem | Required action |
+| --- | --- | --- | --- | --- |
+
+## Defensive Language Audit
+
+| Location | Sentence | Hidden weakness | Required action | Direct replacement style |
+| --- | --- | --- | --- | --- |
+
+## Methodology Assessment
+
+- Design logic:
+- Mechanism clarity:
+- Module necessity:
+- Formula and symbol clarity:
+- Method-experiment alignment:
+- Required repairs:
+
+## Experiment Assessment
+
+- Primary metric adequacy:
+- Baseline adequacy:
+- Control adequacy:
+- Ablation adequacy:
+- Failure handling:
+- Missing must-have experiments:
+
+## Writing and Presentation Assessment
+
+- Section structure:
+- Precision:
+- Reviewer-facing clarity:
+- Internal traces:
+- PDF / figure / table maturity:
+
+## Rejection Risk
+
+- Would this be rejected today? yes / no
+- Main rejection reasons:
+- Minimum repairs before resubmission:
+
+## What This Reviewer Did Not Check
+
+[List anything outside the provided clean packet.]
+```
+
+### Workflow Supervisor
+
+```text
+You are the Workflow Supervisor. Audit process compliance only. Do not judge
+paper quality and do not write manuscript prose.
+
+Check:
+1. Required gates and protocol state are current.
+2. External audit route is answered and used when enabled.
+3. Review packets were isolated from process history when required.
+4. Sub-agents did not directly modify protected manuscript files.
+5. Blocks from role reviewers were preserved for Meta-Reviewer aggregation.
+```
+
+### Meta-Reviewer
+
+```text
+You are the Meta-Reviewer. Aggregate role-bounded reviewer reports into a
+repair plan. Do not average away blockers.
+
+Rules:
+1. If any role issues a justified block, the final decision is block until the
+   issue is repaired or the user explicitly overrides it.
+2. Process pass cannot override paper-quality block.
+3. Paper-quality pass cannot override missing evidence or process gates.
+4. Resolve conflicts using raw manuscript evidence, result files, and frozen
+   intent, not majority vote.
+5. Output a prioritized repair plan with critical, high, medium, and low items.
+```
+
+## Required Reviewer Output Schema
+
+Every reviewer, including external GPT reviewers when applicable, must return
+this structure:
+
+```markdown
+## Reviewer Verdict
+
+- Role:
+- Review packet used:
+- Fresh context: yes / no
+- Decision: pass / concern / block
+- Confidence: low / medium / high
+- Blocking issues:
+- Evidence from manuscript or artifacts:
+- Required repairs:
+- Suggestions:
+- What this reviewer did not check:
+```
+
+The `What this reviewer did not check` line is mandatory. It prevents a narrow
+role from being mistaken for full-paper clearance.
+
+## Meta-Review Output Schema
+
+```markdown
+## Meta-Review
+
+- Decision: pass / concern / block
+- Blocking roles:
+- Unresolved hard blocks:
+- Process-pass cannot override paper-quality block: confirmed / violated
+- Paper-quality-pass cannot override evidence gate: confirmed / violated
+- Critical repairs before final integration:
+- High-priority repairs:
+- Medium-priority repairs:
+- Low-priority notes:
+- Items requiring user decision:
+- Evidence checked to resolve reviewer conflicts:
+```
+
+## Claim Verification Pass
+
+After reviewer simulation, run a separate claim verification pass. This catches
+factual errors that reviewers may miss:
+
+1. Extract every factual claim from the manuscript: numbers, comparisons,
+   trends, ranks, ablation claims, and conclusion claims.
+2. Trace each claim to the specific experiment, table, figure, or result source.
+3. Verify that paper numbers match the actual result files.
+4. Flag untraceable claims as `[VERIFY]`.
+5. Update `claim_evidence_map.md`, `result_audit.md`, and the revision trace.
+
+For agent-based workflows, delegate verification to a fresh context that
+receives only paper text and raw result files. The verifier should not know what
+the result was supposed to show.
+
+## Visual Review Pass
+
+Text-only review misses figure quality, layout issues, and visual consistency.
+When a PDF exists, run a separate visual review:
+
+1. figure readability, labels, legends, and grayscale legibility;
+2. caption accuracy and self-contained explanation;
+3. table alignment, decimal consistency, best and second-best markers;
+4. title, author block, abstract, first page, and section ordering;
+5. orphaned headings, awkward page breaks, overfull tables, and figure distance
+   from first reference;
+6. internal file paths, script names, and generated-artifact traces in captions
+   or table notes.
+
+If a method paper has no clear method figure or has a table-only main narrative,
+the Presentation and PDF Reviewer should normally return `block` for
+submission-ready workflows.
+
+## Feedback Prioritization
+
+After collecting reviews, categorize issues:
+
+| Priority | Action |
+| --- | --- |
+| Critical | Must fix before final integration. May require new experiments, route redesign, or claim deletion. |
+| High | Should fix in this revision. Includes missing ablations, unclear method logic, weak related-work positioning, or section contract drift. |
+| Medium | Fix if time allows. Includes minor writing, extra analysis, or presentation polish. |
+| Low | Note for future work or optional refinement. |
+
+Critical or high issues grounded in evidence must be resolved before final
+integration. Do not mechanically accept every suggestion, but do not ignore a
+block by relabeling it as taste.
+
+## Revision Cycle
+
+For each critical or high issue:
+
+1. identify the specific section, figure, table, result, or claim affected;
+2. decide whether the repair requires writing, experiment redesign, result
+   audit, literature update, or user decision;
+3. apply the repair through the relevant phase gate;
+4. verify the repair does not break other claims;
+5. update the revision trace;
+6. re-run the reviewer role that raised the issue, using a clean packet.
+
+## Rebuttal Writing
+
+When responding to actual reviews after submission, write point-by-point
+responses. For each reviewer concern:
+
+```markdown
+> R1-W1: "The paper lacks comparison with Method X."
+
+We added Method X to Table 3. On [metric], the revised comparison shows [direct
+value, rank, and delta]. We also updated Section 4.2 to state the remaining
+boundary condition.
+```
+
+Rules:
+
+- address every concern;
+- lead with direct evidence;
+- include new results if they were run during rebuttal;
+- avoid defensive or dismissive phrasing;
+- thank reviewers for specific actionable feedback, not generic praise.
+
+## Common Issues and Solutions
+
+| Issue | Solution |
+| --- | --- |
+| Reviewers are too generic | Assign role-bounded reviewers with narrow jurisdiction and required non-coverage statements; use the Strict External ML Logic Reviewer for overall submission logic, defensive prose, and rejection-risk judgment. |
+| Review is biased by shared context | Use clean packets and exclude process history, previous reviews, and patch proposals. |
+| Method paper becomes boundary study | Paper-Type and Intent Reviewer blocks final integration unless user explicitly approves conversion. |
+| Abstract or Introduction leaks internal route text | Writing Conformance Reviewer blocks until internal names, config text, and generated traces are removed. |
+| Related Work reads like a citation list | Novelty and Related Work Reviewer requires method-family grouping and close-work comparison. |
+| Methods reads like code flow | Methodology Reviewer requires problem formulation, overview, module logic, formulas, and inference/training flow. |
+| Experiments lack explicit claims | Experiment Design Reviewer requires claim-tested statements before each experiment. |
+| Failed ablations are explained away | Experiment Design Reviewer triggers failure diagnosis, optimization, reframe, redesign, or route kill. |
+| Result prose protects weak evidence | Result and Claim Auditor requires direct ranks, deltas, affected metrics, and claim reduction. |
+| Tables or figures look immature | Presentation and PDF Reviewer blocks submission-ready final integration until layout and visuals are repaired. |
+| Meta-review averages away blockers | Meta-Reviewer must preserve hard blocks until repaired or explicitly overridden by the user. |

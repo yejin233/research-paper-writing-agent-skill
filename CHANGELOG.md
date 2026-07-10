@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.8
+
+- Rebuilt `references/review-workflow.md` as a clean role-bounded reviewer panel workflow.
+- Added explicit reviewer roles for paper intent, novelty, methodology, experiment design, result claims, writing conformance, PDF presentation, fresh external review, workflow supervision, and meta-review.
+- Added fresh-context review packet rules, hard-block preservation, and required reviewer output schemas.
+- Replaced the generic fresh external reviewer with a strict external ML logic reviewer focused on logic-chain coherence, defensive-language detection, claim-evidence closure, and rejection-risk judgment.
+
 ## 0.1.7
 
 - Added `skill-version.json` and a non-blocking installed-skill freshness check against the latest GitHub manifest.

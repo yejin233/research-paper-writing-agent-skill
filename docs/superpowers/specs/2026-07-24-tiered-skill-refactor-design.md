@@ -13,7 +13,7 @@ Success means:
 - Ordinary translation, polishing, and local revision do not create workflow
   artifacts or invoke research-project gates.
 - Full autonomous research still has explicit evidence and review controls.
-- The four corrupted reference files are valid UTF-8 Markdown.
+- The eight corrupted reference files are valid UTF-8 Markdown.
 - The required workflow surface is reduced to three roles, three hard gates,
   and no more than four core artifacts.
 - CI detects the known corruption patterns and validates both light and full
@@ -25,13 +25,17 @@ The clean `main` revision at `803b24a` has a 906-line `SKILL.md`, eight gate
 scripts, and thirteen example artifacts. Core controller concepts are repeated
 in `references/experiment-workflow.md` and `references/review-workflow.md`.
 
-Four routed references, not only the two originally identified, contain
+Eight routed references, not only the two originally identified, contain
 character-by-character single quoting:
 
 - `references/literature-workflow.md`
 - `references/experiment-workflow.md`
 - `references/review-workflow.md`
 - `references/section-writing/general.md`
+- `references/section-writing/introduction.md`
+- `references/section-writing/methodology.md`
+- `references/section-writing/experiments.md`
+- `references/section-writing/related-work.md`
 
 Their quote counts are approximately half their total character counts. This
 breaks headings, lists, tables, and code while wasting context. Existing CI does
@@ -149,7 +153,7 @@ their logic and references will be removed together.
 
 ## Corruption Recovery
 
-Recover the four damaged references by reversing only the mechanical quoting
+Recover the eight damaged references by reversing only the mechanical quoting
 transformation, then normalize the remaining mojibake manually. Verify the
 result structurally rather than assuming quote removal is sufficient:
 
@@ -169,7 +173,7 @@ Follow RED-GREEN-REFACTOR for the skill change.
 
 Before implementation, add or run baselines demonstrating that `main`:
 
-- passes CI despite the four corrupted references;
+- passes CI despite the eight corrupted references;
 - requires workflow artifacts for a simple writing task;
 - rejects legitimate manuscript details or bounded phrases through broad regex;
 - exposes more than the intended roles, hard gates, and core artifacts.

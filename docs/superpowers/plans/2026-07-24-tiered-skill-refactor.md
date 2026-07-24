@@ -94,20 +94,24 @@ git add tests/check-content-quality.ps1 .github/workflows/check.yml
 git commit -m "test: detect corrupted skill references"
 ```
 
-### Task 2: Recover the Four Corrupted References
+### Task 2: Recover the Eight Corrupted References
 
 **Files:**
 - Modify: `references/literature-workflow.md`
 - Modify: `references/experiment-workflow.md`
 - Modify: `references/review-workflow.md`
 - Modify: `references/section-writing/general.md`
+- Modify: `references/section-writing/introduction.md`
+- Modify: `references/section-writing/methodology.md`
+- Modify: `references/section-writing/experiments.md`
+- Modify: `references/section-writing/related-work.md`
 - Test: `tests/check-content-quality.ps1`
 
 - [ ] **Step 1: Reverse the mechanical quoting transformation**
 
-For each damaged line, remove the single-character wrapper quotes and the spaces
+For each damaged line in all eight files, remove the single-character wrapper quotes and the spaces
 between wrappers. Preserve blank lines and the already-readable first heading.
-Because commit `7279689` introduced all four files already damaged, do not claim
+Because commit `7279689` introduced all eight files already damaged, do not claim
 a clean historical source exists. Treat contractions, possessives, and quoted
 examples as manual-review points after mechanical recovery.
 
@@ -133,7 +137,7 @@ Expected: `Content quality checks completed.`
 Run:
 
 ```powershell
-rg -n "^#{1,4} |'#'#|'P'h'a's'e" references/literature-workflow.md references/experiment-workflow.md references/review-workflow.md references/section-writing/general.md
+rg -n "^#{1,4} |'#'#|'P'h'a's'e" references/literature-workflow.md references/experiment-workflow.md references/review-workflow.md references/section-writing
 ```
 
 Expected: readable headings only; none of the corruption patterns.
@@ -141,7 +145,7 @@ Expected: readable headings only; none of the corruption patterns.
 - [ ] **Step 5: Commit recovery**
 
 ```powershell
-git add references/literature-workflow.md references/experiment-workflow.md references/review-workflow.md references/section-writing/general.md
+git add references/literature-workflow.md references/experiment-workflow.md references/review-workflow.md references/section-writing
 git commit -m "fix: recover corrupted workflow references"
 ```
 

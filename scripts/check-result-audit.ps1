@@ -1,8 +1,7 @@
 param(
   [string]$ProjectRoot = ".",
   [string]$LedgerPath = "",
-  [double]$Tolerance = 0.000001,
-  [switch]$AllowNonSupportRoute
+  [double]$Tolerance = 0.000001
 )
 
 $ErrorActionPreference = "Stop"
@@ -136,23 +135,11 @@ if (-not $LedgerPath) {
 }
 
 $LedgerPath = (Resolve-Path -LiteralPath $LedgerPath).Path
-$ResultAuditPath = Find-Artifact -Names @("result_audit.md")
 $ClaimMapPath = Find-Artifact -Names @("claim_evidence.md", "claim_evidence_map.md")
 
 $ClaimMap = ""
 if ($ClaimMapPath) {
   $ClaimMap = Get-Content -Raw -LiteralPath $ClaimMapPath
-}
-
-if ($ResultAuditPath) {
-  $AuditText = Get-Content -Raw -LiteralPath $ResultAuditPath
-  $routeStatusMatch = [regex]::Match($AuditText, "(?im)^\s*-\s*Route status\s*:\s*(\S+)")
-  if ($routeStatusMatch.Success) {
-    $routeStatus = $routeStatusMatch.Groups[1].Value.Trim().ToLowerInvariant()
-    if (-not $AllowNonSupportRoute -and $routeStatus -in @("optimize", "reframe_required", "kill")) {
-      throw "Result Audit route status is '$routeStatus'; manuscript result claims must stop until repair, redesign, or route kill is resolved."
-    }
-  }
 }
 
 $entries = @()
@@ -265,9 +252,6 @@ foreach ($group in $groups) {
 Write-Output "Result audit check passed."
 Write-Output "Project root: $Root"
 Write-Output "Result ledger: $LedgerPath"
-if ($ResultAuditPath) {
-  Write-Output "Result audit: $ResultAuditPath"
-}
 if ($ClaimMapPath) {
   Write-Output "Claim evidence map: $ClaimMapPath"
 }

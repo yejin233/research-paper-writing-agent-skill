@@ -39,6 +39,7 @@ $SupportedRoot = Join-Path $TempRoot "supported-result"
 New-Item -ItemType Directory -Force -Path (Join-Path $SupportedRoot "results") | Out-Null
 Set-Content -LiteralPath (Join-Path $SupportedRoot "claim_evidence.md") -Value "# Claim Evidence`n`n| Claim ID | Evidence | Support |`n| --- | --- | --- |`n| C1 | results/main.csv | supported |"
 Set-Content -LiteralPath (Join-Path $SupportedRoot "results\main.csv") -Value "result_id,value`nR1,0.91`nR2,0.82"
+Set-Content -LiteralPath (Join-Path $SupportedRoot "result_audit.md") -Value "# Legacy Result Audit`n`n- Route status: kill`n"
 @'
 {"result_id":"R1","source_path":"results/main.csv","reported_value":0.91,"metric":"F1","dataset":"demo","method":"ours","metric_direction":"higher_is_better","claim_ids":["C1"],"support_level":"supported","rank":1,"best_marker":true,"table_cell":"Table 1 / demo / F1"}
 {"result_id":"R2","source_path":"results/main.csv","reported_value":0.82,"metric":"F1","dataset":"demo","method":"base","metric_direction":"higher_is_better","claim_ids":[],"support_level":"context","rank":2,"table_cell":"Table 1 / demo / F1"}

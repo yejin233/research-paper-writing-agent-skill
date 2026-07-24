@@ -1,2 +1,0 @@
-{"result_id":"R1","source_path":"results/main.csv","reported_value":0.91,"metric":"F1","dataset":"dataset-name","method":"ours","metric_direction":"higher_is_better","claim_ids":["C1"],"support_level":"supported","rank":1,"best_marker":true,"table_cell":"Table 1 / dataset-name / F1"}
-{"result_id":"R2","source_path":"results/main.csv","reported_value":0.82,"metric":"F1","dataset":"dataset-name","method":"baseline","metric_direction":"higher_is_better","claim_ids":[],"support_level":"context","rank":2,"table_cell":"Table 1 / dataset-name / F1"}

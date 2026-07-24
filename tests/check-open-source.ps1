@@ -6,15 +6,10 @@ $Required = @(
   "SKILL.md",
   "README.md",
   "LICENSE",
-  "examples/paper_intent.example.md",
-  "examples/protocol_state.example.md",
-  "examples/external_gpt_reviewer.example.md",
-  "examples/experiment_license.example.yaml",
-  "examples/result_ledger.example.jsonl",
-  "examples/handoff_manifest.example.yaml",
-  "examples/result_audit.example.md",
-  "examples/section_contracts.example.md",
-  "examples/workflow_supervision_audit.example.md",
+  "examples/paper_brief.example.md",
+  "examples/claim_evidence.example.md",
+  "examples/research_log.example.md",
+  "examples/review.example.md",
   "docs/workflow.md",
   "docs/gates.md",
   "docs/external-gpt-review.md",
@@ -47,15 +42,14 @@ foreach ($rel in $Required) {
 $Skill = Get-Content -Raw (Join-Path $Root "SKILL.md")
 $RequiredAnchors = @(
   "name: research-paper-writing-agent",
-  "External GPT Reviewer Role",
-  "Remote Audit Window Intake",
-  "Workflow Supervisor Role",
-  "Runtime Protocol Anchor",
-  "Failed-Result Optimization Gate",
-  "Result Auditor Verdict",
-  "Defensive Writing Zero-Tolerance Gate",
-  "Writing Conformance Gate",
-  "Fail-Closed Writing Entry Gate"
+  "Select a Mode",
+  "Citation integrity",
+  "Result traceability",
+  "Claim-scope integrity",
+  "paper_brief.md",
+  "claim_evidence.md",
+  "research_log.md",
+  "review.md"
 )
 
 foreach ($needle in $RequiredAnchors) {
@@ -89,7 +83,5 @@ if ($Matches) {
   $Matches | ForEach-Object { Write-Warning "$($_.Path):$($_.LineNumber): $($_.Line.Trim())" }
   throw "Open-source package check found potential sensitive/local strings."
 }
-
-& (Join-Path $Root "scripts\check-reference-routes.ps1") -ProjectRoot $Root | Out-Null
 
 Write-Output "Open-source package check completed."

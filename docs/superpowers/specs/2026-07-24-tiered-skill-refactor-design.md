@@ -178,7 +178,7 @@ After implementation, verify:
 
 - `SKILL.md` is within 180-250 lines;
 - quoted-character ratio is below `0.05` for Markdown files;
-- no file contains `鈫`, U+FFFD, or equivalent known corruption markers;
+- no file contains U+922B, U+FFFD, or equivalent known corruption markers;
 - routed references have recognizable headings and balanced code fences;
 - an `edit` scenario completes without artifacts;
 - an `evidence` scenario blocks an unsupported citation or number only;

@@ -37,7 +37,7 @@
 
 Implement a PowerShell test that scans repository Markdown as UTF-8, computes
 `single_quote_count / character_count`, and throws when the ratio is `>= 0.05`.
-It must also reject `鈫`, U+FFFD, missing readable headings in routed references,
+It must also reject U+922B, U+FFFD, missing readable headings in routed references,
 and unbalanced triple-backtick fences.
 
 ```powershell
@@ -52,7 +52,7 @@ foreach ($file in $markdown) {
     $ratio = ([regex]::Matches($text, "'").Count / [double]$text.Length)
     if ($ratio -ge 0.05) { throw "Quoted-character corruption in $($file.FullName): $ratio" }
   }
-  if ($text.Contains("鈫") -or $text.Contains([char]0xfffd)) {
+  if ($text.Contains([char]0x922b) -or $text.Contains([char]0xfffd)) {
     throw "Mojibake or replacement character in $($file.FullName)"
   }
   if (([regex]::Matches($text, '(?m)^```').Count % 2) -ne 0) {
@@ -113,7 +113,7 @@ examples as manual-review points after mechanical recovery.
 
 - [ ] **Step 2: Repair mojibake and Markdown structure**
 
-Replace the damaged arrow token with `->`, restore apostrophes where grammar
+Replace the U+922B damaged arrow token with `->`, restore apostrophes where grammar
 requires them, normalize headings/lists/tables/code fences, and keep only domain
 guidance. Delete controller material that duplicates modes, roles, artifacts, or
 gates from the new `SKILL.md` contract.
@@ -133,7 +133,7 @@ Expected: `Content quality checks completed.`
 Run:
 
 ```powershell
-rg -n "^#{1,4} |鈫|�|'#'#|'P'h'a's'e" references/literature-workflow.md references/experiment-workflow.md references/review-workflow.md references/section-writing/general.md
+rg -n "^#{1,4} |'#'#|'P'h'a's'e" references/literature-workflow.md references/experiment-workflow.md references/review-workflow.md references/section-writing/general.md
 ```
 
 Expected: readable headings only; none of the corruption patterns.

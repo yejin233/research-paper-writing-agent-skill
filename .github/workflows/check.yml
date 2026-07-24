@@ -11,6 +11,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      - name: Run content quality checks
+        shell: pwsh
+        run: powershell -ExecutionPolicy Bypass -File .\tests\check-content-quality.ps1
+
       - name: Run open-source package check
         shell: pwsh
         run: powershell -ExecutionPolicy Bypass -File .\tests\check-open-source.ps1

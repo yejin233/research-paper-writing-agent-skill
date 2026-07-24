@@ -137,7 +137,7 @@ if (-not $LedgerPath) {
 
 $LedgerPath = (Resolve-Path -LiteralPath $LedgerPath).Path
 $ResultAuditPath = Find-Artifact -Names @("result_audit.md")
-$ClaimMapPath = Find-Artifact -Names @("claim_evidence_map.md")
+$ClaimMapPath = Find-Artifact -Names @("claim_evidence.md", "claim_evidence_map.md")
 
 $ClaimMap = ""
 if ($ClaimMapPath) {
@@ -209,7 +209,7 @@ foreach ($line in (Get-Content -LiteralPath $LedgerPath)) {
     }
 
     if ($ClaimMap -and $ClaimMap -notmatch [regex]::Escape([string]$claimId)) {
-      throw "Result ledger entry '$resultId' references claim '$claimId' but claim_evidence_map.md does not contain it."
+      throw "Result ledger entry '$resultId' references claim '$claimId' but the claim-evidence artifact does not contain it."
     }
 
     if ($supportLevel -in @("unsupported", "contradicted")) {

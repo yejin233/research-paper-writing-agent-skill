@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.2.0
+
+- Replaced the universal research state machine with task-scoped `edit`,
+  `evidence`, and `autonomous` modes.
+- Reduced the runtime contract to three responsibilities, three hard integrity
+  gates, and four cumulative artifacts.
+- Recovered eight reference files affected by character-by-character quoting and
+  mojibake, and added CI checks for recurrence.
+- Removed protocol, writing, role-boundary, manuscript-phrase, experiment-license,
+  reference-route, and workflow-supervision gate scripts.
+- Retained deterministic result-ledger validation, now preferring
+  `claim_evidence.md` while accepting `claim_evidence_map.md` as a compatibility
+  alias.
+- Added workflow fixtures proving light edits need no artifacts and numeric
+  failures block only affected result claims.
+
 ## 0.1.6
 
 - Added machine-readable `experiment_license.yaml`, `result_ledger.jsonl`, and `handoff_manifest.yaml` examples.

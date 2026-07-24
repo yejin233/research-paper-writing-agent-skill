@@ -1,27 +1,58 @@
 # Workflow Overview
 
-This skill treats research-paper writing as a gated research workflow rather than a linear drafting task.
+The skill applies the smallest workflow that preserves scientific integrity.
 
-## Core Flow
+## Mode Selection
 
-1. Project identity and manuscript intent.
-2. Literature review and close-work mapping.
-3. Skeptic / Route Killer review.
-4. Experiment license with success and kill criteria.
-5. Execution and factual result collection.
-6. Result audit and claim-evidence mapping.
-7. Failed-result optimization if evidence is weak or contradictory.
-8. Section contracts before drafting.
-9. Planned-vs-produced writing audit after drafting.
-10. Defensive-writing audit.
-11. Workflow supervision.
-12. Reviewer / Meta-Reviewer panel.
-13. Final manuscript integration.
+### Edit
 
-## Key Principle
+Use for supplied-text translation, polishing, shortening, restructuring, and
+local revision. Preserve meaning, identify substantive changes, and do not create
+project artifacts. Escalate only if the requested output needs a new citation,
+result, factual statement, or scientific conclusion.
 
-Sub-agents expand search, create opposition, verify facts, and propose edits. The Research Coordinator owns the paper's main claim, terminology, evidence chain, and final manuscript integration. In multi-agent runs, sub-agents write handoffs or patch proposals; protected manuscript edits require a Coordinator integration trace and must pass `scripts/check-role-boundaries.ps1`.
+### Evidence
 
-## Completion Rule
+Use for literature synthesis, citation work, result prose, full scientific
+sections, or manuscript review. Identify the affected claims, record their source
+or result support in `claim_evidence.md` or an equivalent file, and apply only the
+relevant hard gates.
 
-A compiled PDF is not enough. The workflow is complete only when the relevant gates pass, no supervisor blocker remains, the result ledger traces reported numbers to source files, the manuscript prose scanner passes, and the manuscript claims are supported by the evidence chain.
+### Autonomous
+
+Use when Codex manages literature, experiments, analysis, writing, and review.
+Maintain:
+
+1. `paper_brief.md` for the thesis and scope;
+2. `claim_evidence.md` for support and allowed wording;
+3. `research_log.md` for decisions, commands, failures, and output paths;
+4. `review.md` for independent findings and final gate verdicts.
+
+## Core Loop
+
+1. Select the task mode.
+2. Define the claims the output will make.
+3. Gather only the evidence needed for those claims.
+4. Design experiments around decisions and stop criteria.
+5. Draft with wording bounded by support.
+6. Review citation, result, and claim-scope integrity.
+7. Repair the failed boundary and report unresolved uncertainty.
+
+Experiments should serve claims. A failed experiment is first classified as an
+execution, evaluation, tuning, or scientific failure. Run bounded repair tests;
+then support, weaken, redesign, or remove the claim. Changing the central thesis
+or paper type requires author approval.
+
+## Responsibilities
+
+The Lead integrates the paper, Research/Experiment gathers evidence, and the
+Reviewer challenges it independently. These responsibilities may be performed by
+one agent. Multi-agent execution is optional and should not add ceremony to a
+bounded task.
+
+## Completion
+
+An edit completes when the requested revision is accurate and adds no unsupported
+content. Evidence work completes when affected citations, numbers, and claims pass
+their gates or remain explicit local blockers. Autonomous work completes when all
+four artifacts are current and no central blocker remains.

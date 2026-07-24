@@ -9,6 +9,10 @@ This package was prepared as a clean open-source distribution of the local resea
 - `templates/`
 - `examples/`
 - `docs/`
+- `scripts/check-result-audit.ps1`
+- `tests/check-content-quality.ps1`
+- `tests/check-skill-contract.ps1`
+- `tests/check-workflows.ps1`
 - `tests/check-open-source.ps1`
 - `README.md`
 - `LICENSE`
@@ -26,12 +30,14 @@ This package was prepared as a clean open-source distribution of the local resea
 ## Before Publishing
 
 1. Review `LICENSE` and set the correct copyright holder.
-2. Run `tests/check-open-source.ps1`.
+2. Run all four commands under README `Development Checks`.
 3. Review any warnings from the scanner.
 4. Confirm template licenses are acceptable for redistribution.
 5. Confirm the skill provenance is described accurately in the repository description or README.
 
-## Known Caveat
+## Encoding Guarantee
 
-Some upstream text may contain encoding artifacts inherited from the source skill. They are not private data, but maintainers may want to clean them in a later documentation polish pass.
+`tests/check-content-quality.ps1` validates Markdown as strict UTF-8, rejects the
+known quoted-character and mojibake patterns, checks routed headings, and checks
+balanced code fences. Keep this test in CI when changing reference content.
 

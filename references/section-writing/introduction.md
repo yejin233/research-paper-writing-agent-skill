@@ -1,53 +1,54 @@
 # Introduction Writing Workflow
 
-Mandatory reference before drafting or rewriting an Introduction. The section contract must record this path before prose is integrated.
+Use this reference when drafting or revising an introduction. Apply the mode and
+evidence rules in `SKILL.md`; this file only defines the section's rhetorical job.
 
-'#'#'#' 'S't'e'p' '5'.'3':' 'I'n't'r'o'd'u'c't'i'o'n' '('1'-'1'.'5' 'p'a'g'e's' 'm'a'x')'
-'
-'T'h'e' 'i'n't'r'o'd'u'c't'i'o'n' 'm'u's't' 'e'x'p'l'a'i'n' 'w'h'y' 't'h'e' 'm'e't'h'o'd' 'i's' 'n'e'c'e's's'a'r'y',' 'n'o't' 'p'r'e's'e'n't' 't'h'e' 'm'e't'h'o'd' 'a's' 'a' 'p'a'r't's' 'l'i's't'.'
-'
-'M'u's't' 'i'n'c'l'u'd'e':'
-'-' 'C'l'e'a'r' 'p'r'o'b'l'e'm' 's't'a't'e'm'e'n't'
-'-' 'B'r'i'e'f' 'a'p'p'r'o'a'c'h' 'o'v'e'r'v'i'e'w'
-'-' '2'-'4' 'b'u'l'l'e't' 'c'o'n't'r'i'b'u't'i'o'n' 'l'i's't' '('m'a'x' '1'-'2' 'l'i'n'e's' 'e'a'c'h' 'i'n' 't'w'o'-'c'o'l'u'm'n' 'f'o'r'm'a't')'
-'-' 'M'e't'h'o'd's' 's'h'o'u'l'd' 's't'a'r't' 'b'y' 'p'a'g'e' '2'-'3'
-'
-'F'o'r' 'M'L' 'm'e't'h'o'd' 'p'a'p'e'r's',' 'e's'p'e'c'i'a'l'l'y' 'm'u'l't'i'-'c'o'm'p'o'n'e'n't' 'm'e't'h'o'd's' 't'h'a't' 'r'i's'k' 'l'o'o'k'i'n'g' 'l'i'k'e' 'm'o'd'u'l'e' 's't'a'c'k'i'n'g',' 'u's'e' 't'h'e' '*'*'F'a'i'l'u'r'e'-'t'o'-'M'e'c'h'a'n'i's'm' 'I'n't'r'o'd'u'c't'i'o'n' 'P'a't't'e'r'n'*'*' 'u'n'l'e's's' 'a' 'd'i'f'f'e'r'e'n't' 's't'r'u'c't'u'r'e' 'i's' 'c'l'e'a'r'l'y' 'b'e't't'e'r'.'
-'
-'*'*'C'o'r'e' 'c'h'a'i'n'*'*':'
-'`'`'`'
-'E'x'i's't'i'n'g' 'a's's'u'm'p't'i'o'n' '-'>' 'r'e'a'l'-'w'o'r'l'd' 'c'o'u'n't'e'r'e'x'a'm'p'l'e' '-'>' 'f'a'i'l'u'r'e' 'p'h'e'n'o'm'e'n'o'n' '-'>' 'm'e'c'h'a'n'i's'm' 'g'a'p' '-'>' 'p'r'o'p'o's'e'd' 'm'o'd'u'l'e'
-'`'`'`'
-'
-'*'*'D'e'f'a'u'l't' '5'-'p'a'r't' 's't'r'u'c't'u'r'e'*'*':'
-'
-'1'.' '*'*'B'r'o'a'd' 'b'a'c'k'g'r'o'u'n'd'*'*':' 'D'e'f'i'n'e' 't'h'e' 't'a's'k',' 'w'h'y' 'i't' 'm'a't't'e'r's',' 'a'n'd' 'w'h'y' 'i't' 'r'e'm'a'i'n's' 'h'a'r'd'.' 'D'o' 'n'o't' 'i'n't'r'o'd'u'c'e' 't'h'e' 'p'a'p'e'r'''s' 'm'e't'h'o'd' 'o'r' 'm'o'd'u'l'e's' 'h'e'r'e'.'
-'2'.' '*'*'E'x'i's't'i'n'g' 'p'a'r'a'd'i'g'm' 'a'n'd' 'f'a'i'l'u'r'e' 'p'h'e'n'o'm'e'n'o'n'*'*':' 'S't'a't'e' 't'h'e' 'm'a'i'n's't'r'e'a'm' 'p'a'r'a'd'i'g'm',' 'i't's' 'c'o'r'e' 'a's's'u'm'p't'i'o'n',' 'w'h'e'n' 'i't' 'w'o'r'k's',' 'a'n'd' 't'h'e' 'r'e'a'l'-'w'o'r'l'd' 'c'o'u'n't'e'r'e'x'a'm'p'l'e' 'w'h'e'r'e' 'i't' 'f'a'i'l's'.' 'E'n'd' 'w'i't'h' 'o'n'e' 'e'x'p'l'i'c'i't' 'f'a'i'l'u'r'e'-'s'u'm'm'a'r'y' 's'e'n't'e'n'c'e'.'
-'3'.' '*'*'M'e'c'h'a'n'i's'm'-'g'a'p' 'a't't'r'i'b'u't'i'o'n'*'*':' 'C'o'n'v'e'r't' 't'h'e' 'f'a'i'l'u'r'e' 'p'h'e'n'o'm'e'n'o'n' 'i'n't'o' '2'-'3' 'm'e'c'h'a'n'i's'm' 'g'a'p's',' 'p'r'e'f'e'r'a'b'l'y' 'a's' '`'('i')'`',' '`'('i'i')'`',' '`'('i'i'i')'`'.' 'D'o' 'n'o't' 'm'e'r'e'l'y' 'r'e'p'e'a't' 't'h'e' 'p'r'e'v'i'o'u's' 'p'a'r'a'g'r'a'p'h'''s' 'f'a'i'l'u'r'e' 'd'e's'c'r'i'p't'i'o'n'.'
-'4'.' '*'*'M'e't'h'o'd' 'm'a'p'p'i'n'g'*'*':' 'I'n't'r'o'd'u'c'e' 't'h'e' 'p'r'o'p'o's'e'd' 'm'e't'h'o'd' 'b'y' 'm'a'p'p'i'n'g' 'e'a'c'h' 'm'o'd'u'l'e' 't'o' 'a' 'm'e'c'h'a'n'i's'm' 'g'a'p'.' 'E'v'e'r'y' 'g'a'p' 'f'r'o'm' 'p'a'r't' '3' 'm'u's't' 'h'a'v'e' 'a' 'c'o'r'r'e's'p'o'n'd'i'n'g' 's'o'l'u't'i'o'n',' 'a'n'd' 'e'v'e'r'y' 'm'o'd'u'l'e' 'i'n' 'p'a'r't' '4' 'm'u's't' 'h'a'v'e' 'a' 'p'r'o'b'l'e'm' 's'o'u'r'c'e' 'i'n' 'p'a'r't' '3'.'
-'5'.' '*'*'C'o'n't'r'i'b'u't'i'o'n' 'l'i's't'*'*':' 'C'o'm'p'r'e's's' 'c'o'n't'r'i'b'u't'i'o'n's' 't'o' '2'-'4' 'f'a'c't'u'a'l' 'b'u'l'l'e't's',' 'u's'u'a'l'l'y' '3'.' 'S'a'y' 'w'h'a't' 'i's' 'p'r'o'p'o's'e'd' 'a'n'd' 'w'h'i'c'h' 'm'e'c'h'a'n'i's'm' 'p'r'o'b'l'e'm' 'i't' 'a'd'd'r'e's's'e's';' 'a'v'o'i'd' 'p'r'o'm'o't'i'o'n'a'l' 'w'o'r'd'i'n'g' 's'u'c'h' 'a's' '"'s'i'g'n'i'f'i'c'a'n't'l'y' 'i'm'p'r'o'v'e's'"',' '"'f'u'l'l'y' 'p'r'o'v'e's'"',' 'o'r' '"'e'f'f'e'c't'i'v'e'l'y' 'v'a'l'i'd'a't'e's'"' 'u'n'l'e's's' 't'h'e' 'e'v'i'd'e'n'c'e' 'd'i'r'e'c't'l'y' 's'u'p'p'o'r't's' 't'h'a't' 's't'r'e'n'g't'h'.'
-'
-'*'*'D'o' 'n'o't' 'w'r'i't'e'*'*':'
-'`'`'`'
-'W'e' 'p'r'o'p'o's'e' 'm'o'd'u'l'e' 'A',' 'm'o'd'u'l'e' 'B',' 'a'n'd' 'm'o'd'u'l'e' 'C'.'
-'`'`'`'
-'
-'*'*'P'r'e'f'e'r'*'*':'
-'`'`'`'
-'T'o' 'a'd'd'r'e's's' 'g'a'p' '('i')',' 'w'e' 'd'e's'i'g'n' 'A'.' 'T'o' 'm'i't'i'g'a't'e' 'g'a'p' '('i'i')',' 'w'e' 'i'n't'r'o'd'u'c'e' 'B'.' 'T'o' 'i'n'c'o'r'p'o'r'a't'e' 'g'a'p' '('i'i'i')' 'i'n' 'a' 'c'o'n't'r'o'l'l'e'd' 'w'a'y',' 'w'e' 'd'e'v'e'l'o'p' 'C'.'
-'`'`'`'
-'
-'*'*'I'n't'r'o'd'u'c't'i'o'n' 'q'u'a'l'i't'y' 'g'a't'e'*'*':'
-'-' 'A' 's'e'c't'i'o'n' 'c'o'n't'r'a'c't' 'e'x'i's't's' 'b'e'f'o'r'e' 'd'r'a'f't'i'n'g' 'a'n'd' 't'h'e' 'p'l'a'n'n'e'd'-'v's'-'p'r'o'd'u'c'e'd' 'a'u'd'i't'
-' ' 'p'a's's'e's' 'b'e'f'o'r'e' 'i'n't'e'g'r'a't'i'o'n'.'
-'-' 'P'a'r'a'g'r'a'p'h' '1' 'c'o'v'e'r's' 't'a's'k' 'i'm'p'o'r't'a'n'c'e' 'a'n'd' 'g'e'n'e'r'a'l' 'c'h'a'l'l'e'n'g'e' 'w'i't'h'o'u't' 'i'n't'r'o'd'u'c'i'n'g' 't'h'e' 'm'e't'h'o'd'.'
-'-' 'P'a'r'a'g'r'a'p'h' '2' 'n'a'm'e's' 't'h'e' 'e'x'i's't'i'n'g' 'p'a'r'a'd'i'g'm',' 'a'c'k'n'o'w'l'e'd'g'e's' 'w'h'e'n' 'i't' 'w'o'r'k's',' 's't'a't'e's' 'i't's' 'a's's'u'm'p't'i'o'n',' 'a'n'd' 'e'n'd's' 'w'i't'h' 'a' 'c'o'n'c'r'e't'e' 'f'a'i'l'u'r'e'-'s'u'm'm'a'r'y' 's'e'n't'e'n'c'e'.'
-'-' 'P'a'r'a'g'r'a'p'h' '3' 'l'i'f't's' 't'h'e' 'f'a'i'l'u'r'e' 'i'n't'o' 'm'e'c'h'a'n'i's'm' 'g'a'p's' 'i'n's't'e'a'd' 'o'f' 'r'e'p'e'a't'i'n'g' 't'h'e' 's'u'r'f'a'c'e' 'p'h'e'n'o'm'e'n'o'n'.'
-'-' 'T'h'e' '`'('i')'/'('i'i')'/'('i'i'i')'`' 'g'a'p's' 'm'a'p' 'o'n'e'-'t'o'-'o'n'e' 't'o' 'm'e't'h'o'd' 'm'o'd'u'l'e's' 'o'r' 'd'e's'i'g'n' 'c'h'o'i'c'e's'.'
-'-' 'T'h'e' 'm'e't'h'o'd' 'o'v'e'r'v'i'e'w' 'e'x'p'l'a'i'n's' 'w'h'y' 'e'a'c'h' 'm'o'd'u'l'e' 'e'x'i's't's',' 'n'o't' 'o'n'l'y' 'w'h'a't' 'i't' 'i's'.'
-'-' 'C'o'n't'r'i'b'u't'i'o'n's' 'a'r'e' 's'h'o'r't',' 'f'a'c't'u'a'l',' 'a'n'd' 'b'o'u'n'd'e'd' 'b'y' 't'h'e' 'a'v'a'i'l'a'b'l'e' 'e'v'i'd'e'n'c'e'.'
-'-' 'A'b's't'r'a'c't' 'a'n'd' 'I'n't'r'o'd'u'c't'i'o'n' 'u's'e' 'p'a'p'e'r'-'f'a'c'i'n'g' 'm'e'c'h'a'n'i's'm' 'n'a'm'e's',' 'n'o't' 'i'n't'e'r'n'a'l'
-' ' 'c'o'n't'r'o'l'-'p'l'a'n'e' 'l'a'n'g'u'a'g'e'.' 'D'o' 'n'o't' 'e'x'p'o's'e' 'c'o'd'e' 'i'd'e'n't'i'f'i'e'r's',' '`'s'c'o'r'e'_'m'o'd'e'`' 'v'a'l'u'e's','
-' ' 'e'x'p'e'r'i'm'e'n't' 'r'o'u't'e' 'n'a'm'e's',' '"'p'r'o'm'o't'e'd' 'r'o'u't'e'"',' 'w'i'n'd'o'w'/'s't'e'p' 's'i'z'e's',' 'o'r' 'r'o'u't'i'n'e'
-' ' 'h'y'p'e'r'p'a'r'a'm'e't'e'r' 's'e't't'i'n'g's' 'h'e'r'e';' 'm'o'v'e' 't'h'o's'e' 'd'e't'a'i'l's' 't'o' 'M'e't'h'o'd's',' 'E'x'p'e'r'i'm'e'n't's',' 'o'r'
-' ' 'R'e'p'r'o'd'u'c'i'b'i'l'i't'y' 'u'n'l'e's's' 't'h'e'y' 'a'r'e' 't'h'e' 'p'a'p'e'r'''s' 'c'e'n't'r'a'l' 'c'l'a'i'm'.'
+## Required Arc
+
+Build the introduction as a sequence of decisions for the reader:
+
+1. Define the concrete problem and why it matters.
+2. Explain the dominant approach and its relevant assumption.
+3. Show the specific failure or gap, supported by literature or evidence.
+4. Identify the mechanism behind that gap rather than naming only a symptom.
+5. Introduce the proposed idea as a response to that mechanism.
+6. Summarize the evidence and contributions at the level the paper supports.
+
+Do not begin with generic claims about rapid growth, broad importance, or an
+unbounded application area. Reach the paper's actual problem quickly.
+
+## Establish the Gap Precisely
+
+A useful gap states who or what fails, under which setting, and why existing
+methods do not already solve it. Support comparative statements about prior work
+with verified citations. Avoid absolute phrases such as "no prior work" unless
+the search can justify them.
+
+Distinguish a missing capability from a missing evaluation. If the contribution
+is mainly empirical, do not frame it as a new mechanism. If it is methodological,
+explain the technical difference before listing results.
+
+## Present the Method at the Right Depth
+
+Give enough information for a reviewer to understand the core mechanism and why
+it addresses the stated cause. Defer equations, implementation detail, and module
+catalogues to Methods. Use the same terminology and claim IDs as the rest of the
+paper.
+
+## Contribution Statements
+
+Each contribution bullet should state one checkable contribution and its evidence
+or consequence. Prefer:
+
+- a precisely scoped method or insight;
+- the evaluation that tests its central claim;
+- an analysis that explains when or why it works.
+
+Do not split one contribution into several cosmetic bullets. Do not list routine
+engineering, broad impact, or future work as completed contributions.
+
+## Final Checks
+
+Verify that the introduction and abstract agree on the problem, method, strongest
+result, and scope. Every promised contribution must appear later in the paper,
+and every central experiment should connect to a promise made here.

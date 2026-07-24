@@ -1,90 +1,61 @@
 # Methodology Writing Workflow
 
-Mandatory reference before drafting or rewriting Methods/Methodology. The section contract must record this path before prose is integrated.
+Use this reference for Methods or Methodology sections. The section must make the
+paper's mechanism understandable, checkable, and reproducible.
 
-'#'#'#' 'S't'e'p' '5'.'4':' 'M'e't'h'o'd's'
-'
-'T'h'e' 'M'e't'h'o'd's'/'M'e't'h'o'd'o'l'o'g'y' 's'e'c't'i'o'n' 'm'u's't' 'e'x'p'l'a'i'n' 't'h'e' 'd'e's'i'g'n' 'l'o'g'i'c' 'o'f' 't'h'e' 'm'e't'h'o'd','
-'n'o't' 'm'e'r'e'l'y' 'r'e'p'l'a'y' 't'h'e' 'c'o'd'e' 'p'a't'h'.' 'A' 'r'e'a'd'e'r' 's'h'o'u'l'd' 'u'n'd'e'r's't'a'n'd' 'w'h'a't' 'p'r'o'b'l'e'm' 't'h'e'
-'m'e't'h'o'd' 'a'd'd'r'e's's'e's',' 'w'h'y' 'e'a'c'h' 'd'e's'i'g'n' 'e'x'i's't's',' 'h'o'w' 'v'a'r'i'a'b'l'e's' 'f'l'o'w' 'f'r'o'm' 'i'n'p'u't' 't'o'
-'o'u't'p'u't',' 'a'n'd' 'h'o'w' 't'h'e' 'd'e's'i'g'n' 'f'o'r'm's' 'a' 'c'l'o's'e'd' 'm'o'd'e'l'i'n'g' 'm'e'c'h'a'n'i's'm'.'
-'
-'*'*'D'e'f'a'u'l't' 's't'r'u'c't'u'r'e'*'*':'
-'
-'1'.' '*'*'P'r'o'b'l'e'm' 'F'o'r'm'u'l'a't'i'o'n'*'*':' 'D'e'f'i'n'e' 't'h'e' 't'a's'k',' 'i'n'p'u't',' 'o'u't'p'u't',' 't'r'a'i'n'i'n'g' 'd'a't'a','
-' ' ' 'a's's'u'm'p't'i'o'n's',' 'a'n'd' 'l'e'a'r'n'i'n'g'/'s'c'o'r'i'n'g' 'o'b'j'e'c't'i'v'e'.' 'D'o' 'n'o't' 'i'n't'r'o'd'u'c'e' 'm'e't'h'o'd' 'm'o'd'u'l'e's'
-' ' ' 'h'e'r'e'.'
-'2'.' '*'*'M'e't'h'o'd' 'O'v'e'r'v'i'e'w'*'*':' 'E'x'p'l'a'i'n' 't'h'e' 'f'u'l'l' 'm'e'c'h'a'n'i's'm' 'f'r'o'm' 'i'n'p'u't' 't'o' 'f'i'n'a'l' 'o'u't'p'u't'.'
-' ' ' 'E's't'a'b'l'i's'h' 't'h'e' 'm'a'i'n' 'l'i'n'e';' 'd'o' 'n'o't' 'l'i's't' 'm'o'd'u'l'e' 'n'a'm'e's' 'w'i't'h'o'u't' 'e'x'p'l'a'i'n'i'n'g' 't'h'e'i'r'
-' ' ' 'r'o'l'e'.'
-'3'.' '*'*'C'o'r'e' 'M'o'd'u'l'e's'*'*':' 'F'o'r' 'e'a'c'h' 'c'o'r'e' 'm'o'd'u'l'e',' 's't'a't'e' 't'h'e' 'd'e's'i'g'n' 'm'o't'i'v'a't'i'o'n',' 'i'n'p'u't','
-' ' ' 'o'u't'p'u't',' 'm'a't'h'e'm'a't'i'c'a'l' 'd'e'f'i'n'i't'i'o'n',' 'm'e'c'h'a'n'i's'm' 'e'f'f'e'c't',' 'a'n'd' 'h'o'w' 'i't's' 'o'u't'p'u't' 'f'e'e'd's'
-' ' ' 't'h'e' 'n'e'x't' 'm'o'd'u'l'e'.'
-'4'.' '*'*'T'r'a'i'n'i'n'g' 'O'b'j'e'c't'i'v'e' '/' 'I'n'f'e'r'e'n'c'e' 'P'r'o'c'e'd'u'r'e'*'*':' 'C'l'e'a'r'l'y' 's'e'p'a'r'a't'e' 't'r'a'i'n'i'n'g'-'t'i'm'e'
-' ' ' 'f'i't't'i'n'g',' 'c'a'l'i'b'r'a't'i'o'n',' 'a'n'd' 't'e's't'-'t'i'm'e' 'i'n'f'e'r'e'n'c'e' 'o'r' 's'c'o'r'i'n'g'.' 'S't'a't'e' 'w'h'a't' 'd'a't'a' 'a'n'd'
-' ' ' 'l'a'b'e'l's',' 'i'f' 'a'n'y',' 'a'r'e' 'u's'e'd' 'a't' 'e'a'c'h' 's't'a'g'e'.'
-'5'.' '*'*'A'l'g'o'r'i't'h'm' 'o'r' 'C'o'm'p'l'e'x'i't'y' 'A'n'a'l'y's'i's'*'*':' 'I'n'c'l'u'd'e' 'p's'e'u'd'o'c'o'd'e',' 'c'o'm'p'l'e'x'i't'y',' 'o'r'
-' ' ' 'i'n'f'e'r'e'n'c'e'-'c'o's't' 'a'n'a'l'y's'i's' 'o'n'l'y' 'w'h'e'n' 't'h'e' 'a'l'g'o'r'i't'h'm'i'c' 'f'l'o'w' 'o'r' 'c'o's't' 'i's' 'c'e'n't'r'a'l' 't'o'
-' ' ' 't'h'e' 'p'a'p'e'r'.'
-'
-'*'*'M'o'd'u'l'e' 'w'r'i't'i'n'g' 'r'u'l'e'*'*':'
-'E'v'e'r'y' 'c'o'r'e' 'm'o'd'u'l'e' 's'h'o'u'l'd' 'f'o'l'l'o'w' 'a' 'p'r'o'b'l'e'm' '-'>' 'd'e's'i'g'n' '-'>' 'm'e'c'h'a'n'i's'm' '-'>' 'o'u't'p'u't'
-'c'h'a'i'n':'
-'-' 'w'h'a't' 's'p'e'c'i'f'i'c' 'i's's'u'e' 't'h'e' 'm'o'd'u'l'e' 'a'd'd'r'e's's'e's';'
-'-' 'w'h'a't' 'i'n'p'u't' 'i't' 'r'e'c'e'i'v'e's';'
-'-' 'w'h'a't' 'o'u't'p'u't' 'i't' 'p'r'o'd'u'c'e's';'
-'-' 'h'o'w' 't'h'e' 'f'o'r'm'u'l'a' 'd'e'f'i'n'e's' 't'h'a't' 'o'u't'p'u't';'
-'-' 'w'h'a't' 'm'e'c'h'a'n'i's'm' 'o'r' 'c'o'n's't'r'a'i'n't' 't'h'e' 'f'o'r'm'u'l'a' 'c'r'e'a't'e's';'
-'-' 'h'o'w' 't'h'e' 'o'u't'p'u't' 'i's' 'c'o'n's'u'm'e'd' 'b'y' 't'h'e' 'n'e'x't' 'm'o'd'u'l'e'.'
-'
-'D'o' 'n'o't' 'p'r'e's'e'n't' 'M'e't'h'o'd's' 'a's' '"'m'o'd'u'l'e' 'A',' 'm'o'd'u'l'e' 'B',' 'm'o'd'u'l'e' 'C'"' 'w'i't'h'o'u't' 'd'e's'i'g'n'
-'n'e'c'e's's'i't'y' 'a'n'd' 'i'n'p'u't'-'o'u't'p'u't' 'c'o'n'n'e'c't'i'o'n's'.'
-'
-'*'*'F'o'r'm'u'l'a' 'r'u'l'e'*'*':'
-'B'e'f'o'r'e' 'e'v'e'r'y' 'e'q'u'a't'i'o'n',' 'e'x'p'l'a'i'n' 'w'h'a't' 'o'b'j'e'c't' 'i't' 'd'e'f'i'n'e's',' 'w'h'e'r'e' 'i't's' 'v'a'r'i'a'b'l'e's' 'c'o'm'e'
-'f'r'o'm',' 'a'n'd' 'w'h'y' 't'h'e' 'd'e'f'i'n'i't'i'o'n' 'i's' 'n'e'e'd'e'd'.' 'A'f't'e'r' 'e'v'e'r'y' 'e'q'u'a't'i'o'n',' 'e'x'p'l'a'i'n' 't'h'e'
-'f'o'r'm'u'l'a'''s' 'o'u't'p'u't',' 'm'e'c'h'a'n'i's'm' 'e'f'f'e'c't',' 'a'n'd' 'l'a't'e'r' 'u's'e'.' 'K'e'e'p' 's'y'm'b'o'l's' 'c'o'n's'i's't'e'n't' 'w'i't'h'
-'f'i'g'u'r'e's',' 'a'l'g'o'r'i't'h'm's',' 'e'x'p'e'r'i'm'e'n't's',' 'a'n'd' 'i'm'p'l'e'm'e'n't'a't'i'o'n'.' 'D'e'l'e't'e' 'f'o'r'm'u'l'a's' 't'h'a't' 'd'o'
-'n'o't' 'd'e'f'i'n'e' 't'h'e' 'c'o'r'e' 'm'e'c'h'a'n'i's'm'.'
-'
-'*'*'D'e's'i'g'n'-'m'o't'i'v'a't'i'o'n' 'r'u'l'e'*'*':'
-'M'o't'i'v'a't'i'o'n's' 'm'u's't' 'n'a'm'e' 'a' 's'p'e'c'i'f'i'c' 'm'o'd'e'l'i'n'g' 'o'b'j'e'c't',' 'c'o'n's't'r'a'i'n't',' 'e'v'i'd'e'n'c'e' 's'o'u'r'c'e','
-'o'r' 't'r'a'i'n'-'t'e's't' 'd'e'c'i's'i'o'n' 'm'i's'm'a't'c'h'.' 'A'v'o'i'd' 'e'm'p't'y' 'm'o't'i'v'e's' 's'u'c'h' 'a's' '"'i'm'p'r'o'v'e'
-'p'e'r'f'o'r'm'a'n'c'e'"',' '"'e'n'h'a'n'c'e' 'r'e'p'r'e's'e'n't'a't'i'o'n' 'l'e'a'r'n'i'n'g'"',' 'o'r' '"'c'a'p't'u'r'e' 'c'o'm'p'l'e'x' 'p'a't't'e'r'n's'.'"'
-'P'r'e'f'e'r' 'f'o'r'm's' 'l'i'k'e' '"'T'o' 'm'o'd'e'l' '['s'p'e'c'i'f'i'c' 'd'e'p'e'n'd'e'n'c'y']'.'.'.'"',' '"'T'o' 'c'o'n's't'r'a'i'n' '['s'p'e'c'i'f'i'c'
-'r'e'p'r'e's'e'n't'a't'i'o'n']'.'.'.'"',' '"'T'o' 'r'e'd'u'c'e' 'd'e'p'e'n'd'e'n'c'e' 'o'n' '['s'i'n'g'l'e' 'e'v'i'd'e'n'c'e' 's'o'u'r'c'e']'.'.'.'"',' 'o'r'
-'"'T'o' 'a'l'i'g'n' '['t'r'a'i'n'i'n'g' 'o'b'j'e'c't'i'v'e']' 'w'i't'h' '['t'e's't'-'t'i'm'e' 'd'e'c'i's'i'o'n']'.'.'.'"'.'
-'
-'*'*'M'e't'h'o'd'-'e'x'p'e'r'i'm'e'n't' 'a'l'i'g'n'm'e'n't'*'*':'
-'E'v'e'r'y' 'd'e's'i'g'n' 'e'm'p'h'a's'i'z'e'd' 'a's' 'c'o'r'e' 'i'n' 'M'e't'h'o'd's' 'n'e'e'd's' 'c'o'r'r'e's'p'o'n'd'i'n'g' 'e'v'i'd'e'n'c'e' 'i'n'
-'E'x'p'e'r'i'm'e'n't's':' 'a'n' 'a'b'l'a't'i'o'n',' 'r'e'p'l'a'c'e'm'e'n't' 'c'o'm'p'a'r'i's'o'n',' 'p'a'r'a'm'e't'e'r' 's'e'n's'i't'i'v'i't'y','
-'m'e'c'h'a'n'i's'm' 'd'i'a'g'n'o's't'i'c',' 'v'i's'u'a'l'i'z'a't'i'o'n',' 'o'r' 'c'a's'e' 's't'u'd'y'.' 'C'o'n'v'e'r's'e'l'y',' 'e'a'c'h' 'a'b'l'a't'i'o'n'
-'s'h'o'u'l'd' 'm'a'p' 'b'a'c'k' 't'o' 'a' 'c'o'n'c'r'e't'e' 'd'e's'i'g'n' 'i'n' 'M'e't'h'o'd's'.' 'M'e't'h'o'd' 'c'l'a'i'm's' 'm'u's't' 'n'o't' 'e'x'c'e'e'd'
-'w'h'a't' 'e'x'p'e'r'i'm'e'n't's' 'c'a'n' 'v'e'r'i'f'y'.'
-'
-'*'*'I'm'p'l'e'm'e'n't'a't'i'o'n'-'d'e't'a'i'l' 'b'o'u'n'd'a'r'y'*'*':'
-'C'o'r'e' 'M'e't'h'o'd's' 's'h'o'u'l'd' 'n'o't' 'p'i'l'e' 'u'p' 'r'o'u't'i'n'e' 'e'n'g'i'n'e'e'r'i'n'g' 's'e't't'i'n'g's'.' 'W'i'n'd'o'w' 'l'e'n'g't'h','
-'b'a't'c'h' 's'i'z'e',' 'l'e'a'r'n'i'n'g' 'r'a't'e',' 'o'p't'i'm'i'z'e'r',' 'e'p'o'c'h's',' 's'e'e'd's',' 'h'a'r'd'w'a'r'e',' 'a'n'd' 'f'r'a'm'e'w'o'r'k'
-'v'e'r's'i'o'n's' 'b'e'l'o'n'g' 'i'n' 'E'x'p'e'r'i'm'e'n't's',' 'I'm'p'l'e'm'e'n't'a't'i'o'n' 'D'e't'a'i'l's',' 'R'e'p'r'o'd'u'c'i'b'i'l'i't'y',' 'o'r' 't'h'e'
-'a'p'p'e'n'd'i'x' 'u'n'l'e's's' 't'h'e' 's'e't't'i'n'g' 'i's' 'i't's'e'l'f' 't'h'e' 'm'e't'h'o'd'.' 'I'f' 'a' 'd'e't'a'i'l' 'd'e't'e'r'm'i'n'e's' 't'h'e'
-'m'e't'h'o'd'''s' 'm'e'c'h'a'n'i's'm',' 'k'e'e'p' 'i't' 'i'n' 'M'e't'h'o'd's';' 'i'f' 'i't' 'm'e'r'e'l'y' 'r'e'p'r'o'd'u'c'e's' 't'h'e' 'r'u'n',' 'm'o'v'e' 'i't'
-'o'u't'.'
-'
-'*'*'N'a'm'i'n'g' 'r'u'l'e'*'*':'
-'D'o' 'n'o't' 'i'n'v'e'n't' 'a'c'r'o'n'y'm's' 'f'o'r' 'o'r'd'i'n'a'r'y' 'o'p'e'r'a't'i'o'n's'.' 'U's'u'a'l'l'y' 'k'e'e'p' 'o'n'e' 'm'e't'h'o'd' 'n'a'm'e','
-'t'w'o' 'o'r' 't'h'r'e'e' 'c'o'r'e' 'm'e'c'h'a'n'i's'm' 'n'a'm'e's' 'a't' 'm'o's't',' 'a'n'd' 'o'n'e' 'o'b'j'e'c't'i'v'e' 'o'r' 's'c'o'r'i'n'g' 'r'u'l'e'
-'n'a'm'e' 'o'n'l'y' 'i'f' 'i't' 'i's' 'c'e'n't'r'a'l'.' 'D'o' 'n'o't' 'p'a'c'k'a'g'e' 's'i'm'p'l'e' 'c'o'n'c'a't'e'n'a't'i'o'n',' 'M'L'P's',' 's't'a'n'd'a'r'd'
-'a't't'e'n't'i'o'n',' 'o'r' 'r'o'u't'i'n'e' 'p'r'e'p'r'o'c'e's's'i'n'g' 'a's' 'm'a'j'o'r' 'i'n'n'o'v'a't'i'o'n's'.'
-'
-'*'*'M'e't'h'o'd's' 'q'u'a'l'i't'y' 'g'a't'e'*'*':'
-'-' 'A' 's'e'c't'i'o'n' 'c'o'n't'r'a'c't' 'e'x'i's't's' 'b'e'f'o'r'e' 'd'r'a'f't'i'n'g' 'a'n'd' 't'h'e' 'p'l'a'n'n'e'd'-'v's'-'p'r'o'd'u'c'e'd' 'a'u'd'i't'
-' ' 'p'a's's'e's' 'b'e'f'o'r'e' 'i'n't'e'g'r'a't'i'o'n'.'
-'-' 'P'r'o'b'l'e'm' 'f'o'r'm'u'l'a't'i'o'n' 'i's' 's'e'p'a'r'a't'e' 'f'r'o'm' 'm'e't'h'o'd' 'd'e't'a'i'l's'.'
-'-' 'E'a'c'h' 'c'o'r'e' 'm'o'd'u'l'e' 's't'a't'e's' 'm'o't'i'v'a't'i'o'n',' 'i'n'p'u't',' 'o'u't'p'u't',' 'f'o'r'm'u'l'a',' 'm'e'c'h'a'n'i's'm' 'e'f'f'e'c't','
-' ' 'a'n'd' 'd'o'w'n's't'r'e'a'm' 'c'o'n'n'e'c't'i'o'n'.'
-'-' 'T'r'a'i'n'i'n'g'/'c'a'l'i'b'r'a't'i'o'n'/'i'n'f'e'r'e'n'c'e' 's't'a'g'e's' 'a'n'd' 'l'a'b'e'l' 'u's'a'g'e' 'a'r'e' 'e'x'p'l'i'c'i't'.'
-'-' 'S'y'm'b'o'l's' 'm'a't'c'h' 't'h'e' 'f'i'g'u'r'e',' 'e'q'u'a't'i'o'n's',' 'e'x'p'e'r'i'm'e'n't's',' 'a'n'd' 'c'o'd'e'-'f'a'c'i'n'g'
-' ' 't'e'r'm'i'n'o'l'o'g'y'.'
-'-' 'R'o'u't'i'n'e' 'i'm'p'l'e'm'e'n't'a't'i'o'n' 's'e't't'i'n'g's' 'a'r'e' 'n'o't' 'm'i'x'e'd' 'i'n't'o' 'c'o'r'e' 'm'e't'h'o'd' 'l'o'g'i'c'.'
-'-' 'C'o'r'e' 'm'o'd'u'l'e's' 'a'r'e' 'm'a't'c'h'e'd' 'b'y' 'a'b'l'a't'i'o'n's',' 'd'i'a'g'n'o's't'i'c's',' 's'e'n's'i't'i'v'i't'y',' 'o'r' 'c'a's'e'
-' ' 's't'u'd'i'e's' 'i'n' 'E'x'p'e'r'i'm'e'n't's'.'
+## Start With the Contract
+
+Define the problem setting, inputs, outputs, assumptions, and notation before the
+main method. State what information is available during training and inference.
+Readers should be able to distinguish the proposed problem formulation from the
+solution.
+
+## Explain the Mechanism
+
+Present the method in causal order:
+
+1. inputs and preprocessing that affect the claim;
+2. the proposed mechanism and its components;
+3. objective or learning signal;
+4. training procedure;
+5. inference procedure and outputs.
+
+For each component, explain why it exists and which failure it addresses. Avoid a
+module inventory with no mechanism. Use a compact overview before detailed
+equations or algorithms.
+
+## Use Notation Deliberately
+
+Define every symbol before use and keep one symbol per concept. State tensor
+shapes or domains where ambiguity would affect implementation. Put the main
+operation in equations and use prose to explain intent, assumptions, and edge
+cases rather than narrating algebra line by line.
+
+## Separate Scientific Choices From Configuration
+
+The main section should include design choices necessary to understand or assess
+the contribution. Put exhaustive hyperparameters, hardware, and routine settings
+in an implementation-details subsection or appendix. Ordinary details such as
+batch size, learning rate, or window size are legitimate manuscript content and
+must not be rejected by phrase scanners.
+
+## Support Reproduction
+
+Specify architecture, initialization, losses, optimization, stopping rules, data
+processing, and randomness when they materially affect results. Point to code or
+appendix details when available. Match the names and settings used in experiment
+logs and tables.
+
+## Bound the Method Claim
+
+Do not infer properties such as invariance, robustness, efficiency, convergence,
+or causality from architecture alone. Either provide analysis and evidence or
+describe the property as a motivation or hypothesis. State assumptions and known
+failure modes directly.
+
+## Final Checks
+
+Confirm that every ablated component is defined here, every central method claim
+has a corresponding experiment or analysis, and no result is introduced in the
+method description. A knowledgeable reader should be able to sketch an
+implementation without guessing the core mechanism.

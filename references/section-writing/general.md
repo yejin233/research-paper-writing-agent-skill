@@ -1,254 +1,95 @@
 # General Section Writing Workflow
 
-Detailed reference for drafting modes, context management, title, abstract, Figure 1, limitations, conclusion, appendix, page budget, and writing style. Section-specific references remain authoritative for Introduction, Methodology, Experiments, and Related Work.
+Use this reference for titles, abstracts, conclusions, discussions, limitations,
+appendices, and paper-wide editing. Load the section-specific reference for an
+introduction, methodology, experiments/results, or related-work task.
 
-'#'#' 'P'h'a's'e' '5':' 'P'a'p'e'r' 'D'r'a'f't'i'n'g'
-'
-'*'*'G'o'a'l'*'*':' 'W'r'i't'e' 'a' 'c'o'm'p'l'e't'e',' 'p'u'b'l'i'c'a't'i'o'n'-'r'e'a'd'y' 'p'a'p'e'r'.'
-'
-'#'#'#' 'D'r'a'f't'i'n'g' 'R'e'l'e'a's'e' 'R'u'l'e's'
-'
-'P'h'a's'e' '5' 'i's' 'n'o't' 'o'n'e' 'u'n'd'i'f'f'e'r'e'n't'i'a't'e'd' 'w'r'i't'i'n'g' 'm'o'd'e'.' 'D'i's't'i'n'g'u'i's'h' 'r'o'u'g'h' 'd'r'a'f't'i'n'g' 'f'r'o'm' 'e'v'i'd'e'n'c'e'-'g'r'o'u'n'd'e'd' 'd'r'a'f't'i'n'g' 'a'n'd' 'f'r'o'm' 's'e'c'o'n'd'-'p'a's's' 'p'o'l'i's'h':'
-'
-'|' 'W'r'i't'i'n'g' 'm'o'd'e' '|' 'M'i'n'i'm'u'm' 'p'h'a's'e'/'s't'a't'e' '|' 'A'l'l'o'w'e'd' 'n'o'w' '|' 'N'o't' 'a'l'l'o'w'e'd' 'y'e't' '|'
-'|' '-'-'-' '|' '-'-'-' '|' '-'-'-' '|' '-'-'-' '|'
-'|' 'R'o'u'g'h' 'd'r'a'f't'i'n'g' '|' 'P'h'a's'e' '1'+' '|' 'M'e't'h'o'd's' 'n'o't'e's',' 'r'e'l'a't'e'd'-'w'o'r'k' 'm'a'p',' 'f'i'g'u'r'e' 's'k'e't'c'h'e's',' 'p'r'o'v'i's'i'o'n'a'l' 's'e'c't'i'o'n' 's'c'a'f'f'o'l'd's',' 'a'p'p'e'n'd'i'x' 'p'l'a'c'e'h'o'l'd'e'r's' '|' 'F'i'n'a'l' 'a'b's't'r'a'c't' 'w'o'r'd'i'n'g',' 'f'r'o'z'e'n' 'c'o'n't'r'i'b'u't'i'o'n' 'b'u'l'l'e't's',' 'p'o'l'i's'h'e'd' 'd'i's'c'u's's'i'o'n',' 's'u'b'm'i's's'i'o'n'-'r'e'a'd'y' 'n'a'r'r'a't'i'v'e' '|'
-'|' 'E'v'i'd'e'n'c'e'-'g'r'o'u'n'd'e'd' 'd'r'a'f't'i'n'g' '|' 'P'h'a's'e' '5' '|' 'F'u'l'l' 'M'e't'h'o'd's',' 'R'e's'u'l't's',' 'R'e'l'a't'e'd' 'W'o'r'k',' 'r'o'u'g'h' 'I'n't'r'o'/'A'b's't'r'a'c't',' 'F'i'g'u'r'e' '1',' 'l'i'm'i't'a't'i'o'n's',' 'p'r'a'c't'i'c'a'l'i't'y' 's'e'c't'i'o'n',' 'a'p'p'e'n'd'i'x' 'p'l'a'n' '|' 'S'e'c'o'n'd'-'p'a's's' 'r'e'f'i'n'e'm'e'n't',' 'f'i'n'a'l' 't'i't'l'e' 't'u'n'i'n'g',' 'f'i'n'a'l' 'r'e'v'i'e'w'e'r'-'f'a'c'i'n'g' 'f'r'a'm'i'n'g' 'i'f' 'e'v'i'd'e'n'c'e' 'p'a'c'k'a'g'e' 'i's' 'i'n'c'o'm'p'l'e't'e' '|'
-'|' 'S'e'c'o'n'd'-'p'a's's' 'r'e'f'i'n'e'm'e'n't' '|' 'P'h'a's'e' '6' '|' 'G'l'o'b'a'l' 'c'o'n's'i's't'e'n'c'y' 'e'd'i't's',' 'r'e'd'u'n'd'a'n'c'y' 'c'u't's',' 't'e'r'm'i'n'o'l'o'g'y' 'a'l'i'g'n'm'e'n't',' 'f'i'n'a'l' 'a'b's't'r'a'c't'/'i'n't'r'o'd'u'c't'i'o'n' 'p'o'l'i's'h',' 'f'i'g'u'r'e'-'c'a'p't'i'o'n' 'a'l'i'g'n'm'e'n't' '|' 'S'u'b'm'i's's'i'o'n' 'p'a'c'k'a'g'i'n'g' 'b'e'f'o'r'e' 's'e'l'f'-'r'e'v'i'e'w' 'a'n'd' 'c'l'a'i'm' 'v'e'r'i'f'i'c'a't'i'o'n' 'c'l'o's'e' 'c'r'i't'i'c'a'l' 'i's's'u'e's' '|'
-'
-'B'e'f'o'r'e' 'a'n'y' 'd'r'a'f't'i'n'g' 's'e's's'i'o'n',' 'r'e'a'd' '`'p'a'p'e'r'/'s't'a't'u's'.'m'd'`' 'o'r' 't'h'e' 'a'c't'i'v'e' 'p'r'o'j'e'c't' 's't'a't'u's' 'n'o't'e'.' 'I'f' 't'h'e' 's't'a't'u's' 'f'i'l'e' 's'a'y's' 't'h'e' 'p'r'o'j'e'c't' 'i's' 'b'e'l'o'w' 'P'h'a's'e' '5',' 'd'o' 'n'o't' 'b'e'h'a'v'e' 'a's' 't'h'o'u'g'h' 't'h'e' 'p'a'p'e'r' 'i's' 'a'l'r'e'a'd'y' 'i'n' 'f'u'l'l'-'d'r'a'f't' 'm'o'd'e'.'
-'
-'#'#'#' 'C'o'n't'e'x't' 'M'a'n'a'g'e'm'e'n't' 'f'o'r' 'L'a'r'g'e' 'P'r'o'j'e'c't's'
-'
-'A' 'p'a'p'e'r' 'p'r'o'j'e'c't' 'w'i't'h' '5'0'+' 'e'x'p'e'r'i'm'e'n't' 'f'i'l'e's',' 'm'u'l't'i'p'l'e' 'r'e's'u'l't' 'd'i'r'e'c't'o'r'i'e's',' 'a'n'd' 'e'x't'e'n's'i'v'e' 'l'i't'e'r'a't'u'r'e' 'n'o't'e's' 'c'a'n' 'e'a's'i'l'y' 'e'x'c'e'e'd' 't'h'e' 'a'g'e'n't'''s' 'c'o'n't'e'x't' 'w'i'n'd'o'w'.' 'M'a'n'a'g'e' 't'h'i's' 'p'r'o'a'c't'i'v'e'l'y':'
-'
-'*'*'W'h'a't' 't'o' 'l'o'a'd' 'i'n't'o' 'c'o'n't'e'x't' 'p'e'r' 'd'r'a'f't'i'n'g' 't'a's'k':'*'*'
-'
-'|' 'D'r'a'f't'i'n'g' 'T'a's'k' '|' 'L'o'a'd' 'I'n't'o' 'C'o'n't'e'x't' '|' 'D'o' 'N'O'T' 'L'o'a'd' '|'
-'|'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'-'-'-'-'-'-'-'|'
-'|' 'W'r'i't'i'n'g' 'I'n't'r'o'd'u'c't'i'o'n' '|' '`'e'x'p'e'r'i'm'e'n't'_'l'o'g'.'m'd'`',' 'c'o'n't'r'i'b'u't'i'o'n' 's't'a't'e'm'e'n't',' 'f'a'i'l'u'r'e'-'t'o'-'m'e'c'h'a'n'i's'm' 'm'a'p',' '5'-'1'0' 'm'o's't' 'r'e'l'e'v'a'n't' 'p'a'p'e'r' 'a'b's't'r'a'c't's' '|' 'R'a'w' 'r'e's'u'l't' 'J'S'O'N's',' 'f'u'l'l' 'e'x'p'e'r'i'm'e'n't' 's'c'r'i'p't's',' 'a'l'l' 'l'i't'e'r'a't'u'r'e' 'n'o't'e's' '|'
-'|' 'W'r'i't'i'n'g' 'M'e't'h'o'd's' '|' 'E'x'p'e'r'i'm'e'n't' 'c'o'n'f'i'g's',' 'p's'e'u'd'o'c'o'd'e',' 'a'r'c'h'i't'e'c't'u'r'e' 'd'e's'c'r'i'p't'i'o'n' '|' 'R'a'w' 'l'o'g's',' 'r'e's'u'l't's' 'f'r'o'm' 'o't'h'e'r' 'e'x'p'e'r'i'm'e'n't's' '|'
-'|' 'W'r'i't'i'n'g' 'R'e's'u'l't's' '|' '`'e'x'p'e'r'i'm'e'n't'_'l'o'g'.'m'd'`',' 'r'e's'u'l't' 's'u'm'm'a'r'y' 't'a'b'l'e's',' 'f'i'g'u'r'e' 'l'i's't' '|' 'F'u'l'l' 'a'n'a'l'y's'i's' 's'c'r'i'p't's',' 'i'n't'e'r'm'e'd'i'a't'e' 'd'a't'a' '|'
-'|' 'W'r'i't'i'n'g' 'R'e'l'a't'e'd' 'W'o'r'k' '|' '`'p'a'p'e'r'_'i'n'd'e'x'`',' 'r'e'a'd'i'n'g' 'n'o't'e's',' 'S'i'm'i'l'a'r'-'P'a'p'e'r' 'M'a't'r'i'x',' '.'b'i'b' 'f'i'l'e' '|' 'E'x'p'e'r'i'm'e'n't' 'f'i'l'e's',' 'r'a'w' 'P'D'F's' '|'
-'|' 'R'e'v'i's'i'o'n' 'p'a's's' '|' 'F'u'l'l' 'p'a'p'e'r' 'd'r'a'f't',' 's'p'e'c'i'f'i'c' 'r'e'v'i'e'w'e'r' 'c'o'n'c'e'r'n's' '|' 'E'v'e'r'y't'h'i'n'g' 'e'l's'e' '|'
-'
-'*'*'P'r'i'n'c'i'p'l'e's':'*'*'
-'-' '*'*'`'e'x'p'e'r'i'm'e'n't'_'l'o'g'.'m'd'`' 'i's' 't'h'e' 'p'r'i'm'a'r'y' 'c'o'n't'e'x't' 'b'r'i'd'g'e'*'*' ''?'i't' 's'u'm'm'a'r'i'z'e's' 'e'v'e'r'y't'h'i'n'g' 'n'e'e'd'e'd' 'f'o'r' 'w'r'i't'i'n'g' 'w'i't'h'o'u't' 'l'o'a'd'i'n'g' 'r'a'w' 'd'a't'a' 'f'i'l'e's' '('s'e'e' 'S't'e'p' '4'.'8')'
-'-' '*'*'L'o'a'd' 'o'n'e' 's'e'c't'i'o'n'''s' 'c'o'n't'e'x't' 'a't' 'a' 't'i'm'e'*'*' 'w'h'e'n' 'd'e'l'e'g'a't'i'n'g'.' 'A' 's'u'b'-'a'g'e'n't' 'd'r'a'f't'i'n'g' 'M'e't'h'o'd's' 'd'o'e's'n'''t' 'n'e'e'd' 't'h'e' 'l'i't'e'r'a't'u'r'e' 'r'e'v'i'e'w' 'n'o't'e's'.'
-'-' '*'*'S'u'm'm'a'r'i'z'e',' 'd'o'n'''t' 'i'n'c'l'u'd'e' 'r'a'w' 'f'i'l'e's'.'*'*' 'F'o'r' 'a' '2'0'0'-'l'i'n'e' 'r'e's'u'l't' 'J'S'O'N',' 'l'o'a'd' 'a' '1'0'-'l'i'n'e' 's'u'm'm'a'r'y' 't'a'b'l'e'.' 'F'o'r' 'a' '5'0'-'p'a'g'e' 'r'e'l'a't'e'd' 'p'a'p'e'r',' 'l'o'a'd' 't'h'e' '5'-'s'e'n't'e'n'c'e' 'a'b's't'r'a'c't' '+' 'y'o'u'r' '2'-'l'i'n'e' 'n'o't'e' 'a'b'o'u't' 'i't's' 'r'e'l'e'v'a'n'c'e'.'
-'-' '*'*'F'o'r' 'v'e'r'y' 'l'a'r'g'e' 'p'r'o'j'e'c't's'*'*':' 'C'r'e'a't'e' 'a' '`'c'o'n't'e'x't'/'`' 'd'i'r'e'c't'o'r'y' 'w'i't'h' 'p'r'e'-'c'o'm'p'r'e's's'e'd' 's'u'm'm'a'r'i'e's':'
-' ' '`'`'`'
-' ' 'c'o'n't'e'x't'/'
-' ' ' ' 'c'o'n't'r'i'b'u't'i'o'n'.'m'd' ' ' ' ' ' ' ' ' ' '#' '1' 's'e'n't'e'n'c'e'
-' ' ' ' 'e'x'p'e'r'i'm'e'n't'_'s'u'm'm'a'r'y'.'m'd' ' ' ' '#' 'K'e'y' 'r'e's'u'l't's' 't'a'b'l'e' '('f'r'o'm' 'e'x'p'e'r'i'm'e'n't'_'l'o'g'.'m'd')'
-' ' ' ' 'l'i't'e'r'a't'u'r'e'_'m'a'p'.'m'd' ' ' ' ' ' ' ' '#' 'O'r'g'a'n'i'z'e'd' 'c'i't'a't'i'o'n' 'n'o't'e's'
-' ' ' ' 'f'i'g'u'r'e'_'i'n'v'e'n't'o'r'y'.'m'd' ' ' ' ' ' '#' 'L'i's't' 'o'f' 'f'i'g'u'r'e's' 'w'i't'h' 'd'e's'c'r'i'p't'i'o'n's'
-' ' '`'`'`'
-'
-'#'#'#' 'T'h'e' 'N'a'r'r'a't'i'v'e' 'P'r'i'n'c'i'p'l'e'
-'
-'*'*'T'h'e' 's'i'n'g'l'e' 'm'o's't' 'c'r'i't'i'c'a'l' 'i'n's'i'g'h't'*'*':' 'Y'o'u'r' 'p'a'p'e'r' 'i's' 'n'o't' 'a' 'c'o'l'l'e'c't'i'o'n' 'o'f' 'e'x'p'e'r'i'm'e'n't's' ''?'i't'''s' 'a' 's't'o'r'y' 'w'i't'h' 'o'n'e' 'c'l'e'a'r' 'c'o'n't'r'i'b'u't'i'o'n' 's'u'p'p'o'r't'e'd' 'b'y' 'e'v'i'd'e'n'c'e'.'
-'
-'E'v'e'r'y' 's'u'c'c'e's's'f'u'l' 'M'L' 'p'a'p'e'r' 'c'e'n't'e'r's' 'o'n' 'w'h'a't' 'N'e'e'l' 'N'a'n'd'a' 'c'a'l'l's' '"'t'h'e' 'n'a'r'r'a't'i'v'e'"':' 'a' 's'h'o'r't',' 'r'i'g'o'r'o'u's',' 'e'v'i'd'e'n'c'e'-'b'a's'e'd' 't'e'c'h'n'i'c'a'l' 's't'o'r'y' 'w'i't'h' 'a' 't'a'k'e'a'w'a'y' 'r'e'a'd'e'r's' 'c'a'r'e' 'a'b'o'u't'.'
-'
-'*'*'T'h'r'e'e' 'P'i'l'l'a'r's' '('m'u's't' 'b'e' 'c'r'y's't'a'l' 'c'l'e'a'r' 'b'y' 'e'n'd' 'o'f' 'i'n't'r'o'd'u'c't'i'o'n')':'*'*'
-'
-'|' 'P'i'l'l'a'r' '|' 'D'e's'c'r'i'p't'i'o'n' '|' 'T'e's't' '|'
-'|'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'|'
-'|' '*'*'T'h'e' 'W'h'a't'*'*' '|' '1'-'3' 's'p'e'c'i'f'i'c' 'n'o'v'e'l' 'c'l'a'i'm's' '|' 'C'a'n' 'y'o'u' 's't'a't'e' 't'h'e'm' 'i'n' 'o'n'e' 's'e'n't'e'n'c'e'?' '|'
-'|' '*'*'T'h'e' 'W'h'y'*'*' '|' 'R'i'g'o'r'o'u's' 'e'm'p'i'r'i'c'a'l' 'e'v'i'd'e'n'c'e' '|' 'D'o' 'e'x'p'e'r'i'm'e'n't's' 'd'i's't'i'n'g'u'i's'h' 'y'o'u'r' 'h'y'p'o't'h'e's'i's' 'f'r'o'm' 'a'l't'e'r'n'a't'i'v'e's'?' '|'
-'|' '*'*'T'h'e' 'S'o' 'W'h'a't'*'*' '|' 'W'h'y' 'r'e'a'd'e'r's' 's'h'o'u'l'd' 'c'a'r'e' '|' 'D'o'e's' 't'h'i's' 'c'o'n'n'e'c't' 't'o' 'a' 'r'e'c'o'g'n'i'z'e'd' 'c'o'm'm'u'n'i't'y' 'p'r'o'b'l'e'm'?' '|'
-'
-'*'*'I'f' 'y'o'u' 'c'a'n'n'o't' 's't'a't'e' 'y'o'u'r' 'c'o'n't'r'i'b'u't'i'o'n' 'i'n' 'o'n'e' 's'e'n't'e'n'c'e',' 'y'o'u' 'd'o'n'''t' 'y'e't' 'h'a'v'e' 'a' 'p'a'p'e'r'.'*'*'
-'
-'#'#'#' 'T'h'e' 'S'o'u'r'c'e's' 'B'e'h'i'n'd' 'T'h'i's' 'G'u'i'd'a'n'c'e'
-'
-'T'h'i's' 's'k'i'l'l' 's'y'n't'h'e's'i'z'e's' 'w'r'i't'i'n'g' 'p'h'i'l'o's'o'p'h'y' 'f'r'o'm' 'r'e's'e'a'r'c'h'e'r's' 'w'h'o' 'h'a'v'e' 'p'u'b'l'i's'h'e'd' 'e'x't'e'n's'i'v'e'l'y' 'a't' 't'o'p' 'v'e'n'u'e's'.' 'T'h'e' 'w'r'i't'i'n'g' 'p'h'i'l'o's'o'p'h'y' 'l'a'y'e'r' 'w'a's' 'o'r'i'g'i'n'a'l'l'y' 'c'o'm'p'i'l'e'd' 'b'y' '['O'r'c'h'e's't'r'a' 'R'e's'e'a'r'c'h']'('h't't'p's':'/'/'g'i't'h'u'b'.'c'o'm'/'o'r'c'h'e's't'r'a'-'r'e's'e'a'r'c'h')' 'a's' 't'h'e' '`'m'l'-'p'a'p'e'r'-'w'r'i't'i'n'g'`' 's'k'i'l'l'.'
-'
-'|' 'S'o'u'r'c'e' '|' 'K'e'y' 'C'o'n't'r'i'b'u't'i'o'n' '|' 'L'i'n'k' '|'
-'|'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'|'
-'|' '*'*'N'e'e'l' 'N'a'n'd'a'*'*' '('G'o'o'g'l'e' 'D'e'e'p'M'i'n'd')' '|' 'T'h'e' 'N'a'r'r'a't'i'v'e' 'P'r'i'n'c'i'p'l'e',' 'W'h'a't'/'W'h'y'/'S'o' 'W'h'a't' 'f'r'a'm'e'w'o'r'k' '|' '['H'o'w' 't'o' 'W'r'i't'e' 'M'L' 'P'a'p'e'r's']'('h't't'p's':'/'/'w'w'w'.'a'l'i'g'n'm'e'n't'f'o'r'u'm'.'o'r'g'/'p'o's't's'/'e'J'G'p't'P'b'b'F'P'Z'G'L'p'j's'p'/'h'i'g'h'l'y'-'o'p'i'n'i'o'n'a't'e'd'-'a'd'v'i'c'e'-'o'n'-'h'o'w'-'t'o'-'w'r'i't'e'-'m'l'-'p'a'p'e'r's')' '|'
-'|' '*'*'S'e'b'a's't'i'a'n' 'F'a'r'q'u'h'a'r'*'*' '('D'e'e'p'M'i'n'd')' '|' '5'-'s'e'n't'e'n'c'e' 'a'b's't'r'a'c't' 'f'o'r'm'u'l'a' '|' '['H'o'w' 't'o' 'W'r'i't'e' 'M'L' 'P'a'p'e'r's']'('h't't'p's':'/'/'s'e'b'a's't'i'a'n'f'a'r'q'u'h'a'r'.'c'o'm'/'o'n'-'r'e's'e'a'r'c'h'/'2'0'2'4'/'1'1'/'0'4'/'h'o'w'_'t'o'_'w'r'i't'e'_'m'l'_'p'a'p'e'r's'/')' '|'
-'|' '*'*'G'o'p'e'n' '&' 'S'w'a'n'*'*' '|' '7' 'p'r'i'n'c'i'p'l'e's' 'o'f' 'r'e'a'd'e'r' 'e'x'p'e'c't'a't'i'o'n's' '|' '['S'c'i'e'n'c'e' 'o'f' 'S'c'i'e'n't'i'f'i'c' 'W'r'i't'i'n'g']'('h't't'p's':'/'/'c's'e'w'e'b'.'u'c's'd'.'e'd'u'/'~'s'w'a'n's'o'n'/'p'a'p'e'r's'/'s'c'i'e'n'c'e'-'o'f'-'w'r'i't'i'n'g'.'p'd'f')' '|'
-'|' '*'*'Z'a'c'h'a'r'y' 'L'i'p't'o'n'*'*' '|' 'W'o'r'd' 'c'h'o'i'c'e',' 'e'l'i'm'i'n'a't'i'n'g' 'h'e'd'g'i'n'g' '|' '['H'e'u'r'i's't'i'c's' 'f'o'r' 'S'c'i'e'n't'i'f'i'c' 'W'r'i't'i'n'g']'('h't't'p's':'/'/'w'w'w'.'a'p'p'r'o'x'i'm'a't'e'l'y'c'o'r'r'e'c't'.'c'o'm'/'2'0'1'8'/'0'1'/'2'9'/'h'e'u'r'i's't'i'c's'-'t'e'c'h'n'i'c'a'l'-'s'c'i'e'n't'i'f'i'c'-'w'r'i't'i'n'g'-'m'a'c'h'i'n'e'-'l'e'a'r'n'i'n'g'-'p'e'r's'p'e'c't'i'v'e'/')' '|'
-'|' '*'*'J'a'c'o'b' 'S't'e'i'n'h'a'r'd't'*'*' '('U'C' 'B'e'r'k'e'l'e'y')' '|' 'P'r'e'c'i's'i'o'n',' 'c'o'n's'i's't'e'n't' 't'e'r'm'i'n'o'l'o'g'y' '|' '['W'r'i't'i'n'g' 'T'i'p's']'('h't't'p's':'/'/'b'o'u'n'd'e'd'-'r'e'g'r'e't'.'g'h'o's't'.'i'o'/')' '|'
-'|' '*'*'E't'h'a'n' 'P'e'r'e'z'*'*' '('A'n't'h'r'o'p'i'c')' '|' 'M'i'c'r'o'-'l'e'v'e'l' 'c'l'a'r'i't'y' 't'i'p's' '|' '['E'a's'y' 'P'a'p'e'r' 'W'r'i't'i'n'g' 'T'i'p's']'('h't't'p's':'/'/'e't'h'a'n'p'e'r'e'z'.'n'e't'/'e'a's'y'-'p'a'p'e'r'-'w'r'i't'i'n'g'-'t'i'p's'/')' '|'
-'|' '*'*'A'n'd'r'e'j' 'K'a'r'p'a't'h'y'*'*' '|' 'S'i'n'g'l'e' 'c'o'n't'r'i'b'u't'i'o'n' 'f'o'c'u's' '|' 'V'a'r'i'o'u's' 'l'e'c't'u'r'e's' '|'
-'
-'*'*'F'o'r' 'd'e'e'p'e'r' 'd'i'v'e's' 'i'n't'o' 'a'n'y' 'o'f' 't'h'e's'e',' 's'e'e':'*'*'
-'-' '['r'e'f'e'r'e'n'c'e's'/'w'r'i't'i'n'g'-'g'u'i'd'e'.'m'd']'('r'e'f'e'r'e'n'c'e's'/'w'r'i't'i'n'g'-'g'u'i'd'e'.'m'd')' ''?'F'u'l'l' 'e'x'p'l'a'n'a't'i'o'n's' 'w'i't'h' 'e'x'a'm'p'l'e's'
-'-' '['r'e'f'e'r'e'n'c'e's'/'s'o'u'r'c'e's'.'m'd']'('r'e'f'e'r'e'n'c'e's'/'s'o'u'r'c'e's'.'m'd')' ''?'C'o'm'p'l'e't'e' 'b'i'b'l'i'o'g'r'a'p'h'y'
-'
-'#'#'#' 'T'i'm'e' 'A'l'l'o'c'a't'i'o'n'
-'
-'S'p'e'n'd' 'a'p'p'r'o'x'i'm'a't'e'l'y' '*'*'e'q'u'a'l' 't'i'm'e'*'*' 'o'n' 'e'a'c'h' 'o'f':'
-'1'.' 'T'h'e' 'a'b's't'r'a'c't'
-'2'.' 'T'h'e' 'i'n't'r'o'd'u'c't'i'o'n'
-'3'.' 'T'h'e' 'f'i'g'u'r'e's'
-'4'.' 'E'v'e'r'y't'h'i'n'g' 'e'l's'e' 'c'o'm'b'i'n'e'd'
-'
-'*'*'W'h'y'?'*'*' 'M'o's't' 'r'e'v'i'e'w'e'r's' 'f'o'r'm' 'j'u'd'g'm'e'n't's' 'b'e'f'o'r'e' 'r'e'a'c'h'i'n'g' 'y'o'u'r' 'm'e't'h'o'd's'.' 'R'e'a'd'e'r's' 'e'n'c'o'u'n't'e'r' 'y'o'u'r' 'p'a'p'e'r' 'a's':' 't'i't'l'e' '鈫'?'a'b's't'r'a'c't' '鈫'?'i'n't'r'o'd'u'c't'i'o'n' '鈫'?'f'i'g'u'r'e's' '鈫'?'m'a'y'b'e' 't'h'e' 'r'e's't'.'
-'
-'#'#'#' 'W'r'i't'i'n'g' 'W'o'r'k'f'l'o'w'
-'
-'`'`'`'
-'P'a'p'e'r' 'W'r'i't'i'n'g' 'C'h'e'c'k'l'i's't':'
-'-' '[' ']' 'S't'e'p' '1':' 'D'e'f'i'n'e' 't'h'e' 'o'n'e'-'s'e'n't'e'n'c'e' 'c'o'n't'r'i'b'u't'i'o'n'
-'-' '[' ']' 'S't'e'p' '2':' 'D'r'a'f't' 'F'i'g'u'r'e' '1' '('c'o'r'e' 'i'd'e'a' 'o'r' 'm'o's't' 'c'o'm'p'e'l'l'i'n'g' 'r'e's'u'l't')'
-'-' '[' ']' 'S't'e'p' '3':' 'D'r'a'f't' 'a'b's't'r'a'c't' '('5'-'s'e'n't'e'n'c'e' 'f'o'r'm'u'l'a')'
-'-' '[' ']' 'S't'e'p' '4':' 'D'r'a'f't' 'i'n't'r'o'd'u'c't'i'o'n' '('1'-'1'.'5' 'p'a'g'e's' 'm'a'x')'
-'-' '[' ']' 'S't'e'p' '5':' 'D'r'a'f't' 'm'e't'h'o'd's'
-'-' '[' ']' 'S't'e'p' '6':' 'D'r'a'f't' 'e'x'p'e'r'i'm'e'n't's' '&' 'r'e's'u'l't's'
-'-' '[' ']' 'S't'e'p' '7':' 'D'r'a'f't' 'r'e'l'a't'e'd' 'w'o'r'k'
-'-' '[' ']' 'S't'e'p' '8':' 'D'r'a'f't' 'c'o'n'c'l'u's'i'o'n' '&' 'd'i's'c'u's's'i'o'n'
-'-' '[' ']' 'S't'e'p' '9':' 'D'r'a'f't' 'l'i'm'i't'a't'i'o'n's' '('R'E'Q'U'I'R'E'D' 'b'y' 'a'l'l' 'v'e'n'u'e's')'
-'-' '[' ']' 'S't'e'p' '1'0':' 'P'l'a'n' 'a'p'p'e'n'd'i'x' '('p'r'o'o'f's',' 'e'x't'r'a' 'e'x'p'e'r'i'm'e'n't's',' 'd'e't'a'i'l's')'
-'-' '[' ']' 'S't'e'p' '1'1':' 'C'o'm'p'l'e't'e' 'p'a'p'e'r' 'c'h'e'c'k'l'i's't'
-'-' '[' ']' 'S't'e'p' '1'2':' 'F'i'n'a'l' 'r'e'v'i'e'w'
-'`'`'`'
-'
-'#'#'#' 'T'w'o'-'P'a's's' 'R'e'f'i'n'e'm'e'n't' 'P'a't't'e'r'n'
-'
-'W'h'e'n' 'd'r'a'f't'i'n'g' 'w'i't'h' 'a'n' 'A'I' 'a'g'e'n't',' 'u's'e' 'a' '*'*'t'w'o'-'p'a's's'*'*' 'a'p'p'r'o'a'c'h' '('p'r'o'v'e'n' 'e'f'f'e'c't'i'v'e' 'i'n' 'S'a'k'a'n'a'A'I'''s' 'A'I'-'S'c'i'e'n't'i's't' 'p'i'p'e'l'i'n'e')':'
-'
-'*'*'P'a's's' '1' ''?'W'r'i't'e' '+' 'i'm'm'e'd'i'a't'e' 'r'e'f'i'n'e' 'p'e'r' 's'e'c't'i'o'n':'*'*'
-'F'o'r' 'e'a'c'h' 's'e'c't'i'o'n',' 'w'r'i't'e' 'a' 'c'o'm'p'l'e't'e' 'd'r'a'f't',' 't'h'e'n' 'i'm'm'e'd'i'a't'e'l'y' 'r'e'f'i'n'e' 'i't' 'i'n' 't'h'e' 's'a'm'e' 'c'o'n't'e'x't'.' 'T'h'i's' 'c'a't'c'h'e's' 'l'o'c'a'l' 'i's's'u'e's' '('c'l'a'r'i't'y',' 'f'l'o'w',' 'c'o'm'p'l'e't'e'n'e's's')' 'w'h'i'l'e' 't'h'e' 's'e'c't'i'o'n' 'i's' 'f'r'e's'h'.'
-'
-'*'*'P'a's's' '2' ''?'G'l'o'b'a'l' 'r'e'f'i'n'e'm'e'n't' 'w'i't'h' 'f'u'l'l'-'p'a'p'e'r' 'c'o'n't'e'x't':'*'*'
-'A'f't'e'r' 'a'l'l' 's'e'c't'i'o'n's' 'a'r'e' 'd'r'a'f't'e'd',' 'r'e'v'i's'i't' 'e'a'c'h' 's'e'c't'i'o'n' 'w'i't'h' 'a'w'a'r'e'n'e's's' 'o'f' 't'h'e' 'c'o'm'p'l'e't'e' 'p'a'p'e'r'.' 'T'h'i's' 'c'a't'c'h'e's' 'c'r'o's's'-'s'e'c't'i'o'n' 'i's's'u'e's':' 'r'e'd'u'n'd'a'n'c'y',' 'i'n'c'o'n's'i's't'e'n't' 't'e'r'm'i'n'o'l'o'g'y',' 'n'a'r'r'a't'i'v'e' 'f'l'o'w',' 'a'n'd' 'g'a'p's' 'w'h'e'r'e' 'o'n'e' 's'e'c't'i'o'n' 'p'r'o'm'i's'e's' 's'o'm'e't'h'i'n'g' 'a'n'o't'h'e'r' 'd'o'e's'n'''t' 'd'e'l'i'v'e'r'.'
-'
-'`'`'`'
-'S'e'c'o'n'd'-'p'a's's' 'r'e'f'i'n'e'm'e'n't' 'p'r'o'm'p't' '('p'e'r' 's'e'c't'i'o'n')':'
-'"'R'e'v'i'e'w' 't'h'e' '['S'E'C'T'I'O'N']' 'i'n' 't'h'e' 'c'o'n't'e'x't' 'o'f' 't'h'e' 'c'o'm'p'l'e't'e' 'p'a'p'e'r'.'
-'-' 'D'o'e's' 'i't' 'f'i't' 'w'i't'h' 't'h'e' 'r'e's't' 'o'f' 't'h'e' 'p'a'p'e'r'?' 'A'r'e' 't'h'e'r'e' 'r'e'd'u'n'd'a'n'c'i'e's' 'w'i't'h' 'o't'h'e'r' 's'e'c't'i'o'n's'?'
-'-' 'I's' 't'e'r'm'i'n'o'l'o'g'y' 'c'o'n's'i's't'e'n't' 'w'i't'h' 'I'n't'r'o'd'u'c't'i'o'n' 'a'n'd' 'M'e't'h'o'd's'?'
-'-' 'C'a'n' 'a'n'y't'h'i'n'g' 'b'e' 'c'u't' 'w'i't'h'o'u't' 'w'e'a'k'e'n'i'n'g' 't'h'e' 'm'e's's'a'g'e'?'
-'-' 'D'o'e's' 't'h'e' 'n'a'r'r'a't'i'v'e' 'f'l'o'w' 'f'r'o'm' 't'h'e' 'p'r'e'v'i'o'u's' 's'e'c't'i'o'n' 'a'n'd' 'i'n't'o' 't'h'e' 'n'e'x't'?'
-'M'a'k'e' 'm'i'n'i'm'a'l',' 't'a'r'g'e't'e'd' 'e'd'i't's'.' 'D'o' 'n'o't' 'r'e'w'r'i't'e' 'f'r'o'm' 's'c'r'a't'c'h'.'"'
-'`'`'`'
-'
-'#'#'#' 'S't'e'p' '5'.'0':' 'T'i't'l'e'
-'
-'T'h'e' 't'i't'l'e' 'i's' 't'h'e' 's'i'n'g'l'e' 'm'o's't'-'r'e'a'd' 'e'l'e'm'e'n't' 'o'f' 't'h'e' 'p'a'p'e'r'.' 'I't' 'd'e't'e'r'm'i'n'e's' 'w'h'e't'h'e'r' 'a'n'y'o'n'e' 'c'l'i'c'k's' 't'h'r'o'u'g'h' 't'o' 't'h'e' 'a'b's't'r'a'c't'.'
-'
-'*'*'G'o'o'd' 't'i't'l'e's'*'*':'
-'-' 'S't'a't'e' 't'h'e' 'c'o'n't'r'i'b'u't'i'o'n' 'o'r' 'f'i'n'd'i'n'g':' '"'S'e'm'a'n't'i'c'-'P'r'e's'e'r'v'i'n'g' 'E'x'e'c'u't'o'r' 'E'v'o'l'u't'i'o'n' 'f'o'r' 'S't'a'l'e' 'A't't'a'c'k'e'r' 'K'n'o'w'l'e'd'g'e'"'
-'-' 'H'i'g'h'l'i'g'h't' 'a' 's'u'r'p'r'i's'i'n'g' 'r'e's'u'l't':' '"'S'c'a'l'i'n'g' 'D'a't'a'-'C'o'n's't'r'a'i'n'e'd' 'L'a'n'g'u'a'g'e' 'M'o'd'e'l's'"' '('i'm'p'l'i'e's' 'y'o'u' 'c'a'n')'
-'-' 'N'a'm'e' 't'h'e' 'm'e't'h'o'd' '+' 'w'h'a't' 'i't' 'd'o'e's':' '"'D'P'O':' 'D'i'r'e'c't' 'P'r'e'f'e'r'e'n'c'e' 'O'p't'i'm'i'z'a't'i'o'n' 'o'f' 'L'a'n'g'u'a'g'e' 'M'o'd'e'l's'"'
-'
-'*'*'B'a'd' 't'i't'l'e's'*'*':'
-'-' 'T'o'o' 'g'e'n'e'r'i'c':' '"'A'n' 'A'p'p'r'o'a'c'h' 't'o' 'I'm'p'r'o'v'i'n'g' 'L'a'n'g'u'a'g'e' 'M'o'd'e'l' 'O'u't'p'u't's'"'
-'-' 'T'o'o' 'l'o'n'g':' 'a'n'y't'h'i'n'g' 'o'v'e'r' '~'1'5' 'w'o'r'd's'
-'-' 'J'a'r'g'o'n'-'o'n'l'y':' '"'A's'y'm'p't'o't'i'c' 'C'o'n'v'e'r'g'e'n'c'e' 'o'f' 'I't'e'r'a't'i'v'e' 'S't'o'c'h'a's't'i'c' 'P'o'l'i'c'y' 'R'e'f'i'n'e'm'e'n't'"' '('w'h'o' 'i's' 't'h'i's' 'f'o'r'?')'
-'
-'*'*'R'u'l'e's'*'*':'
-'-' 'I'n'c'l'u'd'e' 'y'o'u'r' 'm'e't'h'o'd' 'n'a'm'e' 'i'f' 'y'o'u' 'h'a'v'e' 'o'n'e' '('f'o'r' 'c'i't'a'b'i'l'i't'y')'
-'-' 'I'n'c'l'u'd'e' '1'-'2' 'k'e'y'w'o'r'd's' 'r'e'v'i'e'w'e'r's' 'w'i'l'l' 's'e'a'r'c'h' 'f'o'r'
-'-' 'A'v'o'i'd' 'c'o'l'o'n's' 'u'n'l'e's's' 'b'o't'h' 'h'a'l'v'e's' 'c'a'r'r'y' 'm'e'a'n'i'n'g'
-'-' 'T'e's't':' 'w'o'u'l'd' 'a' 'r'e'v'i'e'w'e'r' 'k'n'o'w' 't'h'e' 'd'o'm'a'i'n' 'a'n'd' 'c'o'n't'r'i'b'u't'i'o'n' 'f'r'o'm' 't'h'e' 't'i't'l'e' 'a'l'o'n'e'?'
-'
-'#'#'#' 'S't'e'p' '5'.'1':' 'A'b's't'r'a'c't' '('5'-'S'e'n't'e'n'c'e' 'F'o'r'm'u'l'a')'
-'
-'F'r'o'm' 'S'e'b'a's't'i'a'n' 'F'a'r'q'u'h'a'r' '('D'e'e'p'M'i'n'd')':'
-'
-'`'`'`'
-'1'.' 'W'h'a't' 'y'o'u' 'a'c'h'i'e'v'e'd':' '"'W'e' 'i'n't'r'o'd'u'c'e'.'.'.'"',' '"'W'e' 'p'r'o'v'e'.'.'.'"',' '"'W'e' 'd'e'm'o'n's't'r'a't'e'.'.'.'"'
-'2'.' 'W'h'y' 't'h'i's' 'i's' 'h'a'r'd' 'a'n'd' 'i'm'p'o'r't'a'n't'
-'3'.' 'H'o'w' 'y'o'u' 'd'o' 'i't' '('w'i't'h' 's'p'e'c'i'a'l'i's't' 'k'e'y'w'o'r'd's' 'f'o'r' 'd'i's'c'o'v'e'r'a'b'i'l'i't'y')'
-'4'.' 'W'h'a't' 'e'v'i'd'e'n'c'e' 'y'o'u' 'h'a'v'e'
-'5'.' 'Y'o'u'r' 'm'o's't' 'r'e'm'a'r'k'a'b'l'e' 'n'u'm'b'e'r'/'r'e's'u'l't'
-'`'`'`'
-'
-'*'*'D'e'l'e't'e'*'*' 'g'e'n'e'r'i'c' 'o'p'e'n'i'n'g's' 'l'i'k'e' '"'L'a'r'g'e' 'l'a'n'g'u'a'g'e' 'm'o'd'e'l's' 'h'a'v'e' 'a'c'h'i'e'v'e'd' 'r'e'm'a'r'k'a'b'l'e' 's'u'c'c'e's's'.'.'.'"'
-'
-'#'#'#' 'S't'e'p' '5'.'2':' 'F'i'g'u'r'e' '1'
-'
-'F'i'g'u'r'e' '1' 'i's' 't'h'e' 's'e'c'o'n'd' 't'h'i'n'g' 'm'o's't' 'r'e'a'd'e'r's' 'l'o'o'k' 'a't' 'a'f't'e'r' 't'h'e' 'a'b's't'r'a'c't'.' 'P'l'a'n' 'i't' 'a'f't'e'r' 't'h'e' 'p'a'p'e'r' 'c'l'a'i'm',' 's'e'c't'i'o'n' 'c'o'n't'r'a'c't',' 'a'n'd' 'm'e't'h'o'd' 'm'e'c'h'a'n'i's'm' 'a'r'e' 'c'l'e'a'r'.'
-'
-'|' 'F'i'g'u'r'e' '1' 'T'y'p'e' '|' 'W'h'e'n' 't'o' 'U's'e' '|' 'E'x'a'm'p'l'e' '|'
-'|'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'-'-'-'|'
-'|' '*'*'M'e't'h'o'd' 'd'i'a'g'r'a'm'*'*' '|' 'N'e'w' 'a'r'c'h'i't'e'c't'u'r'e' 'o'r' 'p'i'p'e'l'i'n'e' '|' 'T'i'k'Z' 'f'l'o'w'c'h'a'r't' 's'h'o'w'i'n'g' 'y'o'u'r' 's'y's't'e'm' '|'
-'|' '*'*'R'e's'u'l't's' 't'e'a's'e'r'*'*' '|' 'O'n'e' 'c'o'm'p'e'l'l'i'n'g' 'r'e's'u'l't' 't'e'l'l's' 't'h'e' 'w'h'o'l'e' 's't'o'r'y' '|' 'B'a'r' 'c'h'a'r't':' '"'O'u'r's' 'v's' 'b'a's'e'l'i'n'e's'"' 'w'i't'h' 'c'l'e'a'r' 'g'a'p' '|'
-'|' '*'*'P'r'o'b'l'e'm' 'i'l'l'u's't'r'a't'i'o'n'*'*' '|' 'T'h'e' 'p'r'o'b'l'e'm' 'i's' 'u'n'i'n't'u'i't'i'v'e' '|' 'B'e'f'o'r'e'/'a'f't'e'r' 's'h'o'w'i'n'g' 'f'a'i'l'u'r'e' 'm'o'd'e' 'y'o'u' 'f'i'x' '|'
-'|' '*'*'C'o'n'c'e'p't'u'a'l' 'd'i'a'g'r'a'm'*'*' '|' 'A'b's't'r'a'c't' 'c'o'n't'r'i'b'u't'i'o'n' 'n'e'e'd's' 'v'i's'u'a'l' 'g'r'o'u'n'd'i'n'g' '|' '2'x'2' 'm'a't'r'i'x' 'o'f' 'm'e't'h'o'd' 'p'r'o'p'e'r't'i'e's' '|'
-'
-'*'*'R'u'l'e's'*'*':' 'F'i'g'u'r'e' '1' 'm'u's't' 'b'e' 'u'n'd'e'r's't'a'n'd'a'b'l'e' 'w'i't'h'o'u't' 'r'e'a'd'i'n'g' 'a'n'y' 't'e'x't'.' 'T'h'e' 'c'a'p't'i'o'n' 'a'l'o'n'e' 's'h'o'u'l'd' 'c'o'm'm'u'n'i'c'a't'e' 't'h'e' 'c'o'r'e' 'i'd'e'a'.' 'U's'e' 'c'o'l'o'r' 'p'u'r'p'o's'e'f'u'l'l'y' ''?'d'o'n'''t' 'j'u's't' 'd'e'c'o'r'a't'e'.'
+## Establish the Writing Contract
 
-'#'#'#' 'S't'e'p' '5'.'7':' 'L'i'm'i't'a't'i'o'n's' '('R'E'Q'U'I'R'E'D')'
-'
-'A'l'l' 'm'a'j'o'r' 'c'o'n'f'e'r'e'n'c'e's' 'r'e'q'u'i'r'e' 't'h'i's'.' 'H'o'n'e's't'y' 'h'e'l'p's':'
-'-' 'R'e'v'i'e'w'e'r's' 'a'r'e' 'i'n's't'r'u'c't'e'd' 'n'o't' 't'o' 'p'e'n'a'l'i'z'e' 'h'o'n'e's't' 'l'i'm'i't'a't'i'o'n' 'a'c'k'n'o'w'l'e'd'g'm'e'n't'
-'-' 'P'r'e'-'e'm'p't' 'c'r'i't'i'c'i's'm's' 'b'y' 'i'd'e'n't'i'f'y'i'n'g' 'w'e'a'k'n'e's's'e's' 'f'i'r's't'
-'-' 'E'x'p'l'a'i'n' 'w'h'y' 'l'i'm'i't'a't'i'o'n's' 'd'o'n'''t' 'u'n'd'e'r'm'i'n'e' 'c'o'r'e' 'c'l'a'i'm's'
-'
-'#'#'#' 'S't'e'p' '5'.'8':' 'C'o'n'c'l'u's'i'o'n' '&' 'D'i's'c'u's's'i'o'n'
-'
-'*'*'C'o'n'c'l'u's'i'o'n'*'*' '('r'e'q'u'i'r'e'd',' '0'.'5'-'1' 'p'a'g'e')':'
-'-' 'R'e's't'a't'e' 't'h'e' 'c'o'n't'r'i'b'u't'i'o'n' 'i'n' 'o'n'e' 's'e'n't'e'n'c'e' '('d'i'f'f'e'r'e'n't' 'w'o'r'd'i'n'g' 'f'r'o'm' 'a'b's't'r'a'c't')'
-'-' 'S'u'm'm'a'r'i'z'e' 'k'e'y' 'f'i'n'd'i'n'g's' '('2'-'3' 's'e'n't'e'n'c'e's',' 'n'o't' 'a' 'l'i's't')'
-'-' 'I'm'p'l'i'c'a't'i'o'n's':' 'w'h'a't' 'd'o'e's' 't'h'i's' 'm'e'a'n' 'f'o'r' 't'h'e' 'f'i'e'l'd'?'
-'-' 'F'u't'u'r'e' 'w'o'r'k':' '2'-'3' 'c'o'n'c'r'e't'e' 'n'e'x't' 's't'e'p's' '('n'o't' 'v'a'g'u'e' '"'w'e' 'l'e'a'v'e' 'X' 'f'o'r' 'f'u't'u'r'e' 'w'o'r'k'"')'
-'
-'*'*'D'i's'c'u's's'i'o'n'*'*' '('o'p't'i'o'n'a'l',' 's'o'm'e't'i'm'e's' 'c'o'm'b'i'n'e'd' 'w'i't'h' 'c'o'n'c'l'u's'i'o'n')':'
-'-' 'B'r'o'a'd'e'r' 'i'm'p'l'i'c'a't'i'o'n's' 'b'e'y'o'n'd' 'i'm'm'e'd'i'a't'e' 'r'e's'u'l't's'
-'-' 'C'o'n'n'e'c't'i'o'n's' 't'o' 'o't'h'e'r' 's'u'b'f'i'e'l'd's'
-'-' 'H'o'n'e's't' 'a's's'e's's'm'e'n't' 'o'f' 'w'h'e'n' 't'h'e' 'm'e't'h'o'd' 'd'o'e's' 'a'n'd' 'd'o'e's'n'''t' 'w'o'r'k'
-'-' 'P'r'a'c't'i'c'a'l' 'd'e'p'l'o'y'm'e'n't' 'c'o'n's'i'd'e'r'a't'i'o'n's'
-'
-'*'*'D'o' 'N'O'T'*'*' 'i'n't'r'o'd'u'c'e' 'n'e'w' 'r'e's'u'l't's' 'o'r' 'c'l'a'i'm's' 'i'n' 't'h'e' 'c'o'n'c'l'u's'i'o'n'.'
-'
-'#'#'#' 'S't'e'p' '5'.'9':' 'A'p'p'e'n'd'i'x' 'S't'r'a't'e'g'y'
-'
-'A'p'p'e'n'd'i'c'e's' 'a'r'e' 'u'n'l'i'm'i't'e'd' 'a't' 'a'l'l' 'm'a'j'o'r' 'v'e'n'u'e's' 'a'n'd' 'a'r'e' 'e's's'e'n't'i'a'l' 'f'o'r' 'r'e'p'r'o'd'u'c'i'b'i'l'i't'y'.' 'S't'r'u'c't'u'r'e':'
-'
-'|' 'A'p'p'e'n'd'i'x' 'S'e'c't'i'o'n' '|' 'W'h'a't' 'G'o'e's' 'H'e'r'e' '|'
-'|'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'|'
-'|' '*'*'P'r'o'o'f's' '&' 'D'e'r'i'v'a't'i'o'n's'*'*' '|' 'F'u'l'l' 'p'r'o'o'f's' 't'o'o' 'l'o'n'g' 'f'o'r' 'm'a'i'n' 't'e'x't'.' 'M'a'i'n' 't'e'x't' 'c'a'n' 's't'a't'e' 't'h'e'o'r'e'm's' 'w'i't'h' '"'p'r'o'o'f' 'i'n' 'A'p'p'e'n'd'i'x' 'A'.'"' '|'
-'|' '*'*'A'd'd'i't'i'o'n'a'l' 'E'x'p'e'r'i'm'e'n't's'*'*' '|' 'A'b'l'a't'i'o'n's',' 's'c'a'l'i'n'g' 'c'u'r'v'e's',' 'p'e'r'-'d'a't'a's'e't' 'b'r'e'a'k'd'o'w'n's',' 'h'y'p'e'r'p'a'r'a'm'e't'e'r' 's'e'n's'i't'i'v'i't'y' '|'
-'|' '*'*'I'm'p'l'e'm'e'n't'a't'i'o'n' 'D'e't'a'i'l's'*'*' '|' 'F'u'l'l' 'h'y'p'e'r'p'a'r'a'm'e't'e'r' 't'a'b'l'e's',' 't'r'a'i'n'i'n'g' 'd'e't'a'i'l's',' 'h'a'r'd'w'a'r'e' 's'p'e'c's',' 'r'a'n'd'o'm' 's'e'e'd's' '|'
-'|' '*'*'D'a't'a's'e't' 'D'o'c'u'm'e'n't'a't'i'o'n'*'*' '|' 'D'a't'a' 'c'o'l'l'e'c't'i'o'n' 'p'r'o'c'e's's',' 'a'n'n'o't'a't'i'o'n' 'g'u'i'd'e'l'i'n'e's',' 'l'i'c'e'n's'i'n'g',' 'p'r'e'p'r'o'c'e's's'i'n'g' '|'
-'|' '*'*'P'r'o'm'p't's' '&' 'T'e'm'p'l'a't'e's'*'*' '|' 'E'x'a'c't' 'p'r'o'm'p't's' 'u's'e'd' '('f'o'r' 'L'L'M'-'b'a's'e'd' 'm'e't'h'o'd's')',' 'e'v'a'l'u'a't'i'o'n' 't'e'm'p'l'a't'e's' '|'
-'|' '*'*'A'd'd'i't'i'o'n'a'l' 'F'i'g'u'r'e's'*'*' '|' 'P'e'r'-'t'a's'k' 'b'r'e'a'k'd'o'w'n's',' 't'r'a'j'e'c't'o'r'y' 'v'i's'u'a'l'i'z'a't'i'o'n's',' 'f'a'i'l'u'r'e' 'c'a's'e' 'e'x'a'm'p'l'e's' '|'
-'
-'*'*'R'u'l'e's'*'*':'
-'-' 'T'h'e' 'm'a'i'n' 'p'a'p'e'r' 'm'u's't' 'b'e' 's'e'l'f'-'c'o'n't'a'i'n'e'd' ''?'r'e'v'i'e'w'e'r's' 'a'r'e' 'n'o't' 'r'e'q'u'i'r'e'd' 't'o' 'r'e'a'd' 'a'p'p'e'n'd'i'c'e's'
-'-' 'N'e'v'e'r' 'p'u't' 'c'r'i't'i'c'a'l' 'e'v'i'd'e'n'c'e' 'o'n'l'y' 'i'n' 't'h'e' 'a'p'p'e'n'd'i'x'
-'-' 'C'r'o's's'-'r'e'f'e'r'e'n'c'e':' '"'F'u'l'l' 'r'e's'u'l't's' 'i'n' 'T'a'b'l'e' '5' '('A'p'p'e'n'd'i'x' 'B')'"' 'n'o't' 'j'u's't' '"'s'e'e' 'a'p'p'e'n'd'i'x'"'
-'-' 'U's'e' '`'\'a'p'p'e'n'd'i'x'`' 'c'o'm'm'a'n'd',' 't'h'e'n' '`'\'s'e'c't'i'o'n'{'A':' 'P'r'o'o'f's'}'`' 'e't'c'.'
-'
-'#'#'#' 'P'a'g'e' 'B'u'd'g'e't' 'M'a'n'a'g'e'm'e'n't'
-'
-'W'h'e'n' 'o'v'e'r' 't'h'e' 'p'a'g'e' 'l'i'm'i't':'
-'
-'|' 'C'u't' 'S't'r'a't'e'g'y' '|' 'S'a'v'e's' '|' 'R'i's'k' '|'
-'|'-'-'-'-'-'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'-'|'-'-'-'-'-'-'|'
-'|' 'M'o'v'e' 'p'r'o'o'f's' 't'o' 'a'p'p'e'n'd'i'x' '|' '0'.'5'-'2' 'p'a'g'e's' '|' 'L'o'w' ''?'s't'a'n'd'a'r'd' 'p'r'a'c't'i'c'e' '|'
-'|' 'C'o'n'd'e'n's'e' 'r'e'l'a't'e'd' 'w'o'r'k' '|' '0'.'5'-'1' 'p'a'g'e' '|' 'M'e'd'i'u'm' ''?'m'a'y' 'm'i's's' 'k'e'y' 'c'i't'a't'i'o'n's' '|'
-'|' 'C'o'm'b'i'n'e' 't'a'b'l'e's' 'w'i't'h' 's'u'b'f'i'g'u'r'e's' '|' '0'.'2'5'-'0'.'5' 'p'a'g'e' '|' 'L'o'w' ''?'o'f't'e'n' 'i'm'p'r'o'v'e's' 'r'e'a'd'a'b'i'l'i't'y' '|'
-'|' 'U's'e' '`'\'v's'p'a'c'e'{'-'X'p't'}'`' 's'p'a'r'i'n'g'l'y' '|' '0'.'1'-'0'.'3' 'p'a'g'e' '|' 'L'o'w' 'i'f' 's'u'b't'l'e',' 'h'i'g'h' 'i'f' 'o'b'v'i'o'u's' '|'
-'|' 'R'e'm'o'v'e' 'q'u'a'l'i't'a't'i'v'e' 'e'x'a'm'p'l'e's' '|' '0'.'5'-'1' 'p'a'g'e' '|' 'M'e'd'i'u'm' ''?'r'e'v'i'e'w'e'r's' 'l'i'k'e' 'e'x'a'm'p'l'e's' '|'
-'|' 'R'e'd'u'c'e' 'f'i'g'u'r'e' 's'i'z'e's' '|' '0'.'2'5'-'0'.'5' 'p'a'g'e' '|' 'H'i'g'h' ''?'f'i'g'u'r'e's' 'm'u's't' 'r'e'm'a'i'n' 'r'e'a'd'a'b'l'e' '|'
-'
-'*'*'D'o' 'N'O'T'*'*':' 'r'e'd'u'c'e' 'f'o'n't' 's'i'z'e',' 'c'h'a'n'g'e' 'm'a'r'g'i'n's',' 'r'e'm'o'v'e' 'r'e'q'u'i'r'e'd' 's'e'c't'i'o'n's',' 'o'r' 'u's'e' '`'\'s'm'a'l'l'`'/'`'\'f'o'o't'n'o't'e's'i'z'e'`' 'f'o'r' 'm'a'i'n' 't'e'x't'.'
-'
-'#'#'#' 'W'r'i't'i'n'g' 'S't'y'l'e'
-'
-'*'*'S'e'n't'e'n'c'e'-'l'e'v'e'l' 'c'l'a'r'i't'y' '('G'o'p'e'n' '&' 'S'w'a'n'''s' '7' 'P'r'i'n'c'i'p'l'e's')':'*'*'
-'
-'|' 'P'r'i'n'c'i'p'l'e' '|' 'R'u'l'e' '|'
-'|'-'-'-'-'-'-'-'-'-'-'-'|'-'-'-'-'-'-'|'
-'|' 'S'u'b'j'e'c't'-'v'e'r'b' 'p'r'o'x'i'm'i't'y' '|' 'K'e'e'p' 's'u'b'j'e'c't' 'a'n'd' 'v'e'r'b' 'c'l'o's'e' '|'
-'|' 'S't'r'e's's' 'p'o's'i't'i'o'n' '|' 'P'l'a'c'e' 'e'm'p'h'a's'i's' 'a't' 's'e'n't'e'n'c'e' 'e'n'd's' '|'
-'|' 'T'o'p'i'c' 'p'o's'i't'i'o'n' '|' 'P'u't' 'c'o'n't'e'x't' 'f'i'r's't',' 'n'e'w' 'i'n'f'o' 'a'f't'e'r' '|'
-'|' 'O'l'd' 'b'e'f'o'r'e' 'n'e'w' '|' 'F'a'm'i'l'i'a'r' 'i'n'f'o' '鈫'?'u'n'f'a'm'i'l'i'a'r' 'i'n'f'o' '|'
-'|' 'O'n'e' 'u'n'i't',' 'o'n'e' 'f'u'n'c't'i'o'n' '|' 'E'a'c'h' 'p'a'r'a'g'r'a'p'h' 'm'a'k'e's' 'o'n'e' 'p'o'i'n't' '|'
-'|' 'A'c't'i'o'n' 'i'n' 'v'e'r'b' '|' 'U's'e' 'v'e'r'b's',' 'n'o't' 'n'o'm'i'n'a'l'i'z'a't'i'o'n's' '|'
-'|' 'C'o'n't'e'x't' 'b'e'f'o'r'e' 'n'e'w' '|' 'S'e't' 's't'a'g'e' 'b'e'f'o'r'e' 'p'r'e's'e'n't'i'n'g' '|'
-'
-'*'*'W'o'r'd' 'c'h'o'i'c'e' '('L'i'p't'o'n',' 'S't'e'i'n'h'a'r'd't')':'*'*'
-'-' 'B'e' 's'p'e'c'i'f'i'c':' '"'a'c'c'u'r'a'c'y'"' 'n'o't' '"'p'e'r'f'o'r'm'a'n'c'e'"'
-'-' 'E'l'i'm'i'n'a't'e' 'h'e'd'g'i'n'g':' 'd'r'o'p' '"'m'a'y'"' 'u'n'l'e's's' 'g'e'n'u'i'n'e'l'y' 'u'n'c'e'r't'a'i'n'
-'-' 'C'o'n's'i's't'e'n't' 't'e'r'm'i'n'o'l'o'g'y' 't'h'r'o'u'g'h'o'u't'
-'-' 'A'v'o'i'd' 'i'n'c'r'e'm'e'n't'a'l' 'v'o'c'a'b'u'l'a'r'y':' '"'d'e'v'e'l'o'p'"',' 'n'o't' '"'c'o'm'b'i'n'e'"'
-'
-'*'*'F'u'l'l' 'w'r'i't'i'n'g' 'g'u'i'd'e' 'w'i't'h' 'e'x'a'm'p'l'e's'*'*':' 'S'e'e' '['r'e'f'e'r'e'n'c'e's'/'w'r'i't'i'n'g'-'g'u'i'd'e'.'m'd']'('r'e'f'e'r'e'n'c'e's'/'w'r'i't'i'n'g'-'g'u'i'd'e'.'m'd')'
+Before evidence-bearing drafting, identify the section's purpose, target claims,
+available evidence, and forbidden overreach. In edit mode, infer this contract
+from the supplied text and preserve its meaning; do not create project files.
+
+Write from the strongest supported statement outward. Distinguish:
+
+- observation: what a source or experiment directly shows;
+- interpretation: the mechanism or explanation consistent with the evidence;
+- implication: why the result matters within the stated scope;
+- speculation: a hypothesis that remains to be tested.
+
+Signal speculation rather than blending it into established findings.
+
+## Build a Coherent Narrative
+
+The paper should make one central contribution. Each section has a distinct job:
+the introduction motivates and defines the gap, methods explain the solution,
+experiments test its claims, related work establishes the boundary, and the
+conclusion states what was learned without introducing new evidence.
+
+At paragraph level, use a clear topic sentence, evidence or reasoning, and a
+concluding implication. Put familiar context before new information. Keep the
+main verb near its subject and place the sentence's emphasis near the end.
+
+## Title
+
+Name the problem and contribution precisely. Prefer searchable technical terms
+over slogans. Do not claim generality, causality, robustness, or superiority that
+the evidence does not establish. Finalize the title after the thesis stabilizes.
+
+## Abstract
+
+A compact abstract usually covers:
+
+1. the problem and why it matters;
+2. the specific limitation in existing approaches;
+3. the proposed mechanism or insight;
+4. the evaluation setting and strongest supported result;
+5. the bounded implication.
+
+Use concrete quantities when they are traceable and central. Avoid citations,
+undefined acronyms, implementation trivia, and claims that appear nowhere in the
+paper. Draft early for alignment, then rewrite after results and conclusions are
+stable.
+
+## Figures and Tables
+
+Each figure or table must answer a question that matters to a claim. Captions
+should state what is shown, define symbols and evaluation direction, and give the
+main takeaway without exceeding the evidence. Ensure axes, units, uncertainty,
+splits, and best-value markers are correct and consistent with the text.
+
+## Limitations and Discussion
+
+State the result first, then its boundary. Identify tested settings, untested
+settings, assumptions, failure cases, resource constraints, and credible
+alternative explanations. Explain whether each limitation affects validity,
+generality, or practicality. Do not use limitations to excuse a missing control.
+
+Discussion may connect findings to a broader mechanism, but must label hypotheses
+and avoid presenting future work as completed evidence.
+
+## Conclusion
+
+Restate the problem, contribution, strongest supported finding, and practical or
+scientific implication. Do not introduce a new claim, citation, experiment, or
+number. Match the scope and certainty used in `claim_evidence.md`.
+
+## Appendix
+
+Use the appendix for reproducibility details, proofs, extended analyses, and
+secondary results. The main paper must still contain the evidence needed to
+understand and assess its central claims. Never hide a required baseline, key
+failure, or essential method definition only in the appendix.
+
+## Revision Passes
+
+Separate revision concerns:
+
+1. evidence: citations, numbers, comparisons, and claim boundaries;
+2. structure: thesis, section roles, paragraph order, and redundancy;
+3. expression: clarity, terminology, grammar, and concision;
+4. presentation: figures, tables, captions, references, and venue format.
+
+Do not let sentence polish conceal an unsupported claim. After revision, compare
+the title, abstract, contribution statements, result tables, and conclusion for
+the same claims and degree of certainty.

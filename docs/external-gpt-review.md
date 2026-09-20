@@ -2,21 +2,9 @@
 
 External GPT review is optional. It is an additional quality-control channel for users who have a controllable GPT review page available.
 
-## First-Call Remote Audit Window Intake
+## Optional remote audit intake
 
-At the first call of this skill for a paper workflow, ask:
-
-```text
-Do you have a controllable remote GPT review window that Codex may use as an
-external audit window for this paper workflow?
-```
-
-If yes, record operational details in `external_gpt_reviewer.md` and set
-`paper/protocol_state.md` -> `External audit route.mode` to `remote-gpt`.
-
-If no, no usable opening method is provided, or the user does not answer, set
-`External audit route.mode` to `internal-only` and continue with the internal
-audit route.
+Default to internal review without asking. Record `first-call question: not-requested` in managed protocol state. Reuse prior explicit authorization. If external review is requested and the destination or content authorization is missing, ask only for that information. Use `remote-gpt` only after affirmative consent; otherwise continue `internal-only`.
 
 Do not record credentials, cookies, passwords, tokens, or browser storage.
 

@@ -18,12 +18,35 @@ note that the latest published version could not be verified.
 
 ## Runtime Protocol Anchor
 
-Long-running workflows must maintain `paper/protocol_state.md`. Before any gated action, the Coordinator checks current phase, allowed next actions, blocked actions, external audit route, required artifacts, gate status, last supervision, and drift risk. If the intended action is not explicitly allowed, or if the first-call external audit route is unanswered, the next action is protocol repair.
+Long-running workflows must maintain `paper/protocol_state.md`. Before any gated action, the Coordinator checks current phase, allowed next actions, blocked actions, external audit route, required artifacts, gate status, last supervision, and drift risk. If the intended action is not explicitly allowed, or if an explicitly enabled external review lacks the necessary authorization, the next action is protocol repair.
 
 Run:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action writing
+```
+
+## Exploration Gate
+
+The exploration gate permits bounded debug, smoke, and falsification runs after
+workspace, provenance, label-boundary, resource, output-path, and stop-condition
+checks. It does not require publication review, result audit, or
+complete-dataset evidence because exploration cannot create claims or route
+decisions.
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action exploration
+```
+
+## Promotion Gate
+
+Promotion remains fail-closed. It requires a passed experiment license,
+workflow supervision, a result-bearing science artifact, and the registered
+complete-dataset evidence scope. Smoke or selected-entity results cannot kill
+or promote a route.
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\check-protocol-state.ps1 -ProjectRoot . -Action promotion
 ```
 
 ## Major Gates
@@ -101,7 +124,7 @@ Defensive prose blocks final integration. Replace protective language with direc
 
 ## Writing Entry
 
-Writing is fail-closed. Before drafting, rewriting, polishing, or integrating manuscript prose, the workflow must have frozen paper intent, claim-evidence mapping, section contracts, and trusted evidence paths. Experiments/Results and result-bearing Abstract/Introduction/Conclusion sentences additionally require `result_audit.md`.
+In managed research mode, claim-changing and result-integrating writing is fail-closed. Language-only edits preserve existing facts and do not require governance setup. Managed claim work must have frozen paper intent, claim-evidence mapping, section contracts, and trusted evidence paths. Experiments/Results and result-bearing Abstract/Introduction/Conclusion sentences additionally require `result_audit.md`.
 
 At writing-stage setup, copy the skill-provided checkers into the paper project's
 `scripts/` directory. Then run:

@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased
+
+- Added two-gate research liveness: a safety-scoped Exploration Gate for
+  bounded debug, smoke, and falsification runs, and a publication-strict
+  Promotion Gate for route decisions and claims.
+- Added `scripts/check-research-liveness.ps1`, protocol liveness fields, resume
+  identity checks, a two-batch governance circuit breaker, and a one-layer
+  pre-result review limit.
+- Required complete-dataset evidence for promotion while explicitly preventing
+  smoke-only and partial runs from killing or promoting research routes.
+- Existing projects must copy the `Research liveness` section from the protocol
+  state example before using the new `exploration` or `promotion` actions.
+
 ## 0.1.9
 
 - Rebuilt the experiment workflow and Experiments writing references as clean Markdown after the previous reference text became corrupted by per-character quoting.

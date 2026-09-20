@@ -58,6 +58,19 @@ function Invoke-Gate {
 
 Invoke-Gate -Name "protocol state" -ScriptName "check-protocol-state.ps1" -GateParameters @{ ProjectRoot = $Root; Action = "general" } -Optional -ShouldRun (Test-AnyPath -RelativePaths @("paper\protocol_state.md", "protocol_state.md"))
 
+$hasLivenessState = $false
+foreach ($protocolRel in @("paper\protocol_state.md", "protocol_state.md")) {
+  $protocolCandidate = Join-Path $Root $protocolRel
+  if (Test-Path -LiteralPath $protocolCandidate) {
+    $protocolText = Get-Content -Raw -LiteralPath $protocolCandidate
+    if ($protocolText -match "(?im)^##\s+Research liveness\s*$") {
+      $hasLivenessState = $true
+      break
+    }
+  }
+}
+Invoke-Gate -Name "research liveness" -ScriptName "check-research-liveness.ps1" -GateParameters @{ ProjectRoot = $Root; Action = "general" } -Optional -ShouldRun $hasLivenessState
+
 Invoke-Gate -Name "reference routes" -ScriptName "check-reference-routes.ps1" -GateParameters @{ ProjectRoot = $Root } -Optional -ShouldRun (Test-Path -LiteralPath (Join-Path $Root "SKILL.md"))
 
 Invoke-Gate -Name "experiment license" -ScriptName "check-experiment-license.ps1" -GateParameters @{ ProjectRoot = $Root } -Optional -ShouldRun (Test-AnyPath -RelativePaths @("experiment_license.yaml", "experiment_license.yml", "paper\experiment_license.yaml", "paper\experiment_license.yml"))

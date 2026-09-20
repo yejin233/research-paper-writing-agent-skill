@@ -13,7 +13,7 @@
 
 ## External audit route
 
-- first-call question: answered-no
+- first-call question: not-requested
 - mode: internal-only
 - remote window opening method: none
 - internal audit fallback: Workflow Supervisor, Reviewer, Result Auditor, Figure/Table Auditor
@@ -63,3 +63,20 @@
 
 - risk: medium
 - reason: Long-running drafting task; refresh after three tool batches or before any claim/result integration.
+
+## Research liveness
+
+- task identity: paper-project-task-id
+- workspace identity: .
+- science progress: results/main_metrics.csv
+- engineering progress: tests/check-gates.ps1
+- governance progress: paper/handoffs/workflow_supervision_audit.md
+- consecutive governance-only batches: 0
+- active executor: none
+- next executable command: powershell -ExecutionPolicy Bypass -File scripts/check-writing-gate.ps1 -ProjectRoot .
+- external blocker: none
+- resume status: resumable
+- decision unit: complete-dataset
+- current evidence scope: complete-dataset
+- subagent allocation: execution=0, governance=0
+- review depth: 1

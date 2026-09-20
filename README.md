@@ -9,6 +9,10 @@ This skill is designed for projects that need more than prose polishing. It trea
 - Multi-agent roles with strict permission boundaries.
 - Manuscript intent and frozen paper-type gates.
 - Literature, route-killer, experiment-license, result-audit, and workflow-supervision gates.
+- A two-gate research liveness model: the Exploration Gate permits bounded
+  debug, smoke, and falsification runs after safety checks, while the Promotion
+  Gate keeps route decisions, claims, and writing behind complete-dataset
+  evidence and the existing publication checks.
 - Machine-readable `experiment_license.yaml` and `result_ledger.jsonl` interfaces
   for source-backed experiment and result checks.
 - Experiment analysis depth checks that require claim-level interpretation,
@@ -101,6 +105,20 @@ For an explicit branch-head comparison:
 powershell -ExecutionPolicy Bypass -File .\scripts\check-skill-update.ps1 -Detailed
 ```
 
+## Research Liveness Migration
+
+Existing projects should add the `## Research liveness` section from
+`examples/protocol_state.example.md` to their protocol state before using the
+new actions. The Exploration Gate uses `-Action exploration` to authorize a
+bounded diagnostic run;
+smoke-only or partial evidence cannot eliminate or promote a research route.
+The Promotion Gate uses `-Action promotion` only when the decision unit and
+evidence scope are both `complete-dataset`.
+
+The liveness checker also blocks a third consecutive governance-only batch,
+review recursion before first results, workspace identity mismatches, and
+all-governance agent allocation when execution is due.
+
 ## Important Safety Notes
 
 - This skill does not guarantee novelty, acceptance, correctness, or valid experimental results.
@@ -116,6 +134,7 @@ Run the local release check before publishing or opening a pull request:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\tests\check-open-source.ps1
 powershell -ExecutionPolicy Bypass -File .\tests\check-gates.ps1
+powershell -ExecutionPolicy Bypass -File .\tests\check-research-liveness.ps1
 powershell -ExecutionPolicy Bypass -File .\tests\check-skill-update.ps1
 powershell -ExecutionPolicy Bypass -File .\scripts\check-reference-routes.ps1 -ProjectRoot .
 powershell -ExecutionPolicy Bypass -File .\scripts\check-workflow-supervision.ps1 -ProjectRoot .

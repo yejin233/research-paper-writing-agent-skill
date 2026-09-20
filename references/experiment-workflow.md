@@ -5,6 +5,25 @@ analysis, and experiment-to-prose handoff. Experiments are not complete when
 numbers are reported. They are complete only when each result has claim-level
 interpretation, mechanism-level explanation, and a bounded conclusion.
 
+## Debug and Smoke Runs
+
+Use the Exploration Gate for bounded runs that validate execution, numerical
+behavior, resource cost, output contracts, or a cheapest falsification test.
+Freeze the command, trusted workspace, label boundary, budget, output path, and
+stop condition before launch. These runs do not require publication review or
+complete-dataset evidence because they cannot create paper claims or route
+decisions.
+
+Debug and smoke results may expose implementation failure and inform the next
+executable run. They must not select datasets or entities, tune the promoted
+configuration, kill or promote a route, or appear as claim support. Only the
+registered complete-dataset decision unit may change route status.
+
+Every scientific review concern that would delay execution must name a bounded
+test, failure criterion, expected cost, and affected decision. If no executable
+test exists, record the concern as an advisory risk. Do not create another
+review solely to review that concern.
+
 ## Phase 2: Experiment Design
 
 Goal: design experiments that directly test the paper's claims. Every

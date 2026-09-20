@@ -15,6 +15,23 @@ Process compliance is not paper quality. A workflow may pass process gates while
 the manuscript still fails as a paper. The reviewer panel must judge the current
 manuscript, not whether it improved over earlier drafts.
 
+## Review Recursion Circuit Breaker
+
+Before the first result-bearing experiment, permit at most one design review
+layer. Do not review a review, add a supervisor to validate another supervisor,
+or require a fresh reviewer after advisory scientific concerns. Re-review is
+allowed only after a result exists or after repairing a concrete safety,
+provenance, leakage, destructive-operation, or executable-contract defect.
+
+A pre-result reviewer must convert each proposed blocker into an executable
+test with a failure criterion and budget. Concerns that cannot be tested are
+recorded as risks and do not block the Exploration Gate. External GPT review is
+advisory during exploration even when enabled; it may block promotion or final
+integration only through the normal local evidence and supervision path.
+
+When sub-agents are available, retain at least one execution slot until a
+result-bearing experiment is running or a genuine external blocker is recorded.
+
 ## Review Isolation Rule
 
 Default to fresh-context review packets. A reviewer should see only the files

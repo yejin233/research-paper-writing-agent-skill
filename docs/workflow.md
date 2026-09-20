@@ -24,6 +24,20 @@ This skill treats research-paper writing as a gated research workflow rather tha
 
 Sub-agents expand search, create opposition, verify facts, and propose edits. The Research Coordinator owns the paper's main claim, terminology, evidence chain, and final manuscript integration. In multi-agent runs, sub-agents write handoffs or patch proposals; protected manuscript edits require a Coordinator integration trace and must pass `scripts/check-role-boundaries.ps1`.
 
+## Resume Before Rebuilding
+
+After interruption, compaction, or a service failure, read `Research liveness`
+before creating new reviews or gate artifacts. Verify task and workspace
+identity, inspect active jobs, locate the latest result, and execute the saved
+next command. Rebuild state only when the checkpoint is invalid. Identity
+mismatch blocks all writes; an active job is monitored instead of reopening
+design review.
+
+Science, engineering, and governance progress are separate. After two
+governance-only batches, the next batch must execute, implement a falsification
+test, or record a real external blocker. Complete datasets decide route status;
+smaller runs only debug execution and estimate cost.
+
 ## Completion Rule
 
 A compiled PDF is not enough. The workflow is complete only when the relevant gates pass, no supervisor blocker remains, the result ledger traces reported numbers to source files, the manuscript prose scanner passes, and the manuscript claims are supported by the evidence chain.

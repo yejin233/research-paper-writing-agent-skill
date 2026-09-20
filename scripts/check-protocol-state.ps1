@@ -1,6 +1,6 @@
 param(
   [string]$ProjectRoot = ".",
-  [ValidateSet("general", "writing", "result-claim", "experiment", "phase-transition", "final-integration")]
+  [ValidateSet("general", "exploration", "promotion", "writing", "result-claim", "experiment", "phase-transition", "final-integration")]
   [string]$Action = "general"
 )
 
@@ -141,12 +141,16 @@ Require-NonPlaceholderLine -SectionBody $DriftRisk -Label "risk" -SectionName "D
 Require-NonPlaceholderLine -SectionBody $DriftRisk -Label "reason" -SectionName "Drift risk" | Out-Null
 
 $ExternalAuditMode = $ExternalAuditMode.ToLowerInvariant()
-if ($FirstCallQuestion.ToLowerInvariant() -notin @("answered-yes", "answered-no", "declined", "unavailable")) {
-  throw "External audit route first-call question must be answered before gated work. Use answered-yes or answered-no."
+if ($FirstCallQuestion.ToLowerInvariant() -notin @("answered-yes", "answered-no", "declined", "unavailable", "not-requested")) {
+  throw "Record external-review intake explicitly: not-requested for the internal default, or answered-yes/answered-no/declined/unavailable for an actual intake."
 }
 
 if ($ExternalAuditMode -notin @("remote-gpt", "internal-only")) {
   throw "External audit route mode must be remote-gpt or internal-only. Current mode: $ExternalAuditMode"
+}
+
+if ($ExternalAuditMode -eq "remote-gpt" -and $FirstCallQuestion.ToLowerInvariant() -ne "answered-yes") {
+  throw "Remote GPT review requires explicit affirmative authorization; internal defaults do not authorize uploads."
 }
 
 if ($ExternalAuditMode -eq "remote-gpt") {
@@ -172,7 +176,7 @@ if ($ActionToken -ne "general") {
 }
 
 $SupervisionDecision = Require-NonPlaceholderLine -SectionBody $LastSupervision -Label "decision" -SectionName "Last supervision"
-if ($ActionToken -in @("writing", "result-claim", "experiment", "phase-transition", "final-integration")) {
+if ($ActionToken -in @("promotion", "writing", "result-claim", "experiment", "phase-transition", "final-integration")) {
   if ($SupervisionDecision.ToLowerInvariant() -ne "pass") {
     throw "Last Workflow Supervision decision must be pass before action '$ActionToken'. Current decision: $SupervisionDecision"
   }
@@ -180,6 +184,14 @@ if ($ActionToken -in @("writing", "result-claim", "experiment", "phase-transitio
 }
 
 switch ($ActionToken) {
+  "exploration" {
+    Require-GatePass -GateStatusBody $GateStatus -Label "exploration safety"
+    & (Join-Path $PSScriptRoot "check-research-liveness.ps1") -ProjectRoot $Root -Action exploration | Out-Null
+  }
+  "promotion" {
+    Require-GatePass -GateStatusBody $GateStatus -Label "experiment license"
+    & (Join-Path $PSScriptRoot "check-research-liveness.ps1") -ProjectRoot $Root -Action promotion | Out-Null
+  }
   "writing" {
     Require-GatePass -GateStatusBody $GateStatus -Label "manuscript intent"
     Require-GatePass -GateStatusBody $GateStatus -Label "claim-evidence map"

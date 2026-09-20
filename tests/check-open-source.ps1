@@ -22,6 +22,7 @@ $Required = @(
   "docs/gates.md",
   "docs/external-gpt-review.md",
   "tests/check-gates.ps1",
+  "tests/check-research-liveness.ps1",
   "tests/check-skill-update.ps1",
   "scripts/check-skill-update.ps1",
   "scripts/check-experiment-license.ps1",
@@ -29,6 +30,7 @@ $Required = @(
   "scripts/check-result-audit.ps1",
   "scripts/check-manuscript-prose.ps1",
   "scripts/check-role-boundaries.ps1",
+  "scripts/check-research-liveness.ps1",
   "scripts/check-workflow-supervision.ps1",
   "scripts/check-writing-gate.ps1",
   "scripts/check-protocol-state.ps1",
@@ -63,13 +65,26 @@ $RequiredAnchors = @(
   "Experiment Analysis Auditor Verdict",
   "Defensive Writing Zero-Tolerance Gate",
   "Writing Conformance Gate",
-  "Fail-Closed Writing Entry Gate"
+  "Fail-Closed Writing Entry Gate",
+  "Research Liveness and Two-Gate Autonomy"
 )
 
 foreach ($needle in $RequiredAnchors) {
   if ($Skill -notlike "*$needle*") {
     throw "SKILL.md missing anchor: $needle"
   }
+}
+
+$Readme = Get-Content -Raw (Join-Path $Root "README.md")
+foreach ($needle in @("Exploration Gate", "Promotion Gate", "Research liveness")) {
+  if ($Readme -notlike "*$needle*") {
+    throw "README.md missing research-liveness release anchor: $needle"
+  }
+}
+
+$Changelog = Get-Content -Raw (Join-Path $Root "CHANGELOG.md")
+if ($Changelog -notlike "*two-gate research liveness*") {
+  throw "CHANGELOG.md missing two-gate research liveness release note."
 }
 
 $SensitivePatterns = @(

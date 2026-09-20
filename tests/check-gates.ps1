@@ -12,6 +12,106 @@ Copy-Item -LiteralPath (Join-Path $Root "examples\protocol_state.example.md") -D
 
 & (Join-Path $Root "scripts\check-protocol-state.ps1") -ProjectRoot $TempRoot -Action result-claim | Out-Null
 
+$ExploreRoot = Join-Path $env:TEMP "research-paper-writing-agent-exploration-gate-tests"
+Remove-Item -LiteralPath $ExploreRoot -Recurse -Force -ErrorAction SilentlyContinue
+New-Item -ItemType Directory -Force -Path (Join-Path $ExploreRoot "paper") | Out-Null
+
+@'
+# Protocol State
+
+## Current phase
+
+- phase: Phase 2 - Experiment design
+
+## Frozen identity
+
+- paper type: method_paper
+- thesis: A bounded exploratory run tests the frozen mechanism.
+- core method claim: hypothesis only; no result claim is authorized.
+- forbidden conversions: boundary_study, benchmark, survey, position, negative_result unless the user explicitly approves.
+
+## External audit route
+
+- first-call question: answered-no
+- mode: internal-only
+- remote window opening method: none
+- internal audit fallback: Workflow Supervisor, Reviewer, Result Auditor, Figure/Table Auditor
+
+## Allowed next actions
+
+- exploration
+- gate-repair
+
+## Blocked actions
+
+- result-claim
+- writing
+- promotion
+
+## Required artifacts before next action
+
+- bounded exploration command
+- output path
+- stop condition
+
+## Gate status
+
+- exploration safety: pass
+- manuscript intent: pass
+- claim-evidence map: pending
+- section contracts: pending
+- result audit: pending
+- result ledger: pending
+- writing gate: pending
+- experiment license: pending
+- defensive writing: pending
+- workflow supervision: pending
+
+## Last supervision
+
+- decision: block
+- unresolved blockers: publication gates are intentionally incomplete
+
+## Drift risk
+
+- risk: low
+- reason: The run cannot create claims or route decisions.
+
+## Research liveness
+
+- task identity: task-exploration-test
+- workspace identity: .
+- science progress: none
+- engineering progress: tests/test_method.py
+- governance progress: paper/protocol_state.md
+- consecutive governance-only batches: 1
+- active executor: none
+- next executable command: python run_smoke.py
+- external blocker: none
+- resume status: resumable
+- decision unit: complete-dataset
+- current evidence scope: smoke-only
+- subagent allocation: execution=1, governance=0
+- review depth: 1
+'@ | Set-Content -LiteralPath (Join-Path $ExploreRoot "paper\protocol_state.md")
+
+& (Join-Path $Root "scripts\check-protocol-state.ps1") -ProjectRoot $ExploreRoot -Action exploration | Out-Null
+
+$explorationClaimBlocked = $false
+try {
+  & (Join-Path $Root "scripts\check-protocol-state.ps1") -ProjectRoot $ExploreRoot -Action result-claim | Out-Null
+} catch {
+  if ($_.Exception.Message -match "not explicitly allowed|explicitly blocked") {
+    $explorationClaimBlocked = $true
+  } else {
+    throw
+  }
+}
+
+if (-not $explorationClaimBlocked) {
+  throw "Expected exploration state to block result claims."
+}
+
 $BlockedRoot = Join-Path $env:TEMP "research-paper-writing-agent-gate-tests-blocked"
 Remove-Item -LiteralPath $BlockedRoot -Recurse -Force -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Force -Path (Join-Path $BlockedRoot "paper") | Out-Null
